@@ -1,0 +1,9 @@
++ new
+* changed
+- removed
+
+baffects.js beta 0.1 - Jan 2018
+
+- baffects.js was developed over the christmas vacations by Roberto Cabezas H.
+
+- Assumes default instalation folders for presets.

@@ -1,0 +1,19 @@
+{
+  "name": "baffects.js",
+  "description": "baffects.js API documentation",
+  "version": "0.1",
+  "url": "",
+  "options": {
+    "linkNatives": "true",
+    "ignorePaths": [
+      "./bin",
+      "./examples",
+      "./lib",
+      "./test"
+    ],
+    "paths": [
+      "."
+    ],
+    "outdir": "./docs/baffects"
+  }
+}

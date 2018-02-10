@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/core.js - baffects.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="baffects.js" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.1</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/b.html">b</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/core.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+﻿// all initialisations should go here
+var init = function () {
+    glob.b = pub;
+
+    welcome();
+
+    // -- init internal state vars --
+    startTime = Date.now();
+};
+
+
+// ----------------------------------------
+// execution
+
+/**
+ * Run the sketch to adopt processing language familiarities
+ * @method go
+ * @param {String} [name] Name of the composition
+ * @param {Number} [width] Width of the composition
+ * @param {Number} [height] Height of the composition
+ * @param {Number} [duration] Duration of the composition in seconds
+ * @param {Number} [frameRate] Frame rate of the composition 
+ */
+pub.go = function (name, width, height, time, fr) {
+    var a = arguments[0],
+        b = arguments[1],
+        c = arguments[2],
+        d = arguments[3],
+        e = arguments[4];
+
+    pub.beginUndo();
+    try {
+        thisComp = (proj.activeItem instanceof CompItem) ? proj.activeItem : null;
+        if (thisComp === null) {
+            switch (arguments.length) {
+                case 0:
+                    thisComp = pub.createComp(&quot;untitled&quot;, 1920, 1080, 10, 24);
+                    break;
+                case 2:
+                    thisComp = pub.createComp(a, 1920, 1080, b, 24);
+                    break;
+                case 1:
+                    thisComp = pub.createComp(a, 1920, 1080, 10, 24);
+                    break;
+                case 3:
+                    thisComp = pub.createComp(a, b, c, 10, 24);
+                    break;
+                case 4:
+                    thisComp = pub.createComp(a, b, c, d, 24);
+                    break;
+                case 5:
+                    thisComp = pub.createComp(a, b, c, d, e);
+                    break;
+            }
+        }
+
+        setThisComp();
+
+        if (typeof glob.setup === &#x27;function&#x27;) {
+            pub.println(&quot;Running Setup...&quot;);
+            runAfterEffectsSetup();
+        };
+
+        //draw function runs once every frame.
+        if (typeof glob.draw === &#x27;function&#x27;) {
+            pub.println(&quot;Running Draw...&quot;);
+            runAfterEffectsDraw();
+            glob.draw = null;
+        };
+        thisComp.openInViewer();
+    } catch (e) {
+        alert(e);
+    }
+    pub.endUndo();
+    thisComp.time = 0;
+    pub.println(&quot;Done in &quot; + (pub.millis() / 1000).toPrecision(3) + &quot; seconds...&quot;);
+};
+
+
+// ----------------------------------------
+// all private from here
+
+var setThisComp = function () {
+    //3D
+    curr3DMode = pub.DISSABLE;
+
+    //Fill
+    currFillState = true;
+    currFillColor = [1, 1, 1];
+
+    //Stroke
+    currStrokeState = true;
+    currStrokeWeight = 1;
+    currStrokeColor = [1, 1, 1];
+
+    //Opacity
+    currOpacity = 100;
+
+    //Shape
+    currAnchorMode = 5;
+
+    //Text &amp; Font 
+    currFont = &#x27;Helvetica&#x27;;
+    currFontSize = 100;
+    currJustification = pub.J_CENTER;
+
+    //Blend
+    currBlendMode = pub.NORMAL;
+
+    //Keyframes
+    currInterpolationMode = pub.BEZIER,
+    currSpatialInterpolationMode = pub.LINEAR;
+
+    //Masks
+    currMaskMode = pub.M_ADD;
+
+    //Matrix transformation stack
+    pub.resetMatrix();
+
+    pub.width = thisComp.width;
+    pub.height = thisComp.height;
+
+    pub.background(0);
+};
+
+
+var runAfterEffectsSetup = function () {
+    glob.setup();
+};
+
+var runAfterEffectsDraw = function () {
+    pub.resetMatrix();
+    var frameDur = thisComp.frameDuration;
+    var totalFrames = thisComp.duration * thisComp.frameRate;
+    frameCount = 0;
+    frameTime = 0;
+
+    for (var i = 0; i &lt; totalFrames; i++) {
+        pub.frameCount++;
+        pub.frameTime += frameDur;
+        glob.draw();
+        pub.println(&quot;Running frame: &quot; + (i + 1));
+    }
+};
+
+var welcome = function () {
+    clearConsole();
+    //println(&quot;Using basil.js &quot; + pub.BASIL_VERSION + &quot; ...&quot;);
+    println(&quot;Using baffects.js &quot; + pub.BAFFECTS_VERSION + &quot; ...&quot;);
+};
+
+var error = pub.error = function (msg) {
+    println(ERROR_PREFIX + msg);
+    throw new Error(ERROR_PREFIX + msg);
+};
+
+var warning = pub.warning = function (msg) {
+    println(WARNING_PREFIX + msg);
+};
+
+var clearConsole = function () {
+    var bt = new BridgeTalk();
+    bt.target = &quot;estoolkit&quot;;
+    bt.body = &quot;app.clc()&quot;; // works just with cs6
+    bt.onError = function (errObj) { };
+    bt.onResult = function (resObj) { };
+    bt.send();
+};
+
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

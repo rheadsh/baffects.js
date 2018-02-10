@@ -1,0 +1,1 @@
+﻿#include "../lib/baffects.js"function setup() {    var sel = b.selectedLayers();    b.duplicate(sel[0], 50);}b.go();

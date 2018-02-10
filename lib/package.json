@@ -1,0 +1,32 @@
+{
+  "name": "baffectsjs",
+  "version": "0.1",
+  "description": "An attempt to port the spirit of the Processing visualization language to Adobe After Effects.",
+  "main": "baffects.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheadsh/Baffects.js"
+  },
+  "keywords": [
+    "Baffects.js",
+    "AfterEffects",
+    "Processing"
+  ],
+  "contributors": [
+    {
+      "name": "Roberto Cabezas H",
+      "url": "http://instagram.com/rheadsh"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rheadsh/Baffects.js"
+  },
+  "homepage": "https://github.com/rheadsh/Baffects.js"
+}

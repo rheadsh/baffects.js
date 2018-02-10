@@ -1,0 +1,3 @@
+{
+    "cmd": ["osascript", "$packages/User/Baffects/run.scpt", "$file"]
+}
