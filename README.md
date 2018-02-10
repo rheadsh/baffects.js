@@ -11,4 +11,4 @@ To run sketches:
 2. In After Effects go to the menu File - Scripts - Run Script File...
 
 
-![gif](https://i.imgur.com/JS3cX79.gif)
+![gif](https://i.imgur.com/JsBk4mE.gif)
