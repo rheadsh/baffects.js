@@ -1,5 +1,5 @@
-# baffectsjs
-Baffects.js is a library adaptation in JavaScript for Adobe After Effects of the Processing language. It allows for most of the functionality included in Processing to be used natively in After Effects, plus a custom workflow to enhance productivity in After Effects.
+# Baffects.js
+Baffects.js is a library adaptation of the Processing language in JavaScript for Adobe After Effects. It allows for most of the functionality included in Processing to be used natively in After Effects, plus a custom workflow to enhance productivity.
 
 
 
@@ -9,3 +9,6 @@ Duplicate file in 'baffectsjs/scketches/template.jsx' to be able to run your ske
 To run sketches:
 1. Download Adobe ExtendScript Toolkit and press play button or from the menu Debug - Run.
 2. In After Effects go to the menu File - Scripts - Run Script File...
+
+
+![gif](https://i.imgur.com/JS3cX79.gif)
