@@ -1156,6 +1156,30 @@
             "class": "b"
         },
         {
+            "file": "src/after-effects-constants.js",
+            "line": 681,
+            "description": "Line cap butt option",
+            "itemtype": "property",
+            "name": "BUTT",
+            "class": "b"
+        },
+        {
+            "file": "src/after-effects-constants.js",
+            "line": 687,
+            "description": "Line cap round option",
+            "itemtype": "property",
+            "name": "ROUND",
+            "class": "b"
+        },
+        {
+            "file": "src/after-effects-constants.js",
+            "line": 694,
+            "description": "Line cap projectin option",
+            "itemtype": "property",
+            "name": "PROJECTING",
+            "class": "b"
+        },
+        {
             "file": "src/after-effects-data.js",
             "line": 3,
             "description": "Add items to project from a folder using dialog box.",
@@ -2161,7 +2185,23 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1136,
+            "line": 1129,
+            "description": "Set global cap mode for stroke.",
+            "cat": "AfterEffects",
+            "itemtype": "method",
+            "name": "capMode",
+            "params": [
+                {
+                    "name": "mode",
+                    "description": "",
+                    "type": "BUTT|ROUND|PROJECTING"
+                }
+            ],
+            "class": "b"
+        },
+        {
+            "file": "src/after-effects-environment.js",
+            "line": 1145,
             "description": "Add composition to render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2188,7 +2228,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1170,
+            "line": 1179,
             "description": "Render all compositions in render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2197,7 +2237,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1180,
+            "line": 1189,
             "description": "Clear all items from render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2206,7 +2246,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1202,
+            "line": 1211,
             "description": "Add composition to render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2233,7 +2273,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1240,
+            "line": 1249,
             "description": "Render in render Adone Media Encoder.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2242,7 +2282,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1258,
+            "line": 1267,
             "description": "Suspends the calling thread for a number of milliseconds.\nDuring a sleep period, checks at 100 millisecond intervals to see whether the sleep should be terminated.",
             "cat": "Environment",
             "itemtype": "method",
@@ -3063,7 +3103,7 @@
         },
         {
             "file": "src/after-effects-shapes.js",
-            "line": 1048,
+            "line": 1059,
             "description": "Add Pucker & Bloat effect to ShapeLayer.",
             "cat": "AfterEffects",
             "subcat": "Shapes",
@@ -3087,7 +3127,7 @@
         },
         {
             "file": "src/after-effects-shapes.js",
-            "line": 1074,
+            "line": 1085,
             "description": "Add Repeater effects to ShapeLayer.",
             "cat": "AfterEffects",
             "subcat": "Shapes",
@@ -3111,7 +3151,7 @@
         },
         {
             "file": "src/after-effects-shapes.js",
-            "line": 1107,
+            "line": 1118,
             "description": "Add Trim Paths effect to ShapeLayer.",
             "cat": "AfterEffects",
             "subcat": "Shapes",
@@ -3135,7 +3175,7 @@
         },
         {
             "file": "src/after-effects-shapes.js",
-            "line": 1135,
+            "line": 1146,
             "description": "Add Twist effect to ShapeLayer.",
             "cat": "AfterEffects",
             "subcat": "Shapes",
@@ -3159,7 +3199,7 @@
         },
         {
             "file": "src/after-effects-shapes.js",
-            "line": 1162,
+            "line": 1173,
             "description": "Add Wiggle Path effect to ShapeLayer.",
             "cat": "AfterEffects",
             "subcat": "Shapes",
@@ -3183,7 +3223,7 @@
         },
         {
             "file": "src/after-effects-shapes.js",
-            "line": 1196,
+            "line": 1207,
             "description": "Add Wiggle Transform effect to ShapeLayer.",
             "cat": "AfterEffects",
             "subcat": "Shapes",
@@ -3207,7 +3247,7 @@
         },
         {
             "file": "src/after-effects-shapes.js",
-            "line": 1231,
+            "line": 1242,
             "description": "Add Zig Zag effect to ShapeLayer.",
             "cat": "AfterEffects",
             "subcat": "Shapes",
@@ -7004,27 +7044,31 @@
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1136"
+            "line": " src/after-effects-environment.js:1129"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1170"
+            "line": " src/after-effects-environment.js:1145"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1180"
+            "line": " src/after-effects-environment.js:1179"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1202"
+            "line": " src/after-effects-environment.js:1189"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1240"
+            "line": " src/after-effects-environment.js:1211"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1258"
+            "line": " src/after-effects-environment.js:1249"
+        },
+        {
+            "message": "unknown tag: cat",
+            "line": " src/after-effects-environment.js:1267"
         },
         {
             "message": "unknown tag: cat",
@@ -7148,59 +7192,59 @@
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-shapes.js:1048"
+            "line": " src/after-effects-shapes.js:1059"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-shapes.js:1048"
+            "line": " src/after-effects-shapes.js:1059"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-shapes.js:1074"
+            "line": " src/after-effects-shapes.js:1085"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-shapes.js:1074"
+            "line": " src/after-effects-shapes.js:1085"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-shapes.js:1107"
+            "line": " src/after-effects-shapes.js:1118"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-shapes.js:1107"
+            "line": " src/after-effects-shapes.js:1118"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-shapes.js:1135"
+            "line": " src/after-effects-shapes.js:1146"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-shapes.js:1135"
+            "line": " src/after-effects-shapes.js:1146"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-shapes.js:1162"
+            "line": " src/after-effects-shapes.js:1173"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-shapes.js:1162"
+            "line": " src/after-effects-shapes.js:1173"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-shapes.js:1196"
+            "line": " src/after-effects-shapes.js:1207"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-shapes.js:1196"
+            "line": " src/after-effects-shapes.js:1207"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-shapes.js:1231"
+            "line": " src/after-effects-shapes.js:1242"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-shapes.js:1231"
+            "line": " src/after-effects-shapes.js:1242"
         },
         {
             "message": "unknown tag: cat",
