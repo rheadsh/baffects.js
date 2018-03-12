@@ -12,3 +12,7 @@ To run sketches:
 
 
 ![gif](https://i.imgur.com/JsBk4mE.gif)
+
+
+NOTE:
+Currently only the english version is fully supported because of properties name conventions inside After Effects.
