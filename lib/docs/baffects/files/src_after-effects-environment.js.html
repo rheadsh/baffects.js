@@ -443,7 +443,7 @@ pub.getProperty = function (layer, path) {
 /**
  * Add FX to a specific layer.
  * @cat AfterEffects
- * @method addFx
+ * @method addFX
  * @param {Properties} layer Object or AVLayer to add fx to
  * @param {String} fx Name of the effect to add to layer
  * @return {Properties} Properties object with all animatable properties. Attribute names are built without spaces and all lower case. (Ej. &quot;fx.color&quot; To get the property &quot;Effects/Fill/Color&quot;).
@@ -624,6 +624,31 @@ function scopeTransformProperties(obb) {
     setTransformPropertiesObject();
 
     return this.obb;
+};
+
+/**
+ * Add item to composition
+ * @method addLayer
+ * @param {Item} item 
+ * @return {Properties} Transform properties
+ */
+pub.addLayer = function(item) {
+    var obb = new Properties();
+    var layer = thisComp.layers.add(item);
+    obb.layer = layer;
+    scopeTransformProperties(obb);
+    return obb;
+};
+
+/**
+ * Turn on collapse transformation on layer
+ * @param {Properties} layer 
+ */
+pub.collapseVectors = function(layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    
+    layer.collapseTransformation = true;
 };
 
 /**
@@ -1096,8 +1121,6 @@ pub.createShapes = function (layers) {
 };
 
 
-
-
 //______________________________________________________________________________________________________________________
 // Setter and getter methods for global modes 
 
@@ -1138,7 +1161,7 @@ pub.anchorMode = function (mode) {
  * Set global blend mode for layers.
  * @cat AfterEffects
  * @method blendMode
- * @param {BlendMode} mode 
+ * @param {ADD|ALPHA_ADD|CLASSIC_COLOR_BURN|CLASSIC_COLOR_DODGE|CLASSIC_DIFFERENCE|COLOR|COLOR_BURN|COLOR_DODGE|DANCING_DISSOLVE|DARKEN|DARKER_COLOR|DIFFERENCE|DISSOLVE|DIVIDE|EXCLUSION|HARD_LIGHT|HARD_MIX|HUE|LIGHTEN|LIGHTER_COLOR|LINEAR_BURN|LINEAR_DODGE|LINEAR_LIGHT|LUMINESCENT_PREMUL|LUMINOSITY|MULTIPLY|NORMAL|OVERLAY|PIN_LIGHT|SATURATION|SCREEN|SILHOUETTE_LUMA|SUBTRACT|SOFT_LIGHT|STENCIL_ALPHA|STENCIL_LUMA|VIVID_LIGHT} mode 
  */
 pub.blendMode = function (mode) {
     currBlendMode = mode;
