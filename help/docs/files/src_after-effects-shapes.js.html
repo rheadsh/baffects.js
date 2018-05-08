@@ -1,3 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>src/after-effects-shapes.js - baffects.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="icon" href="../assets/favicon.ico">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+                <h1><img src="../assets/css/logo.png" title="baffects.js" width="117" height="52"></h1>
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: 0.1</em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+                    <h2 class="off-left">APIs</h2>
+                    <div id="api-tabview" class="tabview">
+                        <ul class="tabs">
+                            <li><a href="#api-classes">Classes</a></li>
+                            <li><a href="#api-modules">Modules</a></li>
+                        </ul>
+                
+                        <div id="api-tabview-filter">
+                            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+                        </div>
+                
+                        <div id="api-tabview-panel">
+                            <ul id="api-classes" class="apis classes">
+                                <li><a href="../classes/b.html">b</a></li>
+                            </ul>
+                
+                
+                            <ul id="api-modules" class="apis modules">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+                    Show:
+                    <label for="api-show-inherited">
+                        <input type="checkbox" id="api-show-inherited" checked>
+                        Inherited
+                    </label>
+            
+                    <label for="api-show-protected">
+                        <input type="checkbox" id="api-show-protected">
+                        Protected
+                    </label>
+            
+                    <label for="api-show-private">
+                        <input type="checkbox" id="api-show-private">
+                        Private
+                    </label>
+                    <label for="api-show-deprecated">
+                        <input type="checkbox" id="api-show-deprecated">
+                        Deprecated
+                    </label>
+            
+                </div>
+            
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+<h1 class="file-heading">File: src/after-effects-shapes.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
 ﻿//Shapes
 
 /**
@@ -15,16 +97,16 @@
  * @return {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity].
  *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created solid AVLayer reference.
  *
- * <h4> Syntax: </h4>
- * var solid = b.solid();                               <br>
- * var solid = b.solid(name);                           <br>
- * var solid = b.solid(duration);                       <br>
- * var solid = b.solid(x, y, w, h);                     <br>
- * var solid = b.solid(name, x, y, w, h);               <br>
- * var solid = b.solid(x, y, w, h, duration);           <br>
- * var solid = b.solid(x, y, z, w, h);                  <br>
- * var solid = b.solid(name, x, y, z, w, h);            <br>
- * var solid = b.solid(x, y, z, w, h, duration);        <br>
+ * &lt;h4&gt; Syntax: &lt;/h4&gt;
+ * var solid = b.solid();                               &lt;br&gt;
+ * var solid = b.solid(name);                           &lt;br&gt;
+ * var solid = b.solid(duration);                       &lt;br&gt;
+ * var solid = b.solid(x, y, w, h);                     &lt;br&gt;
+ * var solid = b.solid(name, x, y, w, h);               &lt;br&gt;
+ * var solid = b.solid(x, y, w, h, duration);           &lt;br&gt;
+ * var solid = b.solid(x, y, z, w, h);                  &lt;br&gt;
+ * var solid = b.solid(name, x, y, z, w, h);            &lt;br&gt;
+ * var solid = b.solid(x, y, z, w, h, duration);        &lt;br&gt;
  */
 pub.solid = function (name, x, y, z, w, h, dur) {
     var a = arguments[0],
@@ -39,45 +121,45 @@ pub.solid = function (name, x, y, z, w, h, dur) {
     if (!curr3DMode) {
         switch (arguments.length) {
             case 0:
-                newSolid = createSolid(thisComp, "solid", pub.width / 2, pub.height / 2, 0, pub.width, pub.height, pub.getDuration());
-                newSolid.name = "solid_" + (thisComp.numLayers).toString();
+                newSolid = createSolid(thisComp, &quot;solid&quot;, pub.width / 2, pub.height / 2, 0, pub.width, pub.height, pub.getDuration());
+                newSolid.name = &quot;solid_&quot; + (thisComp.numLayers).toString();
                 return newSolid;
             case 1:
-                if (typeof a === "string") {
+                if (typeof a === &quot;string&quot;) {
                     newSolid = createSolid(thisComp, a, pub.width / 2, pub.height / 2, 0, pub.width, pub.height, pub.getDuration());
                     return newSolid;
                 } else {
-                    newSolid = createSolid(thisComp, "solid", pub.width / 2, pub.height / 2, 0, pub.width, pub.height, a);
-                    newSolid.name = "solid_" + (thisComp.numLayers).toString();
+                    newSolid = createSolid(thisComp, &quot;solid&quot;, pub.width / 2, pub.height / 2, 0, pub.width, pub.height, a);
+                    newSolid.name = &quot;solid_&quot; + (thisComp.numLayers).toString();
                     return newSolid;
                 }
             case 4:
-                newSolid = createSolid(thisComp, "solid", a, b, 0, c, d, pub.getDuration());
-                newSolid.name = "solid_" + (thisComp.numLayers).toString();
+                newSolid = createSolid(thisComp, &quot;solid&quot;, a, b, 0, c, d, pub.getDuration());
+                newSolid.name = &quot;solid_&quot; + (thisComp.numLayers).toString();
                 return newSolid;
             case 5:
-                if (typeof a === "string") {
+                if (typeof a === &quot;string&quot;) {
                     newSolid = createSolid(thisComp, a, b, c, 0, d, e, pub.getDuration());
                     return newSolid;
                 } else {
-                    newSolid = createSolid(thisComp, "solid", a, b, 0, c, d, e);
-                    newSolid.name = "solid_" + (thisComp.numLayers).toString();
+                    newSolid = createSolid(thisComp, &quot;solid&quot;, a, b, 0, c, d, e);
+                    newSolid.name = &quot;solid_&quot; + (thisComp.numLayers).toString();
                     return newSolid;
                 }
         }
     } else {
         switch (arguments.length) {
             case 5:
-                newSolid = createSolid(thisComp, "solid", a, b, c, d, e, pub.getDuration());
-                newSolid.name = "solid_" + (thisComp.numLayers).toString();
+                newSolid = createSolid(thisComp, &quot;solid&quot;, a, b, c, d, e, pub.getDuration());
+                newSolid.name = &quot;solid_&quot; + (thisComp.numLayers).toString();
                 return newSolid;
             case 6:
-                if (typeof a === "string") {
+                if (typeof a === &quot;string&quot;) {
                     newSolid = createSolid(thisComp, a, b, c, d, e, f, pub.getDuration());
                     return newSolid;
                 } else {
-                    newSolid = createSolid(thisComp, "solid", a, b, c, d, e, f);
-                    newSolid.name = "solid_" + (thisComp.numLayers).toString();
+                    newSolid = createSolid(thisComp, &quot;solid&quot;, a, b, c, d, e, f);
+                    newSolid.name = &quot;solid_&quot; + (thisComp.numLayers).toString();
                     return newSolid;
                 }
         }
@@ -133,13 +215,13 @@ function createSolid(comp, name, x, y, z, w, h, dur) {
  * @return {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, size, fill, stroke, weight, round].
  *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
  * 
- * <h4> Syntax: </h4>
- * var rect = b.rect(x, y);                             <br>
- * var rect = b.rect(x, y, w, h);                       <br>
- * var rect = b.rect(x, y, w, h, roundness);            <br>
- * var rect = b.rect(x, y, z);                          <br>
- * var rect = b.rect(x, y, z, w, h);                    <br>
- * var rect = b.rect(x, y, z, w, h, roundness);         <br>
+ * &lt;h4&gt; Syntax: &lt;/h4&gt;
+ * var rect = b.rect(x, y);                             &lt;br&gt;
+ * var rect = b.rect(x, y, w, h);                       &lt;br&gt;
+ * var rect = b.rect(x, y, w, h, roundness);            &lt;br&gt;
+ * var rect = b.rect(x, y, z);                          &lt;br&gt;
+ * var rect = b.rect(x, y, z, w, h);                    &lt;br&gt;
+ * var rect = b.rect(x, y, z, w, h, roundness);         &lt;br&gt;
  */
 pub.rect = function (x, y, z, w, h, round) {
     var a = arguments[0],
@@ -188,8 +270,8 @@ function drawRectShape(comp, x, y, z, w, h, round) {
         shape.threeDLayer = true;
     }
 
-    this.shapeGroup = this.shape.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
-    this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Rect");
+    this.shapeGroup = this.shape.property(&quot;ADBE Root Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
+    this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Shape - Rect&quot;);
 
     if (currStrokeState) {
         createStroke();
@@ -201,8 +283,8 @@ function drawRectShape(comp, x, y, z, w, h, round) {
 
     setTransformPropertiesObject();
     setStylePropertiesObject();
-    this.obb.size = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Rect").property("ADBE Vector Rect Size");
-    this.obb.round = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Rect").property("ADBE Vector Rect Roundness");
+    this.obb.size = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Rect&quot;).property(&quot;ADBE Vector Rect Size&quot;);
+    this.obb.round = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Rect&quot;).property(&quot;ADBE Vector Rect Roundness&quot;);
 
     // Set properties values on shape through Properies object
     this.obb.size.setValue([w, h]);
@@ -243,11 +325,11 @@ function drawRectShape(comp, x, y, z, w, h, round) {
  * @return {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, size, fill, stroke, weight].
  *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
  * 
- * <h4> Syntax: </h4>
- * var ellipse = b.ellipse(x, y);                             <br>
- * var ellipse = b.ellipse(x, y, w, h);                       <br>
- * var ellipse = b.ellipse(x, y, z);                          <br>
- * var ellipse = b.ellipse(x, y, z, w, h);                    <br>
+ * &lt;h4&gt; Syntax: &lt;/h4&gt;
+ * var ellipse = b.ellipse(x, y);                             &lt;br&gt;
+ * var ellipse = b.ellipse(x, y, w, h);                       &lt;br&gt;
+ * var ellipse = b.ellipse(x, y, z);                          &lt;br&gt;
+ * var ellipse = b.ellipse(x, y, z, w, h);                    &lt;br&gt;
  */
 pub.ellipse = function (x, y, z, w, h) {
     var a = arguments[0],
@@ -289,8 +371,8 @@ function drawEllipseShape(comp, x, y, z, w, h) {
         shape.threeDLayer = true;
     }
 
-    this.shapeGroup = this.shape.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
-    this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Ellipse");
+    this.shapeGroup = this.shape.property(&quot;ADBE Root Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
+    this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Shape - Ellipse&quot;);
 
     if (currStrokeState) {
         createStroke();
@@ -302,7 +384,7 @@ function drawEllipseShape(comp, x, y, z, w, h) {
 
     setTransformPropertiesObject();
     setStylePropertiesObject();
-    this.obb.size = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Ellipse").property("ADBE Vector Ellipse Size");
+    this.obb.size = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Ellipse&quot;).property(&quot;ADBE Vector Ellipse Size&quot;);
 
     // Set properties values on shape through Properies object
     this.obb.size.setValue([w, h]);
@@ -342,10 +424,10 @@ function drawEllipseShape(comp, x, y, z, w, h) {
  * @return {Properties} [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, points, radius, fill, stroke, weight].
  *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
  * 
- * <h4> Syntax: </h4>
- * var polygon = b.polygon(x, y);                             <br>
- * var polygon = b.polygon(x, y, r, n);                       <br>
- * var polygon = b.ellipse(x, y, z);                          <br>
+ * &lt;h4&gt; Syntax: &lt;/h4&gt;
+ * var polygon = b.polygon(x, y);                             &lt;br&gt;
+ * var polygon = b.polygon(x, y, r, n);                       &lt;br&gt;
+ * var polygon = b.ellipse(x, y, z);                          &lt;br&gt;
  */
 pub.polygon = function (x, y, z, r, n) {
     var a = arguments[0],
@@ -386,9 +468,9 @@ function drawPolygonShape(comp, x, y, z, r, n) {
         this.shape.threeDLayer = true;
     }
 
-    this.shapeGroup = this.shape.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
-    var gon = this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Star");
-    gon.property("ADBE Vector Star Type").setValue(2);
+    this.shapeGroup = this.shape.property(&quot;ADBE Root Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
+    var gon = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Shape - Star&quot;);
+    gon.property(&quot;ADBE Vector Star Type&quot;).setValue(2);
 
     if (currStrokeState) {
         createStroke();
@@ -400,9 +482,9 @@ function drawPolygonShape(comp, x, y, z, r, n) {
 
     setTransformPropertiesObject();
     setStylePropertiesObject();
-    this.obb.points = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Star").property("ADBE Vector Star Points");
-    this.obb.radius = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Star").property("ADBE Vector Star Outer Radius");
-    this.obb.roundness = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Star").property("ADBE Vector Star Outer Roundess");
+    this.obb.points = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Star&quot;).property(&quot;ADBE Vector Star Points&quot;);
+    this.obb.radius = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Star&quot;).property(&quot;ADBE Vector Star Outer Radius&quot;);
+    this.obb.roundness = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Star&quot;).property(&quot;ADBE Vector Star Outer Roundess&quot;);
 
     // Set properties values on shape through Properies object
     this.obb.points.setValue(n);
@@ -442,8 +524,8 @@ function drawPolygonShape(comp, x, y, z, r, n) {
  * @return {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, stroke, weight].
  *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
  * @example
- * b.stroke(1);                                                            <br>
- * var line = b.line(0, 0, b.width, b.height);                             <br>
+ * b.stroke(1);                                                            &lt;br&gt;
+ * var line = b.line(0, 0, b.width, b.height);                             &lt;br&gt;
  */
 pub.line = function (x1, y1, x2, y2) {
     var shape = drawLineShape(thisComp, x1, y1, x2, y2);
@@ -463,14 +545,14 @@ function drawLineShape(comp, x1, y1, x2, y2) {
         this.shape.threeDLayer = true;
     }
 
-    this.shapeGroup = this.shape.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
-    this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Group");
+    this.shapeGroup = this.shape.property(&quot;ADBE Root Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
+    this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Shape - Group&quot;);
 
     createStroke();
 
     setTransformPropertiesObject();
     setStylePropertiesObject();
-    this.obb.path = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Group").property("ADBE Vector Shape");
+    this.obb.path = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Group&quot;).property(&quot;ADBE Vector Shape&quot;);
 
     // Set properties values on shape through Properies object
     var drawing = new Shape();
@@ -522,7 +604,7 @@ function drawLineShape(comp, x1, y1, x2, y2) {
  * var inTan = [];
  * var outTan = [];
  *   
- * for (var i=0; i<20; i++) {
+ * for (var i=0; i&lt;20; i++) {
  *    var x = b.random(b.width);
  *    var y = b.random(b.height);
  *    points.push([x,y]);
@@ -568,8 +650,8 @@ function drawShape(comp, v, inTangents, outTangents, closed) {
         this.shape.threeDLayer = true;
     }
 
-    this.shapeGroup = this.shape.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
-    this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Group");
+    this.shapeGroup = this.shape.property(&quot;ADBE Root Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
+    this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Shape - Group&quot;);
 
     if (currStrokeState) {
         createStroke();
@@ -581,7 +663,7 @@ function drawShape(comp, v, inTangents, outTangents, closed) {
 
     setTransformPropertiesObject();
     setStylePropertiesObject();
-    this.obb.path = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Shape - Group").property("ADBE Vector Shape");
+    this.obb.path = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Shape - Group&quot;).property(&quot;ADBE Vector Shape&quot;);
 
     // Set properties values on shape through Properies object
     var drawing = new Shape();
@@ -622,14 +704,14 @@ function drawShape(comp, v, inTangents, outTangents, closed) {
 var doTranslate = function (points) {
     var newPoints = [];
     if (points[0].length === 2) {
-        for (var i = 0; i < points.length; i++) {
+        for (var i = 0; i &lt; points.length; i++) {
             var temp = [];
             temp[0] = points[i][0] + currMatrix.position[0];
             temp[1] = points[i][1] + currMatrix.position[1];
             newPoints.push(temp);
         }
     } else {
-        for (var i = 0; i < points.length; i++) {
+        for (var i = 0; i &lt; points.length; i++) {
             var temp = [];
             temp[0] = points[i][0] + currMatrix.position[0];
             temp[1] = points[i][1] + currMatrix.position[1];
@@ -649,9 +731,9 @@ var doTranslate = function (points) {
  * @return {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity].
  *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
  * 
- * <h4> Syntax: </h4>
- * var null = b.nullLayer();                </br>
- * var null = b.nullLayer(duration);        </br>
+ * &lt;h4&gt; Syntax: &lt;/h4&gt;
+ * var null = b.nullLayer();                &lt;/br&gt;
+ * var null = b.nullLayer(duration);        &lt;/br&gt;
  */
 pub.nullLayer = function (duration) {
     var a = arguments[0],
@@ -748,9 +830,9 @@ pub.endShape = function (close) {
     var shape;
     switch (currDrawingMode) {
         case 0:
-            if (inTan.length > 0 && outTan.length > 0) {
+            if (inTan.length &gt; 0 &amp;&amp; outTan.length &gt; 0) {
                 shape = drawShape(thisComp, vertix, inTan, outTan, isClosed);
-            } else if (inTan.length > 0) {
+            } else if (inTan.length &gt; 0) {
                 shape = drawShape(thisComp, vertix, inTan, inTan, isClosed);
             } else {
                 shape = drawShape(thisComp, vertix, null, null, isClosed);
@@ -761,7 +843,7 @@ pub.endShape = function (close) {
                 shape = createShapeWithLines(thisComp, vertix, null, null, isClosed, 2);
                 break;
             } else {
-                error("Bad number of vertex points for this drawing mode");
+                error(&quot;Bad number of vertex points for this drawing mode&quot;);
                 break;
             }
 
@@ -770,7 +852,7 @@ pub.endShape = function (close) {
                 shape = createShapeWithLines(thisComp, vertix, null, null, isClosed, 4);
                 break;
             } else {
-                error("Bad number of vertex points for this drawing mode");
+                error(&quot;Bad number of vertex points for this drawing mode&quot;);
                 break;
             }
 
@@ -779,7 +861,7 @@ pub.endShape = function (close) {
                 shape = createShapeWithLines(thisComp, vertix, null, null, isClosed, 3);
                 break;
             } else {
-                error("Bad number of vertex points for this drawing mode");
+                error(&quot;Bad number of vertex points for this drawing mode&quot;);
                 break;
             }
     }
@@ -834,35 +916,35 @@ function createShapeWithLines(comp, v, inTangents, outTangents, closed, inc) {
         this.shape.threeDLayer = true;
     }
 
-    var generalGroup = this.shape.property("ADBE Root Vectors Group").addProperty("ADBE Vector Group");
+    var generalGroup = this.shape.property(&quot;ADBE Root Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
 
     if (inc === 2) {
         var group = 1;
-        for (var i = 0; i < v.length; i += inc) {
+        for (var i = 0; i &lt; v.length; i += inc) {
             this.lastShapesProps = new Properties();
 
-            var shapeGroup = generalGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Group");
-            var line = shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Group");
+            var shapeGroup = generalGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
+            var line = shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Shape - Group&quot;);
 
             var drawing = new Shape();
             var cmx = currMatrix.position[0];
             var cmy = currMatrix.position[1];
             drawing.vertices = [cmx + v[i], cmy + v[i + 1]];
-            line.property("ADBE Vector Shape").setValue(drawing);
+            line.property(&quot;ADBE Vector Shape&quot;).setValue(drawing);
 
             createStroke();
         }
     }
 
     if (inc === 4 || inc === 3) {
-        for (var i = 0; i < v.length; i += inc) {
+        for (var i = 0; i &lt; v.length; i += inc) {
             this.lastShapesProps = new Properties();
 
-            this.shapeGroup = generalGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Group");
-            var line = this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Shape - Group");
+            this.shapeGroup = generalGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Group&quot;);
+            var line = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Shape - Group&quot;);
             var drawing = new Shape();
             drawing.vertices = doTranslate(v.slice(i, i + inc));
-            line.property("ADBE Vector Shape").setValue(drawing);
+            line.property(&quot;ADBE Vector Shape&quot;).setValue(drawing);
 
             if (currStrokeState) {
                 createStroke();
@@ -883,7 +965,7 @@ function createShapeWithLines(comp, v, inTangents, outTangents, closed, inc) {
 
     pub.anchor(this.obb.layer, currAnchorMode);
 
-    if (matrixStack.length > 0) {
+    if (matrixStack.length &gt; 0) {
         var cmx = currMatrix.position[0];
         var cmy = currMatrix.position[1];
         var cmz = currMatrix.position[2];
@@ -908,30 +990,30 @@ function createShapeWithLines(comp, v, inTangents, outTangents, closed, inc) {
 }
 
 function buildLastShapeProperties(group) {
-    var allGroup = group.property("ADBE Vectors Group");
-    for (var i = 0; i < allGroup.numProperties; i++) {
+    var allGroup = group.property(&quot;ADBE Vectors Group&quot;);
+    for (var i = 0; i &lt; allGroup.numProperties; i++) {
         var shapeProps = new Properties();
-        var interiorGroup = allGroup.property(i + 1).property("ADBE Vectors Group");
+        var interiorGroup = allGroup.property(i + 1).property(&quot;ADBE Vectors Group&quot;);
         checkStyleStack(i);
 
         if (currStrokeState) {
-            shapeProps.stroke = interiorGroup.property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Color");
-            shapeProps.weight = interiorGroup.property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Width");
-            shapeProps.linecap = interiorGroup.property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Line Cap");
-            shapeProps.linejoin = interiorGroup.property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Line Join");
-            shapeProps.miterlimit = interiorGroup.property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Miter Limit");
+            shapeProps.stroke = interiorGroup.property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Color&quot;);
+            shapeProps.weight = interiorGroup.property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Width&quot;);
+            shapeProps.linecap = interiorGroup.property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Line Cap&quot;);
+            shapeProps.linejoin = interiorGroup.property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Line Join&quot;);
+            shapeProps.miterlimit = interiorGroup.property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Miter Limit&quot;);
             shapeProps.stroke.setValue(currStrokeColor);
             shapeProps.weight.setValue(currStrokeWeight);
         }
 
         if (currFillState) {
-            shapeProps.fill = interiorGroup.property("ADBE Vector Graphic - Fill").property("ADBE Vector Fill Color");
+            shapeProps.fill = interiorGroup.property(&quot;ADBE Vector Graphic - Fill&quot;).property(&quot;ADBE Vector Fill Color&quot;);
             shapeProps.fill.setValue(currFillColor);
         }
 
-        var transform = allGroup.property(i + 1).property("ADBE Vector Transform Group");
-        for (var k = 0; k < transform.numProperties; k++) {
-            shapeProps[transform.property(k + 1).name.toLowerCase().replace(/\s/g, '')] = transform.property(k + 1);
+        var transform = allGroup.property(i + 1).property(&quot;ADBE Vector Transform Group&quot;);
+        for (var k = 0; k &lt; transform.numProperties; k++) {
+            shapeProps[transform.property(k + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = transform.property(k + 1);
         }
 
         lastShapes.push(shapeProps);
@@ -939,7 +1021,7 @@ function buildLastShapeProperties(group) {
 }
 
 function checkStyleStack(group) {
-    if (group < styleStack.length) {
+    if (group &lt; styleStack.length) {
         currFillState = styleStack[group].fillState;
         currFillColor = styleStack[group].fill;
         currStrokeState = styleStack[group].strokeState;
@@ -949,7 +1031,7 @@ function checkStyleStack(group) {
 }
 
 function setLastShapeStyles() {
-    for (var i = 0; i < lastShapes.length; i++) {
+    for (var i = 0; i &lt; lastShapes.length; i++) {
         checkStyleStack(i);
         if (currStrokeState) {
             lastShapes[i].stroke.setValue(currStrokeColor);
@@ -978,43 +1060,43 @@ pub.lastShape = function () {
 
 //Creating stroke and fill 
 function createStroke() {
-    var strokeHere = this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Stroke");
+    var strokeHere = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Graphic - Stroke&quot;);
     switch (currCaps) {
         case 0:
-            strokeHere.property("ADBE Vector Stroke Line Cap").setValue(1);
+            strokeHere.property(&quot;ADBE Vector Stroke Line Cap&quot;).setValue(1);
             break;
         case 1:
-            strokeHere.property("ADBE Vector Stroke Line Cap").setValue(2);
+            strokeHere.property(&quot;ADBE Vector Stroke Line Cap&quot;).setValue(2);
             break;
         case 2:
-            strokeHere.property("ADBE Vector Stroke Line Cap").setValue(3);
+            strokeHere.property(&quot;ADBE Vector Stroke Line Cap&quot;).setValue(3);
             break;
     }
 };
 
 function createFill() {
-    this.shapeGroup.property("ADBE Vectors Group").addProperty("ADBE Vector Graphic - Fill");
+    this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Graphic - Fill&quot;);
 };
 
 // Get all transform properties for shapes
 function setTransformPropertiesObject() {
-    var transform = this.shape.property("ADBE Transform Group");
-    for (var i = 0; i < transform.numProperties - 1; i++) {
-        this.obb[transform.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = transform.property(i + 1);
+    var transform = this.shape.property(&quot;ADBE Transform Group&quot;);
+    for (var i = 0; i &lt; transform.numProperties - 1; i++) {
+        this.obb[transform.property(i + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = transform.property(i + 1);
     }
 }
 
 //Recover properties of created shape layer
 function setStylePropertiesObject() {
     if (currStrokeState) {
-        this.obb.stroke = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Color");
-        this.obb.weight = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Width");
+        this.obb.stroke = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Color&quot;);
+        this.obb.weight = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Width&quot;);
         this.obb.stroke.setValue(currStrokeColor);
         this.obb.weight.setValue(currStrokeWeight);
     }
 
     if (currFillState) {
-        this.obb.fill = this.shapeGroup.property("ADBE Vectors Group").property("ADBE Vector Graphic - Fill").property("ADBE Vector Fill Color");
+        this.obb.fill = this.shapeGroup.property(&quot;ADBE Vectors Group&quot;).property(&quot;ADBE Vector Graphic - Fill&quot;).property(&quot;ADBE Vector Fill Color&quot;);
         this.obb.fill.setValue(currFillColor);
     }
 }
@@ -1057,15 +1139,15 @@ function setStylePropertiesObject() {
 // ShapeLayer FX
 
 /**
- * Add Pucker & Bloat effect to ShapeLayer.
+ * Add Pucker &amp; Bloat effect to ShapeLayer.
  * @cat AfterEffects
  * @subcat Shapes
  * @method shapePuckerBloat
  * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
  * @return {Properties} Properties object with attributes [amount].
  * @example
- * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         <br>
- * var fx = b.shapePuckerBloat(shape.layer);                        <br>
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         &lt;br&gt;
+ * var fx = b.shapePuckerBloat(shape.layer);                        &lt;br&gt;
  */
 pub.shapePuckerBloat = function (rShape) {
     var shape;
@@ -1076,8 +1158,8 @@ pub.shapePuckerBloat = function (rShape) {
     }
 
     var obb = new Properties();
-    var pb = shape.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Filter - PB");
-    obb.amount = pb.property("ADBE Vector PuckerBloat Amount");
+    var pb = shape.property(&quot;ADBE Root Vectors Group&quot;).property(1).property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Filter - PB&quot;);
+    obb.amount = pb.property(&quot;ADBE Vector PuckerBloat Amount&quot;);
 
     return obb;
 };
@@ -1090,8 +1172,8 @@ pub.shapePuckerBloat = function (rShape) {
  * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
  * @return {Properties} Properties object with attributes [copies, offset, composite, anchor, position, scale, rotation, startopacity, endopacity].
  * @example
- * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         <br>
- * var fx = b.shapeRepeater(shape.layer);                           <br>
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         &lt;br&gt;
+ * var fx = b.shapeRepeater(shape.layer);                           &lt;br&gt;
  */
 pub.shapeRepeater = function (rShape) {
     var shape;
@@ -1102,14 +1184,14 @@ pub.shapeRepeater = function (rShape) {
     }
 
     var obb = new Properties();
-    var repeater = shape.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Repeater");
-    obb.copies = repeater.property("ADBE Vector Repeater Copies");
-    obb.offset = repeater.property("ADBE Vector Repeater Offset");
-    obb.composite = repeater.property("ADBE Vector Repeater Order");
+    var repeater = shape.property(&quot;ADBE Root Vectors Group&quot;).property(1).property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Filter - Repeater&quot;);
+    obb.copies = repeater.property(&quot;ADBE Vector Repeater Copies&quot;);
+    obb.offset = repeater.property(&quot;ADBE Vector Repeater Offset&quot;);
+    obb.composite = repeater.property(&quot;ADBE Vector Repeater Order&quot;);
 
-    var transform = repeater.property("ADBE Vector Repeater Transform");
-    for (var i = 0; i < transform.numProperties; i++) {
-        obb[transform.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = transform.property(i + 1);
+    var transform = repeater.property(&quot;ADBE Vector Repeater Transform&quot;);
+    for (var i = 0; i &lt; transform.numProperties; i++) {
+        obb[transform.property(i + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = transform.property(i + 1);
     }
 
     return obb;
@@ -1123,8 +1205,8 @@ pub.shapeRepeater = function (rShape) {
  * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
  * @return {Properties} Properties object with attributes [start, end, offset].
  * @example
- * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         <br>
- * var fx = b.shapeTrimPaths(shape.layer);                          <br>
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         &lt;br&gt;
+ * var fx = b.shapeTrimPaths(shape.layer);                          &lt;br&gt;
  */
 pub.shapeTrimPaths = function (rShape) {
     var shape;
@@ -1135,10 +1217,10 @@ pub.shapeTrimPaths = function (rShape) {
     }
 
     var obb = new Properties();
-    var trim = shape.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Trim");
-    obb.start = trim.property("ADBE Vector Trim Start");
-    obb.end = trim.property("ADBE Vector Trim End");
-    obb.offset = trim.property("ADBE Vector Trim Offset");
+    var trim = shape.property(&quot;ADBE Root Vectors Group&quot;).property(1).property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Filter - Trim&quot;);
+    obb.start = trim.property(&quot;ADBE Vector Trim Start&quot;);
+    obb.end = trim.property(&quot;ADBE Vector Trim End&quot;);
+    obb.offset = trim.property(&quot;ADBE Vector Trim Offset&quot;);
 
     return obb;
 };
@@ -1151,8 +1233,8 @@ pub.shapeTrimPaths = function (rShape) {
  * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
  * @return {Properties} Properties object with attributes [angle, center].
  * @example
- * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         <br>
- * var fx = b.shapeTwist(shape.layer);                              <br>
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         &lt;br&gt;
+ * var fx = b.shapeTwist(shape.layer);                              &lt;br&gt;
  */
 pub.shapeTwist = function (rShape) {
     var shape;
@@ -1163,9 +1245,9 @@ pub.shapeTwist = function (rShape) {
     }
 
     var obb = new Properties();
-    var twist = shape.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Twist");
-    obb.angle = twist.property("ADBE Vector Twist Angle");
-    obb.center = twist.property("ADBE Vector Twist Center");
+    var twist = shape.property(&quot;ADBE Root Vectors Group&quot;).property(1).property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Filter - Twist&quot;);
+    obb.angle = twist.property(&quot;ADBE Vector Twist Angle&quot;);
+    obb.center = twist.property(&quot;ADBE Vector Twist Center&quot;);
 
     return obb;
 };
@@ -1178,8 +1260,8 @@ pub.shapeTwist = function (rShape) {
  * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
  * @return {Properties} Properties object with attributes [size, detail, points, wiggles, correlation, temporalphase, spatialphase, seed].
  * @example
- * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         <br>
- * var fx = b.shapeWigglePaths(shape.layer);                        <br>
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         &lt;br&gt;
+ * var fx = b.shapeWigglePaths(shape.layer);                        &lt;br&gt;
  */
 pub.shapeWigglePaths = function (rShape) {
     var shape;
@@ -1190,15 +1272,15 @@ pub.shapeWigglePaths = function (rShape) {
     }
 
     var obb = new Properties();
-    var wiggle = shape.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Roughen");
-    obb.size = wiggle.property("ADBE Vector Roughen Size");
-    obb.detail = wiggle.property("ADBE Vector Roughen Detail");
-    obb.points = wiggle.property("ADBE Vector Roughen Points");
-    obb.wiggles = wiggle.property("ADBE Vector Temporal Freq");
-    obb.correlation = wiggle.property("ADBE Vector Correlation");
-    obb.temporalphase = wiggle.property("ADBE Vector Temporal Phase");
-    obb.spatialphase = wiggle.property("ADBE Vector Spatial Phase");
-    obb.seed = wiggle.property("ADBE Vector Random Seed");
+    var wiggle = shape.property(&quot;ADBE Root Vectors Group&quot;).property(1).property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Filter - Roughen&quot;);
+    obb.size = wiggle.property(&quot;ADBE Vector Roughen Size&quot;);
+    obb.detail = wiggle.property(&quot;ADBE Vector Roughen Detail&quot;);
+    obb.points = wiggle.property(&quot;ADBE Vector Roughen Points&quot;);
+    obb.wiggles = wiggle.property(&quot;ADBE Vector Temporal Freq&quot;);
+    obb.correlation = wiggle.property(&quot;ADBE Vector Correlation&quot;);
+    obb.temporalphase = wiggle.property(&quot;ADBE Vector Temporal Phase&quot;);
+    obb.spatialphase = wiggle.property(&quot;ADBE Vector Spatial Phase&quot;);
+    obb.seed = wiggle.property(&quot;ADBE Vector Random Seed&quot;);
 
     return obb;
 };
@@ -1212,8 +1294,8 @@ pub.shapeWigglePaths = function (rShape) {
  * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
  * @return {Properties} Properties object with attributes [wiggles, correlation, temporalphase, spatialphase, seed, anchor, position, scale, rotation].
  * @example
- * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         <br>
- * var fx = b.shapeWiggleTransform(shape.layer);                    <br>
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         &lt;br&gt;
+ * var fx = b.shapeWiggleTransform(shape.layer);                    &lt;br&gt;
  */
 pub.shapeWiggleTransform = function (rShape) {
     var shape;
@@ -1224,16 +1306,16 @@ pub.shapeWiggleTransform = function (rShape) {
     }
 
     var obb = new Properties();
-    var wiggle = shape.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Wiggler");
-    obb.wiggles = wiggle.property("ADBE Vector Xform Temporal Freq");
-    obb.correlation = wiggle.property("ADBE Vector Correlation");
-    obb.temporalphase = wiggle.property("ADBE Vector Temporal Phase");
-    obb.spatialphase = wiggle.property("ADBE Vector Spatial Phase");
-    obb.seed = wiggle.property("ADBE Vector Random Seed");
+    var wiggle = shape.property(&quot;ADBE Root Vectors Group&quot;).property(1).property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Filter - Wiggler&quot;);
+    obb.wiggles = wiggle.property(&quot;ADBE Vector Xform Temporal Freq&quot;);
+    obb.correlation = wiggle.property(&quot;ADBE Vector Correlation&quot;);
+    obb.temporalphase = wiggle.property(&quot;ADBE Vector Temporal Phase&quot;);
+    obb.spatialphase = wiggle.property(&quot;ADBE Vector Spatial Phase&quot;);
+    obb.seed = wiggle.property(&quot;ADBE Vector Random Seed&quot;);
 
-    var transform = wiggle.property("ADBE Vector Wiggler Transform");
-    for (var i = 0; i < transform.numProperties; i++) {
-        obb[transform.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = transform.property(i + 1);
+    var transform = wiggle.property(&quot;ADBE Vector Wiggler Transform&quot;);
+    for (var i = 0; i &lt; transform.numProperties; i++) {
+        obb[transform.property(i + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = transform.property(i + 1);
     }
 
     return obb;
@@ -1247,8 +1329,8 @@ pub.shapeWiggleTransform = function (rShape) {
  * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
  * @return {Properties} Properties object with attributes [size, ridges, points].
  * @example
- * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         <br>
- * var fx = b.shapeZigZag(shape.layer);                             <br>
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         &lt;br&gt;
+ * var fx = b.shapeZigZag(shape.layer);                             &lt;br&gt;
  */
 pub.shapeZigZag = function (rShape) {
     var shape;
@@ -1259,10 +1341,10 @@ pub.shapeZigZag = function (rShape) {
     }
 
     var obb = new Properties();
-    var zz = shape.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group").addProperty("ADBE Vector Filter - Zigzag");
-    obb.size = zz.property("ADBE Vector Zigzag Size");
-    obb.ridges = zz.property("ADBE Vector Zigzag Detail");
-    obb.points = zz.property("ADBE Vector Zigzag Points");
+    var zz = shape.property(&quot;ADBE Root Vectors Group&quot;).property(1).property(&quot;ADBE Vectors Group&quot;).addProperty(&quot;ADBE Vector Filter - Zigzag&quot;);
+    obb.size = zz.property(&quot;ADBE Vector Zigzag Size&quot;);
+    obb.ridges = zz.property(&quot;ADBE Vector Zigzag Detail&quot;);
+    obb.points = zz.property(&quot;ADBE Vector Zigzag Points&quot;);
 
     return obb;
 };
@@ -1273,21 +1355,39 @@ pub.shapeZigZag = function (rShape) {
 // pub.paint = function(points) {
 //     this.obb = new Properties();
 //     var solid = pub.solid();
-// 	var paint = solid.layer.effect.addProperty("ADBE Paint");
-//     var brush = paint.property("ADBE Paint Group").addProperty("ADBE Paint Atom");
+// 	var paint = solid.layer.effect.addProperty(&quot;ADBE Paint&quot;);
+//     var brush = paint.property(&quot;ADBE Paint Group&quot;).addProperty(&quot;ADBE Paint Atom&quot;);
 
 //     this.obb.layer = solid.layer;
-//     this.obb.path = brush.property("ADBE Paint Shape");
+//     this.obb.path = brush.property(&quot;ADBE Paint Shape&quot;);
 
 //     var shape = new Shape();
 //     shape.vertices = points;
 //     // this.obb.path.setValue(shape);
-//     solid.layer.property("ADBE Effect Parade").property("ADBE Paint").property("ADBE Paint Group").property("ADBE Paint Atom").property("ADBE Paint Shape").setValue(shape);
+//     solid.layer.property(&quot;ADBE Effect Parade&quot;).property(&quot;ADBE Paint&quot;).property(&quot;ADBE Paint Group&quot;).property(&quot;ADBE Paint Atom&quot;).property(&quot;ADBE Paint Shape&quot;).setValue(shape);
 
-//     var strokeProps = brush.property("ADBE Paint Properties");
-//     for (var i = 0; i < strokeProps.numProperties - 1; i++) {
-//         this.obb[strokeProps.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = strokeProps.property(i + 1);
+//     var strokeProps = brush.property(&quot;ADBE Paint Properties&quot;);
+//     for (var i = 0; i &lt; strokeProps.numProperties - 1; i++) {
+//         this.obb[strokeProps.property(i + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = strokeProps.property(i + 1);
 //     }
 
 //     return this.obb;
 // };
+    </pre>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

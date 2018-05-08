@@ -9,11 +9,11 @@
       "./bin",
       "./examples",
       "./lib",
-      "./test"
+      "./sketches"
     ],
     "paths": [
       "."
     ],
-    "outdir": "./docs/baffects"
+    "outdir": "../help/docs"
   }
 }

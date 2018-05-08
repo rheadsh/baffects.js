@@ -146,7 +146,11 @@ function createTimeKey(prop, time, value, inTan, outTan) {
 
     if (prop.propertyValueType === PropertyValueType.ThreeD_SPATIAL || prop.propertyValueType === PropertyValueType.TwoD_SPATIAL) {
         if (currSpatialInterpolationMode == pub.LINEAR) {
-            prop.setSpatialTangentsAtKey(prop.numKeys, [0, 0, 0], [0, 0, 0]);
+            try {
+                prop.setSpatialTangentsAtKey(prop.numKeys, [0, 0, 0], [0, 0, 0]);
+            } catch (e) {
+                prop.setSpatialTangentsAtKey(prop.numKeys, [0, 0], [0, 0]);
+            }
         } else if (currSpatialInterpolationMode === &quot;auto&quot;) {
             prop.setSpatialAutoBezierAtKey(prop.numKeys, true);
         }
