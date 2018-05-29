@@ -1427,7 +1427,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 75,
+            "line": 74,
             "description": "Clean composition layers and items references.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1436,7 +1436,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 97,
+            "line": 96,
             "description": "Sets background color for the composition.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1452,7 +1452,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 120,
+            "line": 119,
             "description": "Get the total number of frames from composition.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1465,7 +1465,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 130,
+            "line": 129,
             "description": "Duration of the composition in seconds.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1478,7 +1478,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 140,
+            "line": 139,
             "description": "Set composition to new duration.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1494,7 +1494,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 150,
+            "line": 149,
             "description": "Total number of layers in the composition",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1507,7 +1507,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 161,
+            "line": 160,
             "description": "Return all the compositions in the project.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1520,7 +1520,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 181,
+            "line": 180,
             "description": "Delete a composition.",
             "itemtype": "method",
             "name": "deleteComp",
@@ -1535,7 +1535,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 200,
+            "line": 199,
             "description": "Get the composition center",
             "itemtype": "method",
             "name": "getCenter",
@@ -1547,7 +1547,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 213,
+            "line": 212,
             "description": "Get item reference by name.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1567,7 +1567,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 237,
+            "line": 235,
             "description": "Adds item to comp (for ease of use loadItem() is better suited for this task).",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1587,7 +1587,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 261,
+            "line": 259,
             "description": "Get layer reference by name.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1607,7 +1607,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 300,
+            "line": 298,
             "description": "Get all layers as Properties object from composition.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1627,7 +1627,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 329,
+            "line": 327,
             "description": "Get layers by range.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1652,7 +1652,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 342,
+            "line": 340,
             "description": "Gets a property from a specified layer, this function is useful in case Properties is not returning a correct layer or effects property.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1677,7 +1677,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 361,
+            "line": 359,
             "description": "Add FX to a specific layer.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1702,7 +1702,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 382,
+            "line": 380,
             "description": "Add slider to layer",
             "itemtype": "method",
             "name": "slider",
@@ -1731,7 +1731,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 405,
+            "line": 403,
             "description": "Return true if seleted layer is Shape Layer",
             "itemtype": "method",
             "name": "isShape",
@@ -1750,7 +1750,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 422,
+            "line": 420,
             "description": "Add preset to a specific layer",
             "itemtype": "method",
             "name": "addPreset",
@@ -1774,7 +1774,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 446,
+            "line": 444,
             "itemtype": "method",
             "name": "getAllFXProperties",
             "params": [
@@ -1795,7 +1795,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 477,
+            "line": 475,
             "description": "Sets track matte function in layer.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1816,7 +1816,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 490,
+            "line": 488,
             "description": "Precompose layers.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1837,7 +1837,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 503,
+            "line": 501,
             "description": "Return the index number ;",
             "itemtype": "method",
             "name": "getIndex",
@@ -1852,7 +1852,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 514,
+            "line": 512,
             "description": "Return only manually selected layers from composition.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1865,7 +1865,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 547,
+            "line": 544,
             "description": "Add item to composition",
             "itemtype": "method",
             "name": "addLayer",
@@ -1884,7 +1884,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 561,
+            "line": 558,
             "description": "Turn on collapse transformation on layer",
             "itemtype": "method",
             "name": "collapseVectors",
@@ -1899,7 +1899,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 573,
+            "line": 570,
             "description": "Duplicate a layer n times.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1930,7 +1930,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 612,
+            "line": 609,
             "description": "Reverse layers order in timeline.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1946,7 +1946,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 644,
+            "line": 641,
             "description": "Create parent - child relationship.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -1967,7 +1967,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 659,
+            "line": 656,
             "description": "Get Layer object bounds.",
             "itemtype": "method",
             "name": "bounds",
@@ -1986,7 +1986,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 672,
+            "line": 669,
             "description": "Reposition anchor point to bounding box option: <br>\n1-------2-------3    <br>\n4-------5-------6    <br>\n7-------8-------9    <br>",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2007,7 +2007,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 901,
+            "line": 898,
             "description": "Enables motion blur to layer.",
             "itemtype": "method",
             "name": "motionBlur",
@@ -2022,7 +2022,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 916,
+            "line": 913,
             "description": "Enable adjustment layer mode",
             "itemtype": "method",
             "name": "adjustmenLayer",
@@ -2037,7 +2037,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 932,
+            "line": 928,
             "description": "Convert audio to keyframes.",
             "itemtype": "method",
             "name": "audioToKeyframes",
@@ -2056,7 +2056,25 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 959,
+            "line": 955,
+            "description": "Apply time remap to loop a sequence",
+            "itemtype": "method",
+            "name": "timeRemap",
+            "params": [
+                {
+                    "name": "layer",
+                    "description": "",
+                    "type": "Sequence"
+                }
+            ],
+            "return": {
+                "description": "1"
+            },
+            "class": "b"
+        },
+        {
+            "file": "src/after-effects-environment.js",
+            "line": 975,
             "description": "Generate frame offset between layers layers",
             "cat": "AfterEffects",
             "subcat": "FromSelections",
@@ -2073,7 +2091,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 983,
+            "line": 999,
             "description": "Create shapes from vectors layer.",
             "itemtype": "method",
             "name": "createShapes",
@@ -2093,7 +2111,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1047,
+            "line": 1063,
             "description": "Set composition to work with.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2109,7 +2127,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1065,
+            "line": 1081,
             "description": "Set anchor point to bounding box option mode: <br>\n1-------2-------3    <br>\n4-------5-------6    <br>\n7-------8-------9    <br> \nThis allows for the position to be controlled in a more intuitive way from scripting. Defaults to 5 which is the center of the layer.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2125,7 +2143,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1079,
+            "line": 1095,
             "description": "Set global blend mode for layers.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2141,7 +2159,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1089,
+            "line": 1105,
             "description": "Apply no fill.",
             "cat": "AfterEffects",
             "subcat": "Color",
@@ -2151,7 +2169,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1101,
+            "line": 1117,
             "description": "Apply no stroke.",
             "cat": "AfterEffects",
             "subcat": "Color",
@@ -2161,7 +2179,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1113,
+            "line": 1129,
             "description": "Returns the current strokeWeight in points and sets it if argument strokeWeight is given.",
             "cat": "AfterEffects",
             "subcat": "Color",
@@ -2182,7 +2200,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1132,
+            "line": 1148,
             "description": "Enables 3D manipulation in layers.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2198,7 +2216,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1142,
+            "line": 1158,
             "description": "Set specific layer blending mode.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2219,7 +2237,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1153,
+            "line": 1169,
             "description": "Set global cap mode for stroke.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2235,7 +2253,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1169,
+            "line": 1185,
             "description": "Add composition to render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2262,7 +2280,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1203,
+            "line": 1219,
             "description": "Render all compositions in render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2271,7 +2289,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1213,
+            "line": 1229,
             "description": "Clear all items from render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2280,7 +2298,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1235,
+            "line": 1251,
             "description": "Add composition to render queue.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2307,7 +2325,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1273,
+            "line": 1289,
             "description": "Render in render Adone Media Encoder.",
             "cat": "AfterEffects",
             "itemtype": "method",
@@ -2316,7 +2334,7 @@
         },
         {
             "file": "src/after-effects-environment.js",
-            "line": 1291,
+            "line": 1307,
             "description": "Suspends the calling thread for a number of milliseconds.\nDuring a sleep period, checks at 100 millisecond intervals to see whether the sleep should be terminated.",
             "cat": "Environment",
             "itemtype": "method",
@@ -6934,151 +6952,147 @@
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:75"
+            "line": " src/after-effects-environment.js:74"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:97"
+            "line": " src/after-effects-environment.js:96"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:120"
+            "line": " src/after-effects-environment.js:119"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:130"
+            "line": " src/after-effects-environment.js:129"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:140"
+            "line": " src/after-effects-environment.js:139"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:150"
+            "line": " src/after-effects-environment.js:149"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:161"
+            "line": " src/after-effects-environment.js:160"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/after-effects-environment.js:200"
+            "line": " src/after-effects-environment.js:199"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:213"
+            "line": " src/after-effects-environment.js:212"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:237"
+            "line": " src/after-effects-environment.js:235"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:261"
+            "line": " src/after-effects-environment.js:259"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:300"
+            "line": " src/after-effects-environment.js:298"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:329"
+            "line": " src/after-effects-environment.js:327"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:342"
+            "line": " src/after-effects-environment.js:340"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:361"
+            "line": " src/after-effects-environment.js:359"
         },
         {
             "message": "replacing incorrect tag: returns with return",
-            "line": " src/after-effects-environment.js:422"
+            "line": " src/after-effects-environment.js:420"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:477"
+            "line": " src/after-effects-environment.js:475"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:490"
+            "line": " src/after-effects-environment.js:488"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:514"
+            "line": " src/after-effects-environment.js:512"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:573"
+            "line": " src/after-effects-environment.js:570"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:612"
+            "line": " src/after-effects-environment.js:609"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:644"
+            "line": " src/after-effects-environment.js:641"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:672"
+            "line": " src/after-effects-environment.js:669"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:959"
+            "line": " src/after-effects-environment.js:975"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-environment.js:959"
+            "line": " src/after-effects-environment.js:975"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1047"
+            "line": " src/after-effects-environment.js:1063"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1065"
+            "line": " src/after-effects-environment.js:1081"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1079"
+            "line": " src/after-effects-environment.js:1095"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1089"
+            "line": " src/after-effects-environment.js:1105"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-environment.js:1089"
+            "line": " src/after-effects-environment.js:1105"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1101"
+            "line": " src/after-effects-environment.js:1117"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-environment.js:1101"
+            "line": " src/after-effects-environment.js:1117"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1113"
+            "line": " src/after-effects-environment.js:1129"
         },
         {
             "message": "unknown tag: subcat",
-            "line": " src/after-effects-environment.js:1113"
+            "line": " src/after-effects-environment.js:1129"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1132"
+            "line": " src/after-effects-environment.js:1148"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1142"
-        },
-        {
-            "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1153"
+            "line": " src/after-effects-environment.js:1158"
         },
         {
             "message": "unknown tag: cat",
@@ -7086,23 +7100,27 @@
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1203"
+            "line": " src/after-effects-environment.js:1185"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1213"
+            "line": " src/after-effects-environment.js:1219"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1235"
+            "line": " src/after-effects-environment.js:1229"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1273"
+            "line": " src/after-effects-environment.js:1251"
         },
         {
             "message": "unknown tag: cat",
-            "line": " src/after-effects-environment.js:1291"
+            "line": " src/after-effects-environment.js:1289"
+        },
+        {
+            "message": "unknown tag: cat",
+            "line": " src/after-effects-environment.js:1307"
         },
         {
             "message": "unknown tag: cat",

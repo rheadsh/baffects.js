@@ -86,17 +86,17 @@
 // Composition methods
 
 /**
-* Create new composition.
-* @cat AfterEffects
-* @method createComp
-* @param {String} name Name of the composition
-* @param {Number} w Width of the composition
-* @param {Number} h Height of the composition
-* @param {Number} duration Duration in seconds of the composition
-* @param {Number} frameRate Frame rate of the composition
-* @return {CompItem} Created composition
-*/
-pub.createComp = function (name, w, h, dur, fr) {
+ * Create new composition.
+ * @cat AfterEffects
+ * @method createComp
+ * @param {String} name Name of the composition
+ * @param {Number} w Width of the composition
+ * @param {Number} h Height of the composition
+ * @param {Number} duration Duration in seconds of the composition
+ * @param {Number} frameRate Frame rate of the composition
+ * @return {CompItem} Created composition
+ */
+pub.createComp = function(name, w, h, dur, fr) {
     var comp = proj.items.addComp(name, w, h, 1, dur, fr);
     thisComp = comp;
     pub.width = comp.width;
@@ -110,7 +110,7 @@ pub.createComp = function (name, w, h, dur, fr) {
  * @method beginUndo
  * @param {String} [name] Undo name GUI identifier
  */
-pub.beginUndo = function (name) {
+pub.beginUndo = function(name) {
     switch (arguments.length) {
         case 0:
             app.beginUndoGroup(&quot;Baffects&quot;);
@@ -126,7 +126,7 @@ pub.beginUndo = function (name) {
  * @cat AfterEffects
  * @method endUndo
  */
-pub.endUndo = function () {
+pub.endUndo = function() {
     app.endUndoGroup();
 };
 
@@ -137,7 +137,7 @@ pub.endUndo = function () {
  * @param {String} name Name of the composition to retrieve
  * @return {CompItem|null} Composition found
  */
-pub.getComp = function (name) {
+pub.getComp = function(name) {
     var Number = 0;
     for (var i = 1; i &lt;= proj.numItems; i++) {
         if ((proj.item(i) instanceof CompItem) &amp;&amp; (proj.item(i).name === name)) {
@@ -147,8 +147,7 @@ pub.getComp = function (name) {
     }
     if (Number &gt; 0) {
         return proj.item(Number);
-    }
-    else {
+    } else {
         error(&quot;Comp not found!&quot;);
         return null;
     }
@@ -159,7 +158,7 @@ pub.getComp = function (name) {
  * @cat AfterEffects
  * @method cleanComp
  */
-pub.cleanComp = function () {
+pub.cleanComp = function() {
     var layers, names;
     layers = thisComp.layers
     try {
@@ -182,7 +181,7 @@ pub.cleanComp = function () {
  * @method background
  * @param {Color|Number} color 
  */
-pub.background = function (color) {
+pub.background = function(color) {
     var a = arguments[0],
         b = arguments[1],
         c = arguments[2];
@@ -205,7 +204,7 @@ pub.background = function (color) {
  * @method getTotalFrames
  * @return {Number} Total number of frames
  */
-pub.getTotalFrames = function () {
+pub.getTotalFrames = function() {
     return thisComp.duration * thisComp.frameRate;
 };
 
@@ -215,7 +214,7 @@ pub.getTotalFrames = function () {
  * @method getDuration
  * @return {Number} Total duration in seconds
  */
-pub.getDuration = function () {
+pub.getDuration = function() {
     return thisComp.duration;
 };
 
@@ -225,7 +224,7 @@ pub.getDuration = function () {
  * @method setCompDuration
  * @param {Number} duration Duration in seconds
  */
-pub.setDuration = function (duration) {
+pub.setDuration = function(duration) {
     thisComp.duration = duration;
 };
 
@@ -235,7 +234,7 @@ pub.setDuration = function (duration) {
  * @method numLayers
  * @return {Number} Total number of layers
  */
-pub.numLayers = function () {
+pub.numLayers = function() {
     return thisComp.numLayers;
 }
 
@@ -246,7 +245,7 @@ pub.numLayers = function () {
  * @method getAllComps
  * @return {Array} 0-based array with CompItem object for eacho one of all the compositions found in the project
  */
-pub.getAllComps = function () {
+pub.getAllComps = function() {
     var comps = [];
     var items = proj.items;
     for (var i = 1; i &lt;= proj.numItems; i++) {
@@ -265,7 +264,7 @@ pub.getAllComps = function () {
  * @method deleteComp
  * @param {String|CompItem} comp 
  */
-pub.deleteComp = function (comp) {
+pub.deleteComp = function(comp) {
     try {
         if (typeof comp === &quot;string&quot;) {
             var newComp = pub.getComp(comp);
@@ -284,7 +283,7 @@ pub.deleteComp = function (comp) {
  * @method getCenter
  * @returns {Array} Composition&#x27;s center as [x, y] array
  */
-pub.getCenter = function () {
+pub.getCenter = function() {
     return [pub.width / 2, pub.height / 2];
 }
 
@@ -299,7 +298,7 @@ pub.getCenter = function () {
  * @param {String} name Name of item to retrieve
  * @return {Item|null} Item found
  */
-pub.getItem = function (name) {
+pub.getItem = function(name) {
     var Number = 0;
     for (var i = 1; i &lt;= proj.numItems; i++) {
         if (!((proj.item(i) instanceof CompItem)) &amp;&amp; (proj.item(i).name === name)) {
@@ -309,8 +308,7 @@ pub.getItem = function (name) {
     }
     if (Number &gt; 0) {
         return proj.item(Number);
-    }
-    else {
+    } else {
         error(&quot;Item not found!&quot;);
         return null;
     }
@@ -323,13 +321,13 @@ pub.getItem = function (name) {
  * @param {Item} item Item to add to composition
  * @return {Layer} Item added as layer
  */
-pub.addItemToComp = function (item) {
+pub.addItemToComp = function(item) {
     var layer = thisComp.layers.add(item);
     return layer;
 };
 
 // TO DO
-pub.getFolder = function (name) {
+pub.getFolder = function(name) {
 
 }
 
@@ -347,7 +345,7 @@ pub.getFolder = function (name) {
  * @param {String} name Name of layer to retrieve 
  * @return {Properties|Array} Return Properties or if the layer has effects it returns a 0-based array of [Transform Properties, FX Properties];
  */
-pub.getLayer = function (name) {
+pub.getLayer = function(name) {
     var layersCollection = thisComp.layers
     var n = 0;
     if (layersCollection.length &gt; 0) {
@@ -387,7 +385,7 @@ pub.getLayer = function (name) {
  * @return {Array&lt;Properties&gt;} 0-based array of Properties object with attributes [layer, anchor, position, scale, rotation, orientation, rotationx, rotationy, rotationz, opacity].
  *                             Each attribute is a Property object for convenience in animation, except of layer which is the layer reference.
  */
-pub.getAllLayers = function (option) {
+pub.getAllLayers = function(option) {
     var allLayers = [];
     var layers = thisComp.layers;
 
@@ -416,7 +414,7 @@ pub.getAllLayers = function (option) {
  * @param {Number} max Maximum index of layer collection
  * @return {LayerCollection} Layers in range
  */
-pub.getLayers = function (min, max) {
+pub.getLayers = function(min, max) {
     var layers = pub.getAllLayers();
     return layers.slice(min - 1, max);
 };
@@ -429,7 +427,7 @@ pub.getLayers = function (min, max) {
  * @param {String} path Full path to property 
  * @return {Property} Property reference
  */
-pub.getProperty = function (layer, path) {
+pub.getProperty = function(layer, path) {
     if (!validateLayer(layer))
         layer = layer.layer;
     var pathStr = path.split(&quot;/&quot;);
@@ -448,7 +446,7 @@ pub.getProperty = function (layer, path) {
  * @param {String} fx Name of the effect to add to layer
  * @return {Properties} Properties object with all animatable properties. Attribute names are built without spaces and all lower case. (Ej. &quot;fx.color&quot; To get the property &quot;Effects/Fill/Color&quot;).
  */
-pub.addFX = function (layer, fx) {
+pub.addFX = function(layer, fx) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -472,7 +470,7 @@ pub.addFX = function (layer, fx) {
 pub.slider = function(layer, name, prop) {
     if (!validateLayer(layer))
         layer = layer.layer;
-    
+
     var sli = layer.effect.addProperty(&quot;ADBE Slider Control&quot;);
     var value = sli.property(&quot;ADBE Slider Control-0001&quot;);
     var exp1 = &#x27;temp = effect(&quot;&#x27; + sli.name + &#x27;&quot;)(&quot;Slider&quot;);&#x27;;
@@ -493,7 +491,7 @@ pub.slider = function(layer, name, prop) {
 pub.isShape = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
-    
+
     if (layer instanceof ShapeLayer) {
         return true;
     } else {
@@ -508,7 +506,7 @@ pub.isShape = function(layer) {
  * @param {String} name Name of the preset to add to layer
  * @returns {Object} Object hierarchy containing all properties of each effect. For every effect it returns an object with attributes names without spaces and lower case. (Ej. &quot;fx.fill.color&quot; To get the property &quot;Effects/Fill/Color&quot;).
  */
-pub.addPreset = function (layer, name) {
+pub.addPreset = function(layer, name) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -539,7 +537,7 @@ pub.addPreset = function (layer, name) {
  * &lt;/code&gt;
  * &lt;/div&gt;
  */
-pub.getAllFXProperties = function (layer) {
+pub.getAllFXProperties = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -563,7 +561,7 @@ pub.getAllFXProperties = function (layer) {
  * @param {Properties} layer Object or AVLayer to set track matte
  * @param {ALPHA|ALPHA_INVERTED|LUMA|LUMA_INVERTED|NO_TRACK_MATTE} mode 
  */
-pub.trackMatte = function (layer, mode) {
+pub.trackMatte = function(layer, mode) {
     if (!validateLayer(layer))
         layer = layer.layer;
     layer.trackMatteType = mode;
@@ -576,7 +574,7 @@ pub.trackMatte = function (layer, mode) {
  * @param {Array} indexes The position indexes of the layers to be collected. An array of integers
  * @param {String} name Name of the new composition
  */
-pub.preComp = function (index, name) {
+pub.preComp = function(index, name) {
     var newComp = thisComp.layers.precompose(index, name, true);
     return newComp;
 };
@@ -587,7 +585,7 @@ pub.preComp = function (index, name) {
  * @method getIndex
  * @param {Properties} layer 
  */
-pub.getIndex = function (layer) {
+pub.getIndex = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
     return layer.index;
@@ -600,7 +598,7 @@ pub.getIndex = function (layer) {
  * @return {Array&lt;Properties&gt;} 0-based array of Properties object of only selected layers with attributes [layer, anchor, position, scale, rotation, orientation, rotationx, rotationy, rotationz, opacity].
  *                             Each attribute is a Property object for convenience in animation, except of layer which is the layer reference.
  */
-pub.selectedLayers = function () {
+pub.selectedLayers = function() {
     var sel = thisComp.selectedLayers;
     var allLayers = [];
 
@@ -611,8 +609,7 @@ pub.selectedLayers = function () {
             scopeTransformProperties(obb);
             allLayers.push(obb);
         }
-    }
-    else
+    } else
         error(&quot;Select at least one layer&quot;)
 
     return allLayers;
@@ -648,7 +645,7 @@ pub.addLayer = function(item) {
 pub.collapseVectors = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
-    
+
     layer.collapseTransformation = true;
 };
 
@@ -661,11 +658,11 @@ pub.collapseVectors = function(layer) {
  * @param {Boolean} [autoComp] Precompose all duplicates if true
  * @return {Properties} Array with transform Properties 
  */
-pub.duplicate = function (originalLayer, n, autoComp) {
+pub.duplicate = function(originalLayer, n, autoComp) {
     var a = arguments[0],
         b = arguments[1],
         c = arguments[2];
-    
+
     var copies;
     switch (arguments.length) {
         case 2:
@@ -698,7 +695,7 @@ function dup(layer, n, autoComp) {
  * @param {LayerCollection} layers Layers to invert order
  */
 //Function adapted from code found in Adobe forums and the internet
-pub.reverseLayers = function (layers) {
+pub.reverseLayers = function(layers) {
     for (var j = 1; j &lt;= layers.length / 2; j++) {
         var layerToMoveAfter = layers[j];
         var wasLocked = layerToMoveAfter.locked;
@@ -730,7 +727,7 @@ pub.reverseLayers = function (layers) {
  * @param {Properties} layer Object or AVLayer to be parent layer
  * @param {Properties} layer Object or AVLayer to be children
  */
-pub.parent = function (parent, children) {
+pub.parent = function(parent, children) {
     if (!validateLayer(parent))
         parent = parent.layer;
     if (!validateLayer(children))
@@ -744,7 +741,7 @@ pub.parent = function (parent, children) {
  * @param {Properties} layer Object or AVLayer to bet bounds from
  * @return {Object} A JavaScript object with four attributes, [top, left, width, height]
  */
-pub.bounds = function (layer) {
+pub.bounds = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -762,7 +759,7 @@ pub.bounds = function (layer) {
  * @param {Number} option Point to bounding box to reposition anchor point
  */
 //This function was adapted from several posts on adobe forum and code found on the internet...
-pub.anchor = function (layer, mode) {
+pub.anchor = function(layer, mode) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -876,8 +873,8 @@ pub.anchor = function (layer, mode) {
             }
         }
 
-        xBounds.sort(function (a, b) { return a - b })
-        yBounds.sort(function (a, b) { return a - b })
+        xBounds.sort(function(a, b) { return a - b })
+        yBounds.sort(function(a, b) { return a - b })
 
         var xl = xBounds.shift();
         var xh = xBounds.pop();
@@ -985,7 +982,7 @@ pub.anchor = function (layer, mode) {
  * @method motionBlur
  * @param {Properties} layer Object or AVLayer to enable motion blur
  */
-pub.motionBlur = function (layer) {
+pub.motionBlur = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -1000,7 +997,7 @@ pub.motionBlur = function (layer) {
  * @method adjustmenLayer
  * @param {Properties} layer Object or AVLayer to enable adjustment layer mode
  */
-pub.adjustmentLayer = function (layer) {
+pub.adjustmentLayer = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -1008,8 +1005,7 @@ pub.adjustmentLayer = function (layer) {
 };
 
 //TO DO
-pub.removeAllEffects = function (layer) {
-};
+pub.removeAllEffects = function(layer) {};
 
 /**
  * Convert audio to keyframes.
@@ -1017,7 +1013,7 @@ pub.removeAllEffects = function (layer) {
  * @param {AVLayer} layer Layer to create keyframes from
  * @return {Properties} Properties object with attributes [left, right, both].
  */
-pub.audioToKeyframes = function (layer) {
+pub.audioToKeyframes = function(layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -1039,13 +1035,33 @@ pub.audioToKeyframes = function (layer) {
 }
 
 /**
+ * Apply time remap to loop a sequence
+ * @method timeRemap
+ * @param {Sequence} layer 
+ * @return 1
+ */
+pub.timeRemap = function(layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    layer.selected = false;
+    layer.selected = true;
+    thisComp.openInViewer();
+    var n = app.findMenuCommandId(&quot;Enable Time Remapping&quot;);
+    app.executeCommand(n);
+
+    layer.outPoint = thisComp.duration;
+    pub.expression(layer.property(&quot;Time Remap&quot;), &quot;loopOut()&quot;);
+}
+
+/**
  * Generate frame offset between layers layers
  * @cat AfterEffects
  * @subcat FromSelections
  * @method moveFrames
  * @param {Number} n Number of frames to offset each layer layer beginning at playhead position
  */
-pub.moveFrames = function (layers, n, initTime) {
+pub.moveFrames = function(layers, n, initTime) {
     if (layers.length &gt; 0) {
         var layersOnly = [];
         for (var i = 0; i &lt; layers.length; i++) {
@@ -1069,7 +1085,7 @@ pub.moveFrames = function (layers, n, initTime) {
  * @return {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, fill, stroke, weight].
  *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created Shape layer reference.
  */
-pub.createShapes = function (layers) {
+pub.createShapes = function(layers) {
     var lays;
     if (arguments.length === 1)
         lays = arguments[0];
@@ -1102,17 +1118,17 @@ pub.createShapes = function (layers) {
             try {
                 var fill = grouping.property(&quot;ADBE Vector Graphic - Fill&quot;).property(&quot;ADBE Vector Fill Color&quot;);
                 obb.fill = fill;
-            } catch (e) { };
+            } catch (e) {};
 
             try {
                 var stroke = grouping.property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Color&quot;);
                 obb.stroke = stroke;
-            } catch (e) { };
+            } catch (e) {};
 
             try {
                 var weight = grouping.property(&quot;ADBE Vector Graphic - Stroke&quot;).property(&quot;ADBE Vector Stroke Width&quot;);
                 obb.weight = weight;
-            } catch (e) { };
+            } catch (e) {};
 
             shapes.push(obb);
         }
@@ -1132,7 +1148,7 @@ pub.createShapes = function (layers) {
  * @method setComp
  * @param {String|CompItem} comp 
  */
-pub.setComp = function (comp) {
+pub.setComp = function(comp) {
     if (typeof comp === &quot;string&quot;) {
         var newComp = pub.getComp(comp);
         thisComp = newComp;
@@ -1154,7 +1170,7 @@ pub.setComp = function (comp) {
  * @method anchorMode
  * @param {Number} mode 
  */
-pub.anchorMode = function (mode) {
+pub.anchorMode = function(mode) {
     currAnchorMode = mode;
 };
 
@@ -1164,7 +1180,7 @@ pub.anchorMode = function (mode) {
  * @method blendMode
  * @param {ADD|ALPHA_ADD|CLASSIC_COLOR_BURN|CLASSIC_COLOR_DODGE|CLASSIC_DIFFERENCE|COLOR|COLOR_BURN|COLOR_DODGE|DANCING_DISSOLVE|DARKEN|DARKER_COLOR|DIFFERENCE|DISSOLVE|DIVIDE|EXCLUSION|HARD_LIGHT|HARD_MIX|HUE|LIGHTEN|LIGHTER_COLOR|LINEAR_BURN|LINEAR_DODGE|LINEAR_LIGHT|LUMINESCENT_PREMUL|LUMINOSITY|MULTIPLY|NORMAL|OVERLAY|PIN_LIGHT|SATURATION|SCREEN|SILHOUETTE_LUMA|SUBTRACT|SOFT_LIGHT|STENCIL_ALPHA|STENCIL_LUMA|VIVID_LIGHT} mode 
  */
-pub.blendMode = function (mode) {
+pub.blendMode = function(mode) {
     currBlendMode = mode;
 };
 
@@ -1174,7 +1190,7 @@ pub.blendMode = function (mode) {
  * @subcat Color
  * @method noFill
  */
-pub.noFill = function () {
+pub.noFill = function() {
     currFillState = false;
     var off = new Style(currFillState, currFillColor, currStrokeState, currStrokeColor, currStrokeWeight);
     styleStack.push(off);
@@ -1186,7 +1202,7 @@ pub.noFill = function () {
  * @subcat Color
  * @method noStroke
  */
-pub.noStroke = function () {
+pub.noStroke = function() {
     currStrokeState = false;
     var off = new Style(currFillState, currFillColor, currStrokeState, currStrokeColor, currStrokeWeight);
     styleStack.push(off);
@@ -1200,7 +1216,7 @@ pub.noStroke = function () {
  * @param {Number} strokeWeight Stroke weight in points to set
  * @return {Number} Current stroke weight
  */
-pub.strokeWeight = function (strokeWeight) {
+pub.strokeWeight = function(strokeWeight) {
     if (arguments.length === 1) {
         currStrokeWeight = strokeWeight;
     }
@@ -1217,7 +1233,7 @@ pub.strokeWeight = function (strokeWeight) {
  * @method set3DMode
  * @param {ENABLE3D|DISSABLE3D} mode 
  */
-pub.set3DMode = function (mode) {
+pub.set3DMode = function(mode) {
     curr3DMode = mode;
 };
 
@@ -1228,7 +1244,7 @@ pub.set3DMode = function (mode) {
  * @param {Layer} layer 
  * @param {BlendMode} mode 
  */
-pub.blendingMode = function (layer, mode) {
+pub.blendingMode = function(layer, mode) {
     layer.blendingMode = mode;
 };
 
@@ -1256,7 +1272,7 @@ pub.capMode = function(mode) {
  * @param {String} template Name of template to use on render
  * @param {String} path Path to save render file
  */
-pub.addToRender = function (comp, template, path) {
+pub.addToRender = function(comp, template, path) {
     var a = arguments[0],
         b = arguments[1],
         c = arguments[2];
@@ -1287,7 +1303,7 @@ function addToRenderFunc(comp, mod, template, path) {
  * @cat AfterEffects
  * @method render
  */
-pub.render = function () {
+pub.render = function() {
     queue.showWindow(true);
     queue.render();
 };
@@ -1297,13 +1313,13 @@ pub.render = function () {
  * @cat AfterEffects
  * @method clearRenderQueue
  */
-pub.clearRenderQueue = function () {
+pub.clearRenderQueue = function() {
     while (queue.numItems &gt; 0) {
         queue.item(queue.numItems).remove();
     }
 };
 
-pub.exportFrameOnly = function (n) {
+pub.exportFrameOnly = function(n) {
 
 };
 
@@ -1322,7 +1338,7 @@ function exportOnlyFrame(comp, mod, n, template, path) {
  * @param {String} template Name of template to use on render
  * @param {String} path Path to save render file
  */
-pub.addToRenderAME = function (comp, template, path) {
+pub.addToRenderAME = function(comp, template, path) {
     var a = arguments[0],
         b = arguments[1],
         c = arguments[2];
@@ -1357,7 +1373,7 @@ function addToRenderAMEFunc(comp, mod, template, path) {
  * @cat AfterEffects
  * @method renderAME
  */
-pub.renderAME = function () {
+pub.renderAME = function() {
     if (app.project.renderQueue.canQueueInAME == true) {
         app.project.renderQueue.queueInAME(true);
     }
@@ -1378,7 +1394,7 @@ pub.renderAME = function () {
  * @method delay
  * @param  {Number} milliseconds  The delay time in milliseconds
  */
-pub.delay = function (milliseconds) {
+pub.delay = function(milliseconds) {
     $.sleep(milliseconds);
 };
     </pre>
