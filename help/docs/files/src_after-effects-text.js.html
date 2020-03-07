@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>src/after-effects-text.js - baffects.js</title>
+    <title>src\after-effects-text.js - baffects.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -76,7 +76,7 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1 class="file-heading">File: src/after-effects-text.js</h1>
+<h1 class="file-heading">File: src\after-effects-text.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
@@ -132,8 +132,8 @@ function createText(comp, text, x, y, z) {
     setTransformPropertiesObject();
 
     var pathOptions = this.shape.property(&quot;ADBE Text Properties&quot;).property(&quot;ADBE Text Path Options&quot;);
-    for (var i=0; i&lt;pathOptions.numProperties; i++) {
-        this.obb[pathOptions.property(i+1).name.toLowerCase().replace(/\s/g,&#x27;&#x27;)] = pathOptions.property(i+1);
+    for (var i = 0; i &lt; pathOptions.numProperties; i++) {
+        this.obb[pathOptions.property(i + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = pathOptions.property(i + 1);
     }
 
     var textLayerProps = this.shape.property(&quot;ADBE Text Properties&quot;).property(&quot;ADBE Text Document&quot;);
@@ -203,7 +203,7 @@ pub.textSize = function (pointSize) {
  * @param {string} fontName The name of the font to set e.g. Helvetica
  * @return {string}         The name of the current font
  */
-pub.textFont = function(fontName) {
+pub.textFont = function (fontName) {
     if (arguments.length === 1) {
         currFont = fontName;
     }
@@ -274,7 +274,7 @@ pub.character = function (text) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textAnchorPoint(txt.layer);                                &lt;br&gt;                         
  */
-pub.textAnchorPoint = function(layer) {
+pub.textAnchorPoint = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -299,7 +299,7 @@ pub.textAnchorPoint = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textPosition(txt.layer);                                   &lt;br&gt;
  */
-pub.textPosition = function(layer) {
+pub.textPosition = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
     var obb = new Properties();
@@ -323,7 +323,7 @@ pub.textPosition = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textScale(txt.layer);                                      &lt;br&gt;
  */
-pub.textScale = function(layer) {
+pub.textScale = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
     var obb = new Properties();
@@ -347,7 +347,7 @@ pub.textScale = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textSkew(txt.layer);                                       &lt;br&gt;
  */
-pub.textSkew = function(layer) {
+pub.textSkew = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
     var obb = new Properties();
@@ -372,7 +372,7 @@ pub.textSkew = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textRotation(txt.layer);                                   &lt;br&gt;
  */
-pub.textRotation = function(layer) {
+pub.textRotation = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
     var obb = new Properties();
@@ -397,7 +397,7 @@ pub.textRotation = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textOpacity(txt.layer);                                    &lt;br&gt;
  */
-pub.textOpacity = function(layer) {
+pub.textOpacity = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -422,7 +422,7 @@ pub.textOpacity = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textAllTransform(txt.layer);                               &lt;br&gt;
  */
-pub.textAllTransform = function(layer) {
+pub.textAllTransform = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -453,7 +453,7 @@ pub.textAllTransform = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textFill(txt.layer);                                       &lt;br&gt;
  */
-pub.textFill = function(layer) {
+pub.textFill = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -478,7 +478,7 @@ pub.textFill = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textStroke(txt.layer);                                     &lt;br&gt;
  */
-pub.textStroke = function(layer) {
+pub.textStroke = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -503,7 +503,7 @@ pub.textStroke = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textStrokeWidth(txt.layer);                                &lt;br&gt;
  */
-pub.textStrokeWidth = function(layer) {
+pub.textStrokeWidth = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -528,7 +528,7 @@ pub.textStrokeWidth = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textTracking(txt.layer);                                   &lt;br&gt;
  */
-pub.textTracking = function(layer) {
+pub.textTracking = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -554,7 +554,7 @@ pub.textTracking = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textCharacterOffset(txt.layer);                            &lt;br&gt;
  */
-pub.textCharacterOffset = function(layer) {
+pub.textCharacterOffset = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -581,7 +581,7 @@ pub.textCharacterOffset = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textCharacterValue(txt.layer);                             &lt;br&gt;
  */
-pub.textCharacterValue = function(layer) {
+pub.textCharacterValue = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
 
@@ -608,10 +608,10 @@ pub.textCharacterValue = function(layer) {
  * var txt = b.text(&quot;Baffects.js&quot;, b.width / 2, b.height / 2);           &lt;br&gt;
  * var fx = b.textBlur(txt.layer);                                       &lt;br&gt;
  */
-pub.textBlur = function(layer) {
+pub.textBlur = function (layer) {
     if (!validateLayer(layer))
         layer = layer.layer;
-    
+
     var obb = new Properties();
     var animator = txt.Text.Animators.addProperty(&quot;ADBE Text Animator&quot;);
     var range = animator.property(&quot;ADBE Text Selectors&quot;).addProperty(&quot;ADBE Text Selector&quot;);
@@ -625,13 +625,13 @@ pub.textBlur = function(layer) {
 
 //Get all range selector properties with advanced options
 function rangeAdvanced(range, obb) {
-    for (var i=0; i&lt;3; i++) {
-        obb[range.property(i+1).name.toLowerCase().replace(/\s/g,&#x27;&#x27;)] = range.property(i+1);
+    for (var i = 0; i &lt; 3; i++) {
+        obb[range.property(i + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = range.property(i + 1);
     }
 
     var advanced = range.property(&quot;ADBE Text Range Advanced&quot;);
-    for (var i=0; i&lt;advanced.numProperties; i++) {
-        obb[advanced.property(i+1).name.toLowerCase().replace(/\s/g,&#x27;&#x27;)] = advanced.property(i+1);
+    for (var i = 0; i &lt; advanced.numProperties; i++) {
+        obb[advanced.property(i + 1).name.toLowerCase().replace(/\s/g, &#x27;&#x27;)] = advanced.property(i + 1);
     }
 }
     </pre>
