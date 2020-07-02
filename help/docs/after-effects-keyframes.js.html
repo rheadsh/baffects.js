@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> after-effects-keyframes.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="b.html">b</a></li></ul><h3>Global</h3><ul><li><a href="global.html#abs">abs</a></li><li><a href="global.html#acos">acos</a></li><li><a href="global.html#asin">asin</a></li><li><a href="global.html#atan">atan</a></li><li><a href="global.html#atan2">atan2</a></li><li><a href="global.html#binary">binary</a></li><li><a href="global.html#ceil">ceil</a></li><li><a href="global.html#constrain">constrain</a></li><li><a href="global.html#cos">cos</a></li><li><a href="global.html#day">day</a></li><li><a href="global.html#degrees">degrees</a></li><li><a href="global.html#dist">dist</a></li><li><a href="global.html#endsWith">endsWith</a></li><li><a href="global.html#exp">exp</a></li><li><a href="global.html#floor">floor</a></li><li><a href="global.html#forEach">forEach</a></li><li><a href="global.html#go">go</a></li><li><a href="global.html#HashList">HashList</a></li><li><a href="global.html#hex">hex</a></li><li><a href="global.html#hour">hour</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isNumber">isNumber</a></li><li><a href="global.html#isString">isString</a></li><li><a href="global.html#isURL">isURL</a></li><li><a href="global.html#itemsFromFolder">itemsFromFolder</a></li><li><a href="global.html#itemsFromFolderGUI">itemsFromFolderGUI</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#lerp">lerp</a></li><li><a href="global.html#loadAI">loadAI</a></li><li><a href="global.html#loadItem">loadItem</a></li><li><a href="global.html#loadSequence">loadSequence</a></li><li><a href="global.html#loadString">loadString</a></li><li><a href="global.html#loadStrings">loadStrings</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#mag">mag</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#millis">millis</a></li><li><a href="global.html#millisecond">millisecond</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minute">minute</a></li><li><a href="global.html#month">month</a></li><li><a href="global.html#nf">nf</a></li><li><a href="global.html#nfc">nfc</a></li><li><a href="global.html#nfp">nfp</a></li><li><a href="global.html#nfs">nfs</a></li><li><a href="global.html#norm">norm</a></li><li><a href="global.html#pow">pow</a></li><li><a href="global.html#print">print</a></li><li><a href="global.html#printInfo">printInfo</a></li><li><a href="global.html#println">println</a></li><li><a href="global.html#projectFolder">projectFolder</a></li><li><a href="global.html#radians">radians</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#saveString">saveString</a></li><li><a href="global.html#saveStrings">saveStrings</a></li><li><a href="global.html#second">second</a></li><li><a href="global.html#sin">sin</a></li><li><a href="global.html#split">split</a></li><li><a href="global.html#splitTokens">splitTokens</a></li><li><a href="global.html#sq">sq</a></li><li><a href="global.html#sqrt">sqrt</a></li><li><a href="global.html#startsWith">startsWith</a></li><li><a href="global.html#tan">tan</a></li><li><a href="global.html#timestamp">timestamp</a></li><li><a href="global.html#trim">trim</a></li><li><a href="global.html#trimWord">trimWord</a></li><li><a href="global.html#unbinary">unbinary</a></li><li><a href="global.html#unhex">unhex</a></li><li><a href="global.html#Vector">Vector</a></li><li><a href="global.html#weekday">weekday</a></li><li><a href="global.html#year">year</a></li></ul></div><div class="category"><h2>Baffects.js</h2><h3>Global</h3><ul><li><a href="global.html#addFX">addFX</a></li><li><a href="global.html#addItemToComp">addItemToComp</a></li><li><a href="global.html#addLayer">addLayer</a></li><li><a href="global.html#addPreset">addPreset</a></li><li><a href="global.html#addToRender">addToRender</a></li><li><a href="global.html#addToRenderAME">addToRenderAME</a></li><li><a href="global.html#adjustmenLayer">adjustmenLayer</a></li><li><a href="global.html#anchor">anchor</a></li><li><a href="global.html#anchorMode">anchorMode</a></li><li><a href="global.html#audioToKeyframes">audioToKeyframes</a></li><li><a href="global.html#background">background</a></li><li><a href="global.html#beginMask">beginMask</a></li><li><a href="global.html#beginShape">beginShape</a></li><li><a href="global.html#beginUndo">beginUndo</a></li><li><a href="global.html#blendingMode">blendingMode</a></li><li><a href="global.html#blendMode">blendMode</a></li><li><a href="global.html#bounds">bounds</a></li><li><a href="global.html#camera">camera</a></li><li><a href="global.html#capMode">capMode</a></li><li><a href="global.html#cleanComp">cleanComp</a></li><li><a href="global.html#clearRenderQueue">clearRenderQueue</a></li><li><a href="global.html#collapseVectors">collapseVectors</a></li><li><a href="global.html#color">color</a></li><li><a href="global.html#createComp">createComp</a></li><li><a href="global.html#createShapes">createShapes</a></li><li><a href="global.html#delay">delay</a></li><li><a href="global.html#deleteComp">deleteComp</a></li><li><a href="global.html#duplicate">duplicate</a></li><li><a href="global.html#ease">ease</a></li><li><a href="global.html#ellipse">ellipse</a></li><li><a href="global.html#endMask">endMask</a></li><li><a href="global.html#endShape">endShape</a></li><li><a href="global.html#endUndo">endUndo</a></li><li><a href="global.html#expression">expression</a></li><li><a href="global.html#fill">fill</a></li><li><a href="global.html#frameCount">frameCount</a></li><li><a href="global.html#frameTime">frameTime</a></li><li><a href="global.html#getAllComps">getAllComps</a></li><li><a href="global.html#getAllFXProperties">getAllFXProperties</a></li><li><a href="global.html#getAllLayers">getAllLayers</a></li><li><a href="global.html#getCenter">getCenter</a></li><li><a href="global.html#getComp">getComp</a></li><li><a href="global.html#getDuration">getDuration</a></li><li><a href="global.html#getIndex">getIndex</a></li><li><a href="global.html#getItem">getItem</a></li><li><a href="global.html#getLayer">getLayer</a></li><li><a href="global.html#getLayers">getLayers</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getTotalFrames">getTotalFrames</a></li><li><a href="global.html#height">height</a></li><li><a href="global.html#hsbaToRgba">hsbaToRgba</a></li><li><a href="global.html#interpolationMode">interpolationMode</a></li><li><a href="global.html#isShape">isShape</a></li><li><a href="global.html#itangent">itangent</a></li><li><a href="global.html#key">key</a></li><li><a href="global.html#lastShape">lastShape</a></li><li><a href="global.html#light">light</a></li><li><a href="global.html#line">line</a></li><li><a href="global.html#mask">mask</a></li><li><a href="global.html#maskMode">maskMode</a></li><li><a href="global.html#motionBlur">motionBlur</a></li><li><a href="global.html#moveFrames">moveFrames</a></li><li><a href="global.html#noFill">noFill</a></li><li><a href="global.html#noise">noise</a></li><li><a href="global.html#noiseDetail">noiseDetail</a></li><li><a href="global.html#noiseSeed">noiseSeed</a></li><li><a href="global.html#noStroke">noStroke</a></li><li><a href="global.html#nullLayer">nullLayer</a></li><li><a href="global.html#numLayers">numLayers</a></li><li><a href="global.html#otangent">otangent</a></li><li><a href="global.html#parent">parent</a></li><li><a href="global.html#polygon">polygon</a></li><li><a href="global.html#popMatrix">popMatrix</a></li><li><a href="global.html#preComp">preComp</a></li><li><a href="global.html#printProperties">printProperties</a></li><li><a href="global.html#pushMatrix">pushMatrix</a></li><li><a href="global.html#random">random</a></li><li><a href="global.html#randomGaussian">randomGaussian</a></li><li><a href="global.html#randomSeed">randomSeed</a></li><li><a href="global.html#rect">rect</a></li><li><a href="global.html#removeAllKeyframes">removeAllKeyframes</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#renderAME">renderAME</a></li><li><a href="global.html#resetMatrix">resetMatrix</a></li><li><a href="global.html#reverseLayers">reverseLayers</a></li><li><a href="global.html#rotate">rotate</a></li><li><a href="global.html#scale">scale</a></li><li><a href="global.html#selectedLayers">selectedLayers</a></li><li><a href="global.html#set3DMode">set3DMode</a></li><li><a href="global.html#setComp">setComp</a></li><li><a href="global.html#setCompDuration">setCompDuration</a></li><li><a href="global.html#setMaskMode">setMaskMode</a></li><li><a href="global.html#shape">shape</a></li><li><a href="global.html#shapePuckerBloat">shapePuckerBloat</a></li><li><a href="global.html#shapeRepeater">shapeRepeater</a></li><li><a href="global.html#shapeTrimPaths">shapeTrimPaths</a></li><li><a href="global.html#shapeTwist">shapeTwist</a></li><li><a href="global.html#shapeWigglePaths">shapeWigglePaths</a></li><li><a href="global.html#shapeWiggleTransform">shapeWiggleTransform</a></li><li><a href="global.html#shapeZigZag">shapeZigZag</a></li><li><a href="global.html#slider">slider</a></li><li><a href="global.html#spatialMode">spatialMode</a></li><li><a href="global.html#speed">speed</a></li><li><a href="global.html#speedAll">speedAll</a></li><li><a href="global.html#speedEase">speedEase</a></li><li><a href="global.html#stroke">stroke</a></li><li><a href="global.html#strokeWeight">strokeWeight</a></li><li><a href="global.html#text">text</a></li><li><a href="global.html#textAlign">textAlign</a></li><li><a href="global.html#textAllTransform">textAllTransform</a></li><li><a href="global.html#textAnchorPoint">textAnchorPoint</a></li><li><a href="global.html#textBlur">textBlur</a></li><li><a href="global.html#textCharacterOffset">textCharacterOffset</a></li><li><a href="global.html#textCharacterValue">textCharacterValue</a></li><li><a href="global.html#textFill">textFill</a></li><li><a href="global.html#textFont">textFont</a></li><li><a href="global.html#textOpacity">textOpacity</a></li><li><a href="global.html#textPosition">textPosition</a></li><li><a href="global.html#textRotation">textRotation</a></li><li><a href="global.html#textScale">textScale</a></li><li><a href="global.html#textSize">textSize</a></li><li><a href="global.html#textSkew">textSkew</a></li><li><a href="global.html#textStroke">textStroke</a></li><li><a href="global.html#textStrokeWidth">textStrokeWidth</a></li><li><a href="global.html#timeRemap">timeRemap</a></li><li><a href="global.html#trackMatte">trackMatte</a></li><li><a href="global.html#translate">translate</a></li><li><a href="global.html#vertex">vertex</a></li><li><a href="global.html#width">width</a></li></ul></div><div class="category"><h2>Baffects.js Constants</h2><h3>Global</h3><ul><li><a href="global.html#ADD">ADD</a></li><li><a href="global.html#ALPHA_ADD">ALPHA_ADD</a></li><li><a href="global.html#AMBIENT">AMBIENT</a></li><li><a href="global.html#BUTT">BUTT</a></li><li><a href="global.html#CLASSIC_COLOR_BURN">CLASSIC_COLOR_BURN</a></li><li><a href="global.html#CLASSIC_COLOR_DODGE">CLASSIC_COLOR_DODGE</a></li><li><a href="global.html#CLASSIC_DIFFERENCE">CLASSIC_DIFFERENCE</a></li><li><a href="global.html#CLOSE">CLOSE</a></li><li><a href="global.html#COLOR">COLOR</a></li><li><a href="global.html#COLOR_BURN">COLOR_BURN</a></li><li><a href="global.html#COLOR_DODGE">COLOR_DODGE</a></li><li><a href="global.html#DANCING_DISSOLVE">DANCING_DISSOLVE</a></li><li><a href="global.html#DARKEN">DARKEN</a></li><li><a href="global.html#DARKER_COLOR">DARKER_COLOR</a></li><li><a href="global.html#DIFFERENCE">DIFFERENCE</a></li><li><a href="global.html#DISSABLE">DISSABLE</a></li><li><a href="global.html#DISSOLVE">DISSOLVE</a></li><li><a href="global.html#DIVIDE">DIVIDE</a></li><li><a href="global.html#ENABLE">ENABLE</a></li><li><a href="global.html#EPSILON">EPSILON</a></li><li><a href="global.html#EXCLUSION">EXCLUSION</a></li><li><a href="global.html#HALF_PI">HALF_PI</a></li><li><a href="global.html#HARD_LIGHT">HARD_LIGHT</a></li><li><a href="global.html#HARD_MIX">HARD_MIX</a></li><li><a href="global.html#HUE">HUE</a></li><li><a href="global.html#INACTIVE">INACTIVE</a></li><li><a href="global.html#KAPPA">KAPPA</a></li><li><a href="global.html#LIGHTEN">LIGHTEN</a></li><li><a href="global.html#LIGHTER_COLOR">LIGHTER_COLOR</a></li><li><a href="global.html#LINEAR_BURN">LINEAR_BURN</a></li><li><a href="global.html#LINEAR_DODGE">LINEAR_DODGE</a></li><li><a href="global.html#LINEAR_LIGHT">LINEAR_LIGHT</a></li><li><a href="global.html#LINES">LINES</a></li><li><a href="global.html#LUMINESCENT_PREMUL">LUMINESCENT_PREMUL</a></li><li><a href="global.html#LUMINOSITY">LUMINOSITY</a></li><li><a href="global.html#M_NONE">M_NONE</a></li><li><a href="global.html#MULTIPLY">MULTIPLY</a></li><li><a href="global.html#NORMAL">NORMAL</a></li><li><a href="global.html#OVERLAY">OVERLAY</a></li><li><a href="global.html#PARALLEL">PARALLEL</a></li><li><a href="global.html#PI">PI</a></li><li><a href="global.html#PIN_LIGHT">PIN_LIGHT</a></li><li><a href="global.html#POINT">POINT</a></li><li><a href="global.html#PROJECTING">PROJECTING</a></li><li><a href="global.html#QUADS">QUADS</a></li><li><a href="global.html#QUARTER_PI">QUARTER_PI</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#ROUND">ROUND</a></li><li><a href="global.html#SATURATION">SATURATION</a></li><li><a href="global.html#SCREEN">SCREEN</a></li><li><a href="global.html#SILHOUETE_ALPHA">SILHOUETE_ALPHA</a></li><li><a href="global.html#SILHOUETTE_LUMA">SILHOUETTE_LUMA</a></li><li><a href="global.html#SINCOS_LENGTH">SINCOS_LENGTH</a></li><li><a href="global.html#SOFT_LIGHT">SOFT_LIGHT</a></li><li><a href="global.html#SPOT">SPOT</a></li><li><a href="global.html#STENCIL_ALPHA">STENCIL_ALPHA</a></li><li><a href="global.html#STENCIL_LUMA">STENCIL_LUMA</a></li><li><a href="global.html#SUBTRACT">SUBTRACT</a></li><li><a href="global.html#TRIANGLES">TRIANGLES</a></li><li><a href="global.html#TWO_PI">TWO_PI</a></li><li><a href="global.html#VIVID_LIGHT">VIVID_LIGHT</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>after-effects-keyframes.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>﻿// Keyframes
+
+/**
+ * Create keyframe at time and value.
+ * @category Baffects.js
+ * @method key
+ * @param {Property} prop Property reference 
+ * @param {number} [time] Time in seconds to set keyframe 
+ * @param {number|Array} value number or array depending on the property dimensions to set value
+ * @param {Array} [inTangents] When spatial keyframes set the value of in tangents
+ * @param {Array} [outTangent] When spatial keyframes set the value of out tangents
+ * @returns {number} index of last created keyframe
+ * @example
+ * var shape = b.rect(500, 500, 100, 100);      
+ * b.key(shape.position, 0, [0,0]);             
+ * b.key(shape.position, 2, [100, 100]);        
+ * b.key(shape.rotation, 45);                      
+ */
+pub.key = function (prop, time, value, inTan, outTan) {
+    var a = arguments[0],
+        b = arguments[1],
+        c = arguments[2],
+        d = arguments[3],
+        e = arguments[4];
+
+    try {
+        switch (arguments.length) {
+            case 2:
+                a.setValue(b);
+                return a.numKeys;
+            case 3:
+                createTimeKey(a, b, c, null, null);
+                return a.numKeys;
+            case 4:
+                createTimeKey(a, b, c, d, d);
+                return a.numKeys;
+            case 5:
+                createTimeKey(a, b, c, d, e);
+                return a.numKeys;
+        }
+    } catch (e) {
+        error("Incorrect number of parameters for this property: " + prop.name);
+    }
+};
+
+function createTimeKey(prop, time, value, inTan, outTan) {
+    var spatial = currSpatialInterpolationMode;
+
+    prop.setValueAtTime(time, value);
+    prop.setInterpolationTypeAtKey(prop.numKeys, currInterpolationMode, currInterpolationMode);
+
+    if (inTan !== null) {
+        currSpatialInterpolationMode = pub.BEZIER;
+        prop.setSpatialContinuousAtKey(prop.numKeys, true);
+        prop.setSpatialTangentsAtKey(prop.numKeys, inTan, outTan);
+    }
+
+    if (prop.propertyValueType === PropertyValueType.ThreeD_SPATIAL || prop.propertyValueType === PropertyValueType.TwoD_SPATIAL) {
+        if (currSpatialInterpolationMode == pub.LINEAR) {
+            try {
+                prop.setSpatialTangentsAtKey(prop.numKeys, [0, 0, 0], [0, 0, 0]);
+            } catch (e) {
+                prop.setSpatialTangentsAtKey(prop.numKeys, [0, 0], [0, 0]);
+            }
+        } else if (currSpatialInterpolationMode === "auto") {
+            prop.setSpatialAutoBezierAtKey(prop.numKeys, true);
+        }
+    }
+
+    currSpatialInterpolationMode = spatial;
+}
+
+
+/**
+ * Set global keyframe interpolation mode.
+ *  
+ * @category Baffects.js 
+ * @method interpolationMode
+ * @param {BEZIER|LINEAR|HOLD} mode 
+ */
+pub.interpolationMode = function (mode) {
+    currInterpolationMode = mode;
+};
+
+/**
+ * Set global spatial keyframe inerpolation mode.
+ *  
+ * @category Baffects.js 
+ * @method spatialMode
+ * @param {LINEAR|AUTO_BEZIER} mode 
+ */
+pub.spatialMode = function (mode) {
+    currSpatialInterpolationMode = mode;
+};
+
+/**
+ * Creates ease object for keyrame velocity manipulation.
+ *  
+ * @category Baffects.js 
+ * @method ease
+ * @param {number} speed The speed value of the keyframe. The units depend on the type of keyframe, and are displayed in the Keyframe Velocity dialog box
+ * @param {number} influence Range[0.1..100.0] The influence value of the keyframe, as shown in the Keyframe Velocity dialog box
+ *  @returns {KeyFrameEase}
+ */
+pub.ease = function (speed, influence) {
+    var ease = new KeyframeEase(speed, influence);
+    return ease;
+};
+
+/**
+ * Manipulates keyframe property speed.
+ *  
+ * @category Baffects.js 
+ * @method speedEase
+ * @param {Property} prop Property reference
+ * @param {number} index Keyframe index
+ * @param {KeyframeEase} easeIn Ease in object to apply
+ * @param {KeyframeEase} easeOut Ease out object to apply
+ */
+pub.speedEase = function (prop, index, easeIn, easeOut) {
+    if (easeIn instanceof Array) {
+        prop.setTemporalEaseAtKey(index, easeIn, easeOut);
+    } else {
+        prop.setTemporalEaseAtKey(index, [easeIn], [easeOut]);
+    }
+};
+
+/**
+ * Manipulates keyframe property speed.
+ *  
+ * @category Baffects.js 
+ * @method speed
+ * @param {Property} prop Property reference
+ * @param {number} index Keyframe index
+ * @param {number} speed The speed value of the keyframe. The units depend on the type of keyframe, and are displayed in the Keyframe Velocity dialog box
+ * @param {number} influence influence Range[0.1..100.0] The influence value of the keyframe, as shown in the Keyframe Velocity dialog box
+ */
+pub.speed = function (prop, index, speed, influence) {
+    var _ease = pub.ease(speed, influence);
+    var easeArr = [];
+    var dimension = getDimension(prop);
+    for (var i = 0; i &lt; dimension; i++) {
+        easeArr.push(_ease);
+    }
+    prop.setTemporalEaseAtKey(index, easeArr, easeArr);
+};
+
+/**
+ * Set all keyframes of a property with the same speed and influence.
+ *  
+ * @category Baffects.js 
+ * @method speedAll
+ * @param {Property} prop Property reference
+ * @param {number} speed The speed value of the keyframe. The units depend on the type of keyframe, and are displayed in the Keyframe Velocity dialog box
+ * @param {number} influence Range[0.1..100.0] The influence value of the keyframe, as shown in the Keyframe Velocity dialog box
+ * @example
+ * var shape = b.rect(500, 500, 100, 100);                                                                               
+ * b.key(shape.position, 0, [b.random(b.width), b.random(b.height)]);               
+ * b.key(shape.position, 2, [b.random(b.width), b.random(b.height)]);               
+ * b.key(shape.position, 3, [b.random(b.width), b.random(b.height)]);               
+ * b.key(shape.position, 5, [b.random(b.width), b.random(b.height)]);               
+ * b.speedAll(shape.position, 0.1, 90);                                             
+ */
+pub.speedAll = function (prop, speed, influence) {
+    var _ease = pub.ease(speed, influence);
+    var easeArr = [];
+
+    var dimension = getDimension(prop);
+
+    for (var i = 0; i &lt; dimension; i++) {
+        easeArr.push(_ease);
+    }
+    for (var i = 1; i &lt;= prop.numKeys; i++) {
+        pub.speedEase(prop, i, easeArr, easeArr);
+    }
+};
+
+function getDimension(prop) {
+    var dimension = 0;
+    if (prop.propertyValueType === PropertyValueType.ThreeD_SPATIAL) {
+        dimension = 1;
+    } else if (prop.propertyValueType === PropertyValueType.ThreeD) {
+        dimension = 3;
+    } else if (prop.propertyValueType === PropertyValueType.TwoD_SPATIAL) {
+        dimension = 2;
+    } else if (prop.propertyValueType === PropertyValueType.TwoD_SPATIAL) {
+        dimension = 2;
+    } else if (prop.propertyValueType === PropertyValueType.OneD) {
+        dimension = 1;
+    } else if (prop.propertyValueType === PropertyValueType.COLOR) {
+        dimension = 1;
+    } else if (prop.propertyValueType === PropertyValueType.CUSTOM_VALUE) {
+        dimension = prop.value.length;
+    }
+
+    return dimension;
+};
+
+/**
+ * Print all attributes of a Javascript object.
+ * @category Baffects.js
+ * @method printProperties
+ * @param {Object} props Object to print properties
+ */
+pub.printProperties = function (props) {
+    for (var name in props) {
+        pub.println(name)
+    }
+};
+
+/**
+ * Add expression to property
+ * @category Baffects.js
+ * @method expression
+ * @param {Property} prop Property to add expression to
+ * @param {String} exppression Expression
+ */
+pub.expression = function (prop, exp) {
+    prop.expression = exp;
+}
+
+/**
+ * Remove all keyframes from a layer property.
+ * @category Baffects.js
+ * @method removeAllKeyframes
+ * @param {Property} prop 
+ */
+pub.removeAllKeyframes = function (prop) {
+    while (prop.numKeys != 0) {
+        prop.removeKey(1);
+    }
+};</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

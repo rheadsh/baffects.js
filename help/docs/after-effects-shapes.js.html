@@ -1,0 +1,1537 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> after-effects-shapes.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="b.html">b</a></li></ul><h3>Global</h3><ul><li><a href="global.html#abs">abs</a></li><li><a href="global.html#acos">acos</a></li><li><a href="global.html#asin">asin</a></li><li><a href="global.html#atan">atan</a></li><li><a href="global.html#atan2">atan2</a></li><li><a href="global.html#binary">binary</a></li><li><a href="global.html#ceil">ceil</a></li><li><a href="global.html#constrain">constrain</a></li><li><a href="global.html#cos">cos</a></li><li><a href="global.html#day">day</a></li><li><a href="global.html#degrees">degrees</a></li><li><a href="global.html#dist">dist</a></li><li><a href="global.html#endsWith">endsWith</a></li><li><a href="global.html#exp">exp</a></li><li><a href="global.html#floor">floor</a></li><li><a href="global.html#forEach">forEach</a></li><li><a href="global.html#go">go</a></li><li><a href="global.html#HashList">HashList</a></li><li><a href="global.html#hex">hex</a></li><li><a href="global.html#hour">hour</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isNumber">isNumber</a></li><li><a href="global.html#isString">isString</a></li><li><a href="global.html#isURL">isURL</a></li><li><a href="global.html#itemsFromFolder">itemsFromFolder</a></li><li><a href="global.html#itemsFromFolderGUI">itemsFromFolderGUI</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#lerp">lerp</a></li><li><a href="global.html#loadAI">loadAI</a></li><li><a href="global.html#loadItem">loadItem</a></li><li><a href="global.html#loadSequence">loadSequence</a></li><li><a href="global.html#loadString">loadString</a></li><li><a href="global.html#loadStrings">loadStrings</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#mag">mag</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#millis">millis</a></li><li><a href="global.html#millisecond">millisecond</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minute">minute</a></li><li><a href="global.html#month">month</a></li><li><a href="global.html#nf">nf</a></li><li><a href="global.html#nfc">nfc</a></li><li><a href="global.html#nfp">nfp</a></li><li><a href="global.html#nfs">nfs</a></li><li><a href="global.html#norm">norm</a></li><li><a href="global.html#pow">pow</a></li><li><a href="global.html#print">print</a></li><li><a href="global.html#printInfo">printInfo</a></li><li><a href="global.html#println">println</a></li><li><a href="global.html#projectFolder">projectFolder</a></li><li><a href="global.html#radians">radians</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#saveString">saveString</a></li><li><a href="global.html#saveStrings">saveStrings</a></li><li><a href="global.html#second">second</a></li><li><a href="global.html#sin">sin</a></li><li><a href="global.html#split">split</a></li><li><a href="global.html#splitTokens">splitTokens</a></li><li><a href="global.html#sq">sq</a></li><li><a href="global.html#sqrt">sqrt</a></li><li><a href="global.html#startsWith">startsWith</a></li><li><a href="global.html#tan">tan</a></li><li><a href="global.html#timestamp">timestamp</a></li><li><a href="global.html#trim">trim</a></li><li><a href="global.html#trimWord">trimWord</a></li><li><a href="global.html#unbinary">unbinary</a></li><li><a href="global.html#unhex">unhex</a></li><li><a href="global.html#Vector">Vector</a></li><li><a href="global.html#weekday">weekday</a></li><li><a href="global.html#year">year</a></li></ul></div><div class="category"><h2>Baffects.js</h2><h3>Global</h3><ul><li><a href="global.html#addFX">addFX</a></li><li><a href="global.html#addItemToComp">addItemToComp</a></li><li><a href="global.html#addLayer">addLayer</a></li><li><a href="global.html#addPreset">addPreset</a></li><li><a href="global.html#addToRender">addToRender</a></li><li><a href="global.html#addToRenderAME">addToRenderAME</a></li><li><a href="global.html#adjustmenLayer">adjustmenLayer</a></li><li><a href="global.html#anchor">anchor</a></li><li><a href="global.html#anchorMode">anchorMode</a></li><li><a href="global.html#audioToKeyframes">audioToKeyframes</a></li><li><a href="global.html#background">background</a></li><li><a href="global.html#beginMask">beginMask</a></li><li><a href="global.html#beginShape">beginShape</a></li><li><a href="global.html#beginUndo">beginUndo</a></li><li><a href="global.html#blendingMode">blendingMode</a></li><li><a href="global.html#blendMode">blendMode</a></li><li><a href="global.html#bounds">bounds</a></li><li><a href="global.html#camera">camera</a></li><li><a href="global.html#capMode">capMode</a></li><li><a href="global.html#cleanComp">cleanComp</a></li><li><a href="global.html#clearRenderQueue">clearRenderQueue</a></li><li><a href="global.html#collapseVectors">collapseVectors</a></li><li><a href="global.html#color">color</a></li><li><a href="global.html#createComp">createComp</a></li><li><a href="global.html#createShapes">createShapes</a></li><li><a href="global.html#delay">delay</a></li><li><a href="global.html#deleteComp">deleteComp</a></li><li><a href="global.html#duplicate">duplicate</a></li><li><a href="global.html#ease">ease</a></li><li><a href="global.html#ellipse">ellipse</a></li><li><a href="global.html#endMask">endMask</a></li><li><a href="global.html#endShape">endShape</a></li><li><a href="global.html#endUndo">endUndo</a></li><li><a href="global.html#expression">expression</a></li><li><a href="global.html#fill">fill</a></li><li><a href="global.html#frameCount">frameCount</a></li><li><a href="global.html#frameTime">frameTime</a></li><li><a href="global.html#getAllComps">getAllComps</a></li><li><a href="global.html#getAllFXProperties">getAllFXProperties</a></li><li><a href="global.html#getAllLayers">getAllLayers</a></li><li><a href="global.html#getCenter">getCenter</a></li><li><a href="global.html#getComp">getComp</a></li><li><a href="global.html#getDuration">getDuration</a></li><li><a href="global.html#getIndex">getIndex</a></li><li><a href="global.html#getItem">getItem</a></li><li><a href="global.html#getLayer">getLayer</a></li><li><a href="global.html#getLayers">getLayers</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getTotalFrames">getTotalFrames</a></li><li><a href="global.html#height">height</a></li><li><a href="global.html#hsbaToRgba">hsbaToRgba</a></li><li><a href="global.html#interpolationMode">interpolationMode</a></li><li><a href="global.html#isShape">isShape</a></li><li><a href="global.html#itangent">itangent</a></li><li><a href="global.html#key">key</a></li><li><a href="global.html#lastShape">lastShape</a></li><li><a href="global.html#light">light</a></li><li><a href="global.html#line">line</a></li><li><a href="global.html#mask">mask</a></li><li><a href="global.html#maskMode">maskMode</a></li><li><a href="global.html#motionBlur">motionBlur</a></li><li><a href="global.html#moveFrames">moveFrames</a></li><li><a href="global.html#noFill">noFill</a></li><li><a href="global.html#noise">noise</a></li><li><a href="global.html#noiseDetail">noiseDetail</a></li><li><a href="global.html#noiseSeed">noiseSeed</a></li><li><a href="global.html#noStroke">noStroke</a></li><li><a href="global.html#nullLayer">nullLayer</a></li><li><a href="global.html#numLayers">numLayers</a></li><li><a href="global.html#otangent">otangent</a></li><li><a href="global.html#parent">parent</a></li><li><a href="global.html#polygon">polygon</a></li><li><a href="global.html#popMatrix">popMatrix</a></li><li><a href="global.html#preComp">preComp</a></li><li><a href="global.html#printProperties">printProperties</a></li><li><a href="global.html#pushMatrix">pushMatrix</a></li><li><a href="global.html#random">random</a></li><li><a href="global.html#randomGaussian">randomGaussian</a></li><li><a href="global.html#randomSeed">randomSeed</a></li><li><a href="global.html#rect">rect</a></li><li><a href="global.html#removeAllKeyframes">removeAllKeyframes</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#renderAME">renderAME</a></li><li><a href="global.html#resetMatrix">resetMatrix</a></li><li><a href="global.html#reverseLayers">reverseLayers</a></li><li><a href="global.html#rotate">rotate</a></li><li><a href="global.html#scale">scale</a></li><li><a href="global.html#selectedLayers">selectedLayers</a></li><li><a href="global.html#set3DMode">set3DMode</a></li><li><a href="global.html#setComp">setComp</a></li><li><a href="global.html#setCompDuration">setCompDuration</a></li><li><a href="global.html#setMaskMode">setMaskMode</a></li><li><a href="global.html#shape">shape</a></li><li><a href="global.html#shapePuckerBloat">shapePuckerBloat</a></li><li><a href="global.html#shapeRepeater">shapeRepeater</a></li><li><a href="global.html#shapeTrimPaths">shapeTrimPaths</a></li><li><a href="global.html#shapeTwist">shapeTwist</a></li><li><a href="global.html#shapeWigglePaths">shapeWigglePaths</a></li><li><a href="global.html#shapeWiggleTransform">shapeWiggleTransform</a></li><li><a href="global.html#shapeZigZag">shapeZigZag</a></li><li><a href="global.html#slider">slider</a></li><li><a href="global.html#spatialMode">spatialMode</a></li><li><a href="global.html#speed">speed</a></li><li><a href="global.html#speedAll">speedAll</a></li><li><a href="global.html#speedEase">speedEase</a></li><li><a href="global.html#stroke">stroke</a></li><li><a href="global.html#strokeWeight">strokeWeight</a></li><li><a href="global.html#text">text</a></li><li><a href="global.html#textAlign">textAlign</a></li><li><a href="global.html#textAllTransform">textAllTransform</a></li><li><a href="global.html#textAnchorPoint">textAnchorPoint</a></li><li><a href="global.html#textBlur">textBlur</a></li><li><a href="global.html#textCharacterOffset">textCharacterOffset</a></li><li><a href="global.html#textCharacterValue">textCharacterValue</a></li><li><a href="global.html#textFill">textFill</a></li><li><a href="global.html#textFont">textFont</a></li><li><a href="global.html#textOpacity">textOpacity</a></li><li><a href="global.html#textPosition">textPosition</a></li><li><a href="global.html#textRotation">textRotation</a></li><li><a href="global.html#textScale">textScale</a></li><li><a href="global.html#textSize">textSize</a></li><li><a href="global.html#textSkew">textSkew</a></li><li><a href="global.html#textStroke">textStroke</a></li><li><a href="global.html#textStrokeWidth">textStrokeWidth</a></li><li><a href="global.html#timeRemap">timeRemap</a></li><li><a href="global.html#trackMatte">trackMatte</a></li><li><a href="global.html#translate">translate</a></li><li><a href="global.html#vertex">vertex</a></li><li><a href="global.html#width">width</a></li></ul></div><div class="category"><h2>Baffects.js Constants</h2><h3>Global</h3><ul><li><a href="global.html#ADD">ADD</a></li><li><a href="global.html#ALPHA_ADD">ALPHA_ADD</a></li><li><a href="global.html#AMBIENT">AMBIENT</a></li><li><a href="global.html#BUTT">BUTT</a></li><li><a href="global.html#CLASSIC_COLOR_BURN">CLASSIC_COLOR_BURN</a></li><li><a href="global.html#CLASSIC_COLOR_DODGE">CLASSIC_COLOR_DODGE</a></li><li><a href="global.html#CLASSIC_DIFFERENCE">CLASSIC_DIFFERENCE</a></li><li><a href="global.html#CLOSE">CLOSE</a></li><li><a href="global.html#COLOR">COLOR</a></li><li><a href="global.html#COLOR_BURN">COLOR_BURN</a></li><li><a href="global.html#COLOR_DODGE">COLOR_DODGE</a></li><li><a href="global.html#DANCING_DISSOLVE">DANCING_DISSOLVE</a></li><li><a href="global.html#DARKEN">DARKEN</a></li><li><a href="global.html#DARKER_COLOR">DARKER_COLOR</a></li><li><a href="global.html#DIFFERENCE">DIFFERENCE</a></li><li><a href="global.html#DISSABLE">DISSABLE</a></li><li><a href="global.html#DISSOLVE">DISSOLVE</a></li><li><a href="global.html#DIVIDE">DIVIDE</a></li><li><a href="global.html#ENABLE">ENABLE</a></li><li><a href="global.html#EPSILON">EPSILON</a></li><li><a href="global.html#EXCLUSION">EXCLUSION</a></li><li><a href="global.html#HALF_PI">HALF_PI</a></li><li><a href="global.html#HARD_LIGHT">HARD_LIGHT</a></li><li><a href="global.html#HARD_MIX">HARD_MIX</a></li><li><a href="global.html#HUE">HUE</a></li><li><a href="global.html#INACTIVE">INACTIVE</a></li><li><a href="global.html#KAPPA">KAPPA</a></li><li><a href="global.html#LIGHTEN">LIGHTEN</a></li><li><a href="global.html#LIGHTER_COLOR">LIGHTER_COLOR</a></li><li><a href="global.html#LINEAR_BURN">LINEAR_BURN</a></li><li><a href="global.html#LINEAR_DODGE">LINEAR_DODGE</a></li><li><a href="global.html#LINEAR_LIGHT">LINEAR_LIGHT</a></li><li><a href="global.html#LINES">LINES</a></li><li><a href="global.html#LUMINESCENT_PREMUL">LUMINESCENT_PREMUL</a></li><li><a href="global.html#LUMINOSITY">LUMINOSITY</a></li><li><a href="global.html#M_NONE">M_NONE</a></li><li><a href="global.html#MULTIPLY">MULTIPLY</a></li><li><a href="global.html#NORMAL">NORMAL</a></li><li><a href="global.html#OVERLAY">OVERLAY</a></li><li><a href="global.html#PARALLEL">PARALLEL</a></li><li><a href="global.html#PI">PI</a></li><li><a href="global.html#PIN_LIGHT">PIN_LIGHT</a></li><li><a href="global.html#POINT">POINT</a></li><li><a href="global.html#PROJECTING">PROJECTING</a></li><li><a href="global.html#QUADS">QUADS</a></li><li><a href="global.html#QUARTER_PI">QUARTER_PI</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#ROUND">ROUND</a></li><li><a href="global.html#SATURATION">SATURATION</a></li><li><a href="global.html#SCREEN">SCREEN</a></li><li><a href="global.html#SILHOUETE_ALPHA">SILHOUETE_ALPHA</a></li><li><a href="global.html#SILHOUETTE_LUMA">SILHOUETTE_LUMA</a></li><li><a href="global.html#SINCOS_LENGTH">SINCOS_LENGTH</a></li><li><a href="global.html#SOFT_LIGHT">SOFT_LIGHT</a></li><li><a href="global.html#SPOT">SPOT</a></li><li><a href="global.html#STENCIL_ALPHA">STENCIL_ALPHA</a></li><li><a href="global.html#STENCIL_LUMA">STENCIL_LUMA</a></li><li><a href="global.html#SUBTRACT">SUBTRACT</a></li><li><a href="global.html#TRIANGLES">TRIANGLES</a></li><li><a href="global.html#TWO_PI">TWO_PI</a></li><li><a href="global.html#VIVID_LIGHT">VIVID_LIGHT</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>after-effects-shapes.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>﻿//Shapes
+
+/**
+ * Add a solid to the composition.
+ * @category Baffects.js
+ * @param {String} [name] Name of the solid
+ * @param {number} x x-coordinate of the solid
+ * @param {number} y y-coordinate of the solid
+ * @param {number} [z] z-coordinate of the solid
+ * @param {number} w Width of the solid
+ * @param {number} h Height of the solid
+ * @param {number} [duration] Duration of the solid in seconds
+ * @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created solid AVLayer reference.
+ * @example
+ * var solid = b.solid();                               
+ * var solid = b.solid(name);                           
+ * var solid = b.solid(duration);                       
+ * var solid = b.solid(x, y, w, h);                     
+ * var solid = b.solid(name, x, y, w, h);               
+ * var solid = b.solid(x, y, w, h, duration);           
+ * var solid = b.solid(x, y, z, w, h);                  
+ * var solid = b.solid(name, x, y, z, w, h);            
+ * var solid = b.solid(x, y, z, w, h, duration);        
+ */
+pub.solid = function (name, x, y, z, w, h, dur) {
+  var a = arguments[0],
+    b = arguments[1],
+    c = arguments[2],
+    d = arguments[3],
+    e = arguments[4],
+    f = arguments[5],
+    g = arguments[6];
+
+  var newSolid;
+  if (!curr3DMode) {
+    switch (arguments.length) {
+      case 0:
+        newSolid = createSolid(
+          thisComp,
+          "solid",
+          pub.width / 2,
+          pub.height / 2,
+          0,
+          pub.width,
+          pub.height,
+          pub.getDuration()
+        );
+        newSolid.name = "solid_" + thisComp.numLayers.toString();
+        return newSolid;
+      case 1:
+        if (typeof a === "string") {
+          newSolid = createSolid(
+            thisComp,
+            a,
+            pub.width / 2,
+            pub.height / 2,
+            0,
+            pub.width,
+            pub.height,
+            pub.getDuration()
+          );
+          return newSolid;
+        } else {
+          newSolid = createSolid(
+            thisComp,
+            "solid",
+            pub.width / 2,
+            pub.height / 2,
+            0,
+            pub.width,
+            pub.height,
+            a
+          );
+          newSolid.name = "solid_" + thisComp.numLayers.toString();
+          return newSolid;
+        }
+      case 4:
+        newSolid = createSolid(
+          thisComp,
+          "solid",
+          a,
+          b,
+          0,
+          c,
+          d,
+          pub.getDuration()
+        );
+        newSolid.name = "solid_" + thisComp.numLayers.toString();
+        return newSolid;
+      case 5:
+        if (typeof a === "string") {
+          newSolid = createSolid(thisComp, a, b, c, 0, d, e, pub.getDuration());
+          return newSolid;
+        } else {
+          newSolid = createSolid(thisComp, "solid", a, b, 0, c, d, e);
+          newSolid.name = "solid_" + thisComp.numLayers.toString();
+          return newSolid;
+        }
+    }
+  } else {
+    switch (arguments.length) {
+      case 5:
+        newSolid = createSolid(
+          thisComp,
+          "solid",
+          a,
+          b,
+          c,
+          d,
+          e,
+          pub.getDuration()
+        );
+        newSolid.name = "solid_" + thisComp.numLayers.toString();
+        return newSolid;
+      case 6:
+        if (typeof a === "string") {
+          newSolid = createSolid(thisComp, a, b, c, d, e, f, pub.getDuration());
+          return newSolid;
+        } else {
+          newSolid = createSolid(thisComp, "solid", a, b, c, d, e, f);
+          newSolid.name = "solid_" + thisComp.numLayers.toString();
+          return newSolid;
+        }
+    }
+  }
+};
+
+function createSolid(comp, name, x, y, z, w, h, dur) {
+  this.obb = new Properties();
+
+  this.shape = comp.layers.addSolid(currFillColor, name, w, h, 1, dur);
+  this.obb.layer = this.shape;
+
+  if (curr3DMode) {
+    this.shape.threeDLayer = true;
+  }
+
+  setTransformPropertiesObject();
+
+  pub.anchor(this.obb.layer, currAnchorMode);
+  var cmx = currMatrix.position[0];
+  var cmy = currMatrix.position[1];
+  var cmz = currMatrix.position[2];
+  this.obb.position.setValue([cmx + x, cmy + y, cmz + z]);
+
+  this.obb.scale.setValue(currMatrix.scale);
+
+  if (curr3DMode) {
+    this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+    this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+    this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+  } else {
+    this.obb.rotation.setValue(currMatrix.rotation);
+  }
+
+  this.obb.opacity.setValue(currOpacity);
+
+  this.shape.blendingMode = currBlendMode;
+
+  return this.obb;
+}
+
+/**
+ * Draws a rectangle to the composition.
+ * @category Baffects.js 
+ * @category Baffects.js
+ * @method rect
+ * @param {number} x x-coordinate of the rectangle
+ * @param {number} y y-coordinate of the rectangle
+ * @param {number} [z] z-coordinate of the rectangle
+ * @param {number} w Width of the rectangle
+ * @param {number} h Height of the rectangle
+ * @param {number} [roundness] Roundness value of the rectangle
+ * @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, size, fill, stroke, weight, round].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
+ * @example
+ * var rect = b.rect(x, y);                             
+ * var rect = b.rect(x, y, w, h);                       
+ * var rect = b.rect(x, y, w, h, roundness);            
+ * var rect = b.rect(x, y, z);                          
+ * var rect = b.rect(x, y, z, w, h);                    
+ * var rect = b.rect(x, y, z, w, h, roundness);         
+ */
+pub.rect = function (x, y, z, w, h, round) {
+  var a = arguments[0],
+    b = arguments[1],
+    c = arguments[2],
+    d = arguments[3],
+    e = arguments[4],
+    f = arguments[5];
+
+  var shape;
+  if (!curr3DMode) {
+    switch (arguments.length) {
+      case 2:
+        shape = drawRectShape(thisComp, a, b, 0, pub.width, pub.height, 0);
+        return shape;
+      case 4:
+        shape = drawRectShape(thisComp, a, b, 0, c, d, 0);
+        return shape;
+      case 5:
+        shape = drawRectShape(thisComp, a, b, 0, c, d, e);
+        return shape;
+    }
+  } else {
+    switch (arguments.length) {
+      case 3:
+        shape = drawRectShape(thisComp, a, b, c, pub.width, pub.height, 0);
+        return shape;
+      case 5:
+        shape = drawRectShape(thisComp, a, b, c, d, e, 0);
+        return shape;
+      case 6:
+        shape = drawRectShape(thisComp, a, b, c, d, e, f);
+        return shape;
+    }
+  }
+};
+
+function drawRectShape(comp, x, y, z, w, h, round) {
+  // Build Shape
+  this.obb = new Properties();
+
+  this.shape = comp.layers.addShape();
+  this.obb.layer = shape;
+
+  if (curr3DMode) {
+    shape.threeDLayer = true;
+  }
+
+  this.shapeGroup = this.shape
+    .property("ADBE Root Vectors Group")
+    .addProperty("ADBE Vector Group");
+  this.shapeGroup
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Shape - Rect");
+
+  if (currStrokeState) {
+    createStroke();
+  }
+
+  if (currFillState) {
+    createFill();
+  }
+
+  setTransformPropertiesObject();
+  setStylePropertiesObject();
+  this.obb.size = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Rect")
+    .property("ADBE Vector Rect Size");
+  this.obb.round = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Rect")
+    .property("ADBE Vector Rect Roundness");
+
+  // Set properties values on shape through Properies object
+  this.obb.size.setValue([w, h]);
+  this.obb.round.setValue(round);
+
+  pub.anchor(this.obb.layer, currAnchorMode);
+  var cmx = currMatrix.position[0];
+  var cmy = currMatrix.position[1];
+  var cmz = currMatrix.position[2];
+  this.obb.position.setValue([cmx + x, cmy + y, cmz + z]);
+  this.obb.scale.setValue(currMatrix.scale);
+
+  if (curr3DMode) {
+    this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+    this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+    this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+  } else {
+    this.obb.rotation.setValue(currMatrix.rotation);
+  }
+
+  this.obb.opacity.setValue(currOpacity);
+
+  this.shape.blendingMode = currBlendMode;
+
+  return this.obb;
+}
+
+/**
+ * Draws an ellipse to the composition.
+ * @category Baffects.js 
+ * @category Baffects.js
+ * @method ellipse
+ * @param {number} x x-coordinate of the ellipse
+ * @param {number} y y-coordinate of the ellipse
+ * @param {number} [z] z-coordinate of the ellipse
+ * @param {number} w Width of the ellipse
+ * @param {number} h Height of the ellipse
+ * @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, size, fill, stroke, weight].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
+ *
+ * @example
+ * var ellipse = b.ellipse(x, y);                             
+ * var ellipse = b.ellipse(x, y, w, h);                       
+ * var ellipse = b.ellipse(x, y, z);                          
+ * var ellipse = b.ellipse(x, y, z, w, h);                    
+ */
+pub.ellipse = function (x, y, z, w, h) {
+  var a = arguments[0],
+    b = arguments[1],
+    c = arguments[2],
+    d = arguments[3],
+    e = arguments[4];
+
+  var shape;
+  if (!curr3DMode) {
+    switch (arguments.length) {
+      case 2:
+        shape = drawEllipseShape(thisComp, a, b, 0, pub.width, pub.height);
+        return shape;
+      case 4:
+        shape = drawEllipseShape(thisComp, a, b, 0, c, d);
+        return shape;
+    }
+  } else {
+    switch (arguments.length) {
+      case 3:
+        shape = drawEllipseShape(thisComp, a, b, c, pub.width, pub.height);
+        return shape;
+      case 5:
+        shape = drawEllipseShape(thisComp, a, b, c, d, e);
+        return shape;
+    }
+  }
+};
+
+function drawEllipseShape(comp, x, y, z, w, h) {
+  // Build Shape
+  this.obb = new Properties();
+
+  this.shape = comp.layers.addShape();
+  this.obb.layer = shape;
+
+  if (curr3DMode) {
+    shape.threeDLayer = true;
+  }
+
+  this.shapeGroup = this.shape
+    .property("ADBE Root Vectors Group")
+    .addProperty("ADBE Vector Group");
+  this.shapeGroup
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Shape - Ellipse");
+
+  if (currStrokeState) {
+    createStroke();
+  }
+
+  if (currFillState) {
+    createFill();
+  }
+
+  setTransformPropertiesObject();
+  setStylePropertiesObject();
+  this.obb.size = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Ellipse")
+    .property("ADBE Vector Ellipse Size");
+
+  // Set properties values on shape through Properies object
+  this.obb.size.setValue([w, h]);
+
+  pub.anchor(this.obb.layer, currAnchorMode);
+  var cmx = currMatrix.position[0];
+  var cmy = currMatrix.position[1];
+  var cmz = currMatrix.position[2];
+  this.obb.position.setValue([cmx + x, cmy + y, cmz + z]);
+  this.obb.scale.setValue(currMatrix.scale);
+
+  if (curr3DMode) {
+    this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+    this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+    this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+  } else {
+    this.obb.rotation.setValue(currMatrix.rotation);
+  }
+
+  this.obb.opacity.setValue(currOpacity);
+
+  this.shape.blendingMode = currBlendMode;
+
+  return this.obb;
+}
+
+/**
+ * Draws an n-gon to the composition.
+ * @category Baffects.js 
+ * @category Baffects.js
+ * @method polygon
+ * @param {number} x x-coordinate of the polygon
+ * @param {number} y y-coordinate of the polygon
+ * @param {number} [z] z-coordinate of the polygon
+ * @param {number} r Radius of the polygon
+ * @param {number} n number of sides
+ * @returns {Properties} [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, points, radius, fill, stroke, weight].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
+ *
+ * @example
+ * var polygon = b.polygon(x, y);                             
+ * var polygon = b.polygon(x, y, r, n);                                               
+ */
+pub.polygon = function (x, y, z, r, n) {
+  var a = arguments[0],
+    b = arguments[1],
+    c = arguments[2],
+    d = arguments[3],
+    e = arguments[4];
+
+  var shape;
+  if (!curr3DMode) {
+    switch (arguments.length) {
+      case 2:
+        shape = drawPolygonShape(thisComp, a, b, 0, pub.width, pub.height);
+        return shape;
+      case 4:
+        shape = drawPolygonShape(thisComp, a, b, 0, c, d);
+        return shape;
+    }
+  } else {
+    switch (arguments.length) {
+      case 3:
+        shape = drawPolygonShape(thisComp, a, b, c, pub.width, pub.height);
+        return shape;
+      case 5:
+        shape = drawPolygonShape(thisComp, a, b, c, d, e);
+        return shape;
+    }
+  }
+};
+
+function drawPolygonShape(comp, x, y, z, r, n) {
+  // Build Shape
+  this.obb = new Properties();
+
+  this.shape = comp.layers.addShape();
+  this.obb.layer = shape;
+  if (curr3DMode) {
+    this.shape.threeDLayer = true;
+  }
+
+  this.shapeGroup = this.shape
+    .property("ADBE Root Vectors Group")
+    .addProperty("ADBE Vector Group");
+  var gon = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Shape - Star");
+  gon.property("ADBE Vector Star Type").setValue(2);
+
+  if (currStrokeState) {
+    createStroke();
+  }
+
+  if (currFillState) {
+    createFill();
+  }
+
+  setTransformPropertiesObject();
+  setStylePropertiesObject();
+  this.obb.points = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Star")
+    .property("ADBE Vector Star Points");
+  this.obb.radius = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Star")
+    .property("ADBE Vector Star Outer Radius");
+  this.obb.roundness = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Star")
+    .property("ADBE Vector Star Outer Roundess");
+
+  // Set properties values on shape through Properies object
+  this.obb.points.setValue(n);
+  this.obb.radius.setValue(r);
+
+  pub.anchor(this.obb.layer, currAnchorMode);
+  var cmx = currMatrix.position[0];
+  var cmy = currMatrix.position[1];
+  var cmz = currMatrix.position[2];
+  this.obb.position.setValue([cmx + x, cmy + y, cmz + z]);
+  this.obb.scale.setValue(currMatrix.scale);
+
+  if (curr3DMode) {
+    this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+    this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+    this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+  } else {
+    this.obb.rotation.setValue(currMatrix.rotation);
+  }
+
+  this.obb.opacity.setValue(currOpacity);
+
+  this.shape.blendingMode = currBlendMode;
+
+  return this.obb;
+}
+
+/**
+ * Draws a line to the composition (currently only 2D mode supported).
+ * @category Baffects.js 
+ * @category Baffects.js
+ * @method line
+ * @param {number} x1 x-coordinate of the first point
+ * @param {number} y1 y-coordinate of the first point
+ * @param {number} x2 x-coordinate of the second point
+ * @param {number} y2 y-coordinate of the second point
+ * @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, stroke, weight].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
+ * @example
+ * b.stroke(1);                                                            
+ * var line = b.line(0, 0, b.width, b.height);                             
+ */
+pub.line = function (x1, y1, x2, y2) {
+  var shape = drawLineShape(thisComp, x1, y1, x2, y2);
+  return shape;
+};
+
+function drawLineShape(comp, x1, y1, x2, y2) {
+  // Build Shape
+  var fillState = currFillState;
+  currFillState = false;
+  this.obb = new Properties();
+
+  this.shape = comp.layers.addShape();
+  this.obb.layer = shape;
+
+  if (curr3DMode) {
+    this.shape.threeDLayer = true;
+  }
+
+  this.shapeGroup = this.shape
+    .property("ADBE Root Vectors Group")
+    .addProperty("ADBE Vector Group");
+  this.shapeGroup
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Shape - Group");
+
+  createStroke();
+
+  setTransformPropertiesObject();
+  setStylePropertiesObject();
+  this.obb.path = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Group")
+    .property("ADBE Vector Shape");
+
+  // Set properties values on shape through Properies object
+  var drawing = new Shape();
+  drawing.vertices = [
+    [x1, y1],
+    [x2, y2],
+  ];
+  this.obb.path.setValue(drawing);
+
+  this.obb.stroke.setValue(currStrokeColor);
+
+  this.obb.anchorpoint.setValue([x1, y1]);
+  var cmx = currMatrix.position[0];
+  var cmy = currMatrix.position[1];
+  this.obb.position.setValue([cmx + x1, cmy + y1]);
+  pub.anchor(this.obb.layer, currAnchorMode);
+
+  this.obb.scale.setValue(currMatrix.scale);
+  if (curr3DMode) {
+    this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+    this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+    this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+  } else {
+    this.obb.rotation.setValue(currMatrix.rotation);
+  }
+
+  this.obb.opacity.setValue(currOpacity);
+
+  this.shape.blendingMode = currBlendMode;
+
+  currFillState = fillState;
+
+  return this.obb;
+}
+
+/**
+ * Draws a shape to the composition.
+ * @category Baffects.js 
+ * @category Baffects.js
+ * @method shape
+ * @param {number[][]} vertices Shape vertices [x, y] array
+ * @param {number[][]} [inTangents] In tangents [x, y] array
+ * @param {number[][]} [outTangents] Out tangents [x, y] array
+ * @param {Boolean} closed Open or closed shape
+ * @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, path, fill, stroke, weight].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
+ * @example
+ * b.background(0);
+ *
+ * var points = [];
+ * var inTan = [];
+ * var outTan = [];
+ *
+ * for (var i=0; i&lt;20; i++) {
+ *    var x = b.random(b.width);
+ *    var y = b.random(b.height);
+ *    points.push([x,y]);
+ *    inTan.push([x-5, y-5]);
+ *    outTan.push([x+5, y+5]);
+ * }
+ *
+ * b.stroke(1);
+ * var mask = b.shape(points, inTan, outTan, false);
+ * b.printProperties(mask);
+ */
+pub.shape = function (vertices, inTangents, outTangents, closed) {
+  var a = arguments[0],
+    b = arguments[1],
+    c = arguments[2],
+    d = arguments[3];
+
+  var shape;
+  switch (arguments.length) {
+    case 1:
+      shape = drawShape(thisComp, a, null, null, false);
+      return shape;
+    case 2:
+      shape = drawShape(thisComp, a, null, null, b);
+      return shape;
+    case 3:
+      shape = drawShape(thisComp, a, b, c, false);
+      return shape;
+    case 4:
+      shape = drawShape(thisComp, a, b, c, d);
+      return shape;
+  }
+};
+
+function drawShape(comp, v, inTangents, outTangents, closed) {
+  // Build Shape
+  this.obb = new Properties();
+
+  this.shape = comp.layers.addShape();
+  this.obb.layer = shape;
+
+  if (curr3DMode) {
+    this.shape.threeDLayer = true;
+  }
+
+  this.shapeGroup = this.shape
+    .property("ADBE Root Vectors Group")
+    .addProperty("ADBE Vector Group");
+  this.shapeGroup
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Shape - Group");
+
+  if (currStrokeState) {
+    createStroke();
+  }
+
+  if (currFillState) {
+    createFill();
+  }
+
+  setTransformPropertiesObject();
+  setStylePropertiesObject();
+  this.obb.path = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .property("ADBE Vector Shape - Group")
+    .property("ADBE Vector Shape");
+
+  // Set properties values on shape through Properies object
+  var drawing = new Shape();
+  drawing.vertices = doTranslate(v);
+  if (inTangents !== null) {
+    drawing.inTangents = doTranslate(inTangents);
+    drawing.outTangents = doTranslate(outTangents);
+  }
+  drawing.closed = closed;
+
+  this.obb.path.setValue(drawing);
+
+  this.obb.position.setValue([0, 0, 0]);
+
+  pub.anchor(this.obb.layer, currAnchorMode);
+
+  this.obb.scale.setValue(currMatrix.scale);
+
+  if (curr3DMode) {
+    this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+    this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+    this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+  } else {
+    this.obb.rotation.setValue(currMatrix.rotation);
+  }
+
+  this.obb.opacity.setValue(currOpacity);
+
+  this.shape.blendingMode = currBlendMode;
+
+  if (pub.INACTIVE) {
+    this.obb.layer.enabled = false;
+  }
+
+  return this.obb;
+}
+
+var doTranslate = function (points) {
+  var newPoints = [];
+  if (points[0].length === 2) {
+    for (var i = 0; i &lt; points.length; i++) {
+      var temp = [];
+      temp[0] = points[i][0] + currMatrix.position[0];
+      temp[1] = points[i][1] + currMatrix.position[1];
+      newPoints.push(temp);
+    }
+  } else {
+    for (var i = 0; i &lt; points.length; i++) {
+      var temp = [];
+      temp[0] = points[i][0] + currMatrix.position[0];
+      temp[1] = points[i][1] + currMatrix.position[1];
+      temp[2] = points[i][2] + currMatrix.position[2];
+      newPoints.push(temp);
+    }
+  }
+  return newPoints;
+};
+
+/**
+ * Creates a new null object.
+ * @category Baffects.js 
+ * @category Baffects.js
+ * @method nullLayer
+ * @param {number} [duration] Duration in seconds of null object
+ * @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created ShapeLayer reference.
+ *
+ * @example
+ * var null = b.nullLayer();                
+ * var null = b.nullLayer(duration);        
+ */
+pub.nullLayer = function (duration) {
+  var a = arguments[0],
+    b = arguments[1];
+
+  var nullObject;
+  switch (arguments.length) {
+    case 0:
+      nullObject = createNullObject(thisComp, pub.getDuration());
+      return nullObject;
+    case 1:
+      nullObject = createNullObject(thisComp, a);
+      return nullObject;
+  }
+};
+
+function createNullObject(comp, duration) {
+  this.obb = new Properties();
+  this.shape = comp.layers.addNull(duration);
+  this.obb.layer = this.shape;
+
+  if (curr3DMode) {
+    this.shape.threeDLayer = true;
+  }
+  setTransformPropertiesObject();
+
+  return this.obb;
+}
+
+//BeginShape and EndShape implementation for AE
+var vertix = [];
+var inTan = [];
+var outTan = [];
+var currDrawingMode = 0;
+var styleStack = [];
+var Style = function (fs, f, ss, s, w) {
+  this.fillState = fs;
+  this.fill = f;
+  this.strokeState = ss;
+  this.stroke = s;
+  this.weight = w;
+};
+
+/**
+ * Using the beginShape() and endShape() functions allow creating more complex forms. beginShape() begins recording vertices for a shape and endShape() stops recording.
+ * The value of the kind parameter tells it which types of shapes to create from the provided vertices. With no mode specified, the shape can be any irregular polygon.
+ * The parameters available for beginShape() are LINES, TRIANGLES, QUADS.
+ * After calling the beginShape() function, a series of vertex(), itangent() or otangent() commands must follow. To stop drawing the shape, call endShape().
+ * Each shape will be outlined with the current stroke color and filled with the fill color.
+ * @category Baffects.js
+ * @method beginShape
+ * @param {NONE|LINES|QUADS|TRIANGLES|INVISIBLE} mode
+ */
+pub.beginShape = function (mode) {
+  styleStack = [];
+  if (arguments.length === 1) {
+    if (mode === pub.INACTIVE) {
+      pub.INACTIVE = true;
+      currDrawingMode = 0;
+      return false;
+    }
+    currDrawingMode = mode;
+  }
+};
+
+/**
+ * The endShape() function is the companion to beginShape() and may only be called after beginShape().
+ * When endshape() is called, all of image data defined since the previous call to beginShape() is written into the image buffer.
+ * The constant CLOSE as the value for the MODE parameter to close the shape (to connect the beginning and the end).
+ * @category Baffects.js
+ * @method endShape
+ * @param {NONE|CLOSE} close
+ */
+pub.endShape = function (close) {
+  var isClosed = false;
+  if (arguments.length === 1) {
+    if (close === pub.CLOSE) {
+      isClosed = true;
+    }
+  }
+  lastShapes = [];
+  var shape;
+  switch (currDrawingMode) {
+    case 0:
+      if (inTan.length > 0 &amp;&amp; outTan.length > 0) {
+        shape = drawShape(thisComp, vertix, inTan, outTan, isClosed);
+      } else if (inTan.length > 0) {
+        shape = drawShape(thisComp, vertix, inTan, inTan, isClosed);
+      } else {
+        shape = drawShape(thisComp, vertix, null, null, isClosed);
+      }
+      break;
+    case 1:
+      if (vertix.length % 2 === 0) {
+        shape = createShapeWithLines(thisComp, vertix, null, null, isClosed, 2);
+        break;
+      } else {
+        error("Bad number of vertex points for this drawing mode");
+        break;
+      }
+
+    case 2:
+      if (vertix.length % 4 === 0) {
+        shape = createShapeWithLines(thisComp, vertix, null, null, isClosed, 4);
+        break;
+      } else {
+        error("Bad number of vertex points for this drawing mode");
+        break;
+      }
+
+    case 3:
+      if (vertix.length % 3 === 0) {
+        shape = createShapeWithLines(thisComp, vertix, null, null, isClosed, 3);
+        break;
+      } else {
+        error("Bad number of vertex points for this drawing mode");
+        break;
+      }
+  }
+  vertix = [];
+  inTan = [];
+  outTan = [];
+  pub.INACTIVE = false;
+  return shape;
+};
+
+/**
+ * All shapes are constructed by connecting a series of vertices. vertex() is used to specify the vertex coordinates for lines, triangles, quads, and polygons.
+ * It is used exclusively within the beginShape() and endShape() functions.
+ * @category Baffects.js
+ * @method vertex
+ * @param {number} x x-coordinate of the vertex
+ * @param {number} y y-coordinate of the vertex
+ */
+pub.vertex = function (x, y) {
+  vertix.push([x, y]);
+};
+
+/**
+ * Define in tangents for shape. Transformation space is relative to the vertex() defined.
+ * @category Baffects.js
+ * @method itangent
+ * @param {number} x  x-coordinate of the vertex
+ * @param {number} y  y-coordinate of the vertex
+ */
+pub.itangent = function (x, y) {
+  inTan.push([x, y]);
+};
+
+/**
+ * Define out tangents for shape. Transformation space is relative to the vertex() defined.
+ * @category Baffects.js
+ * @method otangent
+ * @param {number} x  x-coordinate of the vertex
+ * @param {number} y  y-coordinate of the vertex
+ */
+pub.otangent = function (x, y) {
+  outTan.push([x, y]);
+};
+
+var lastShapes = [];
+
+function createShapeWithLines(comp, v, inTangents, outTangents, closed, inc) {
+  this.obb = new Properties();
+
+  this.shape = comp.layers.addShape();
+  this.obb.layer = shape;
+
+  if (curr3DMode) {
+    this.shape.threeDLayer = true;
+  }
+
+  var generalGroup = this.shape
+    .property("ADBE Root Vectors Group")
+    .addProperty("ADBE Vector Group");
+
+  if (inc === 2) {
+    var group = 1;
+    for (var i = 0; i &lt; v.length; i += inc) {
+      this.lastShapesProps = new Properties();
+
+      var shapeGroup = generalGroup
+        .property("ADBE Vectors Group")
+        .addProperty("ADBE Vector Group");
+      var line = shapeGroup
+        .property("ADBE Vectors Group")
+        .addProperty("ADBE Vector Shape - Group");
+
+      var drawing = new Shape();
+      var cmx = currMatrix.position[0];
+      var cmy = currMatrix.position[1];
+      drawing.vertices = [cmx + v[i], cmy + v[i + 1]];
+      line.property("ADBE Vector Shape").setValue(drawing);
+
+      createStroke();
+    }
+  }
+
+  if (inc === 4 || inc === 3) {
+    for (var i = 0; i &lt; v.length; i += inc) {
+      this.lastShapesProps = new Properties();
+
+      this.shapeGroup = generalGroup
+        .property("ADBE Vectors Group")
+        .addProperty("ADBE Vector Group");
+      var line = this.shapeGroup
+        .property("ADBE Vectors Group")
+        .addProperty("ADBE Vector Shape - Group");
+      var drawing = new Shape();
+      drawing.vertices = doTranslate(v.slice(i, i + inc));
+      line.property("ADBE Vector Shape").setValue(drawing);
+
+      if (currStrokeState) {
+        createStroke();
+      }
+
+      if (currFillState) {
+        createFill();
+      }
+    }
+  }
+
+  buildLastShapeProperties(generalGroup);
+
+  setTransformPropertiesObject();
+
+  this.obb.position.setValue([0, 0, 0]);
+
+  pub.anchor(this.obb.layer, currAnchorMode);
+
+  if (matrixStack.length > 0) {
+    var cmx = currMatrix.position[0];
+    var cmy = currMatrix.position[1];
+    var cmz = currMatrix.position[2];
+    this.obb.position.setValue([cmx, cmy, cmz]);
+  }
+
+  this.obb.scale.setValue(currMatrix.scale);
+
+  if (curr3DMode) {
+    this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+    this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+    this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+  } else {
+    this.obb.rotation.setValue(currMatrix.rotation);
+  }
+
+  this.obb.opacity.setValue(currOpacity);
+
+  this.shape.blendingMode = currBlendMode;
+
+  return this.obb;
+}
+
+function buildLastShapeProperties(group) {
+  var allGroup = group.property("ADBE Vectors Group");
+  for (var i = 0; i &lt; allGroup.numProperties; i++) {
+    var shapeProps = new Properties();
+    var interiorGroup = allGroup.property(i + 1).property("ADBE Vectors Group");
+    checkStyleStack(i);
+
+    if (currStrokeState) {
+      shapeProps.stroke = interiorGroup
+        .property("ADBE Vector Graphic - Stroke")
+        .property("ADBE Vector Stroke Color");
+      shapeProps.weight = interiorGroup
+        .property("ADBE Vector Graphic - Stroke")
+        .property("ADBE Vector Stroke Width");
+      shapeProps.linecap = interiorGroup
+        .property("ADBE Vector Graphic - Stroke")
+        .property("ADBE Vector Stroke Line Cap");
+      shapeProps.linejoin = interiorGroup
+        .property("ADBE Vector Graphic - Stroke")
+        .property("ADBE Vector Stroke Line Join");
+      shapeProps.miterlimit = interiorGroup
+        .property("ADBE Vector Graphic - Stroke")
+        .property("ADBE Vector Stroke Miter Limit");
+      shapeProps.stroke.setValue(currStrokeColor);
+      shapeProps.weight.setValue(currStrokeWeight);
+    }
+
+    if (currFillState) {
+      shapeProps.fill = interiorGroup
+        .property("ADBE Vector Graphic - Fill")
+        .property("ADBE Vector Fill Color");
+      shapeProps.fill.setValue(currFillColor);
+    }
+
+    var transform = allGroup
+      .property(i + 1)
+      .property("ADBE Vector Transform Group");
+    for (var k = 0; k &lt; transform.numProperties; k++) {
+      shapeProps[
+        transform
+          .property(k + 1)
+          .name.toLowerCase()
+          .replace(/\s/g, "")
+      ] = transform.property(k + 1);
+    }
+
+    lastShapes.push(shapeProps);
+  }
+}
+
+function checkStyleStack(group) {
+  if (group &lt; styleStack.length) {
+    currFillState = styleStack[group].fillState;
+    currFillColor = styleStack[group].fill;
+    currStrokeState = styleStack[group].strokeState;
+    currStrokeColor = styleStack[group].stroke;
+    currStrokeWeight = styleStack[group].weight;
+  }
+}
+
+function setLastShapeStyles() {
+  for (var i = 0; i &lt; lastShapes.length; i++) {
+    checkStyleStack(i);
+    if (currStrokeState) {
+      lastShapes[i].stroke.setValue(currStrokeColor);
+      lastShapes[i].weight.setValue(currStrokeWeight);
+    }
+
+    if (currFillState) {
+      lastShapes[i].fill.setValue(currFillColor);
+    }
+  }
+}
+
+/**
+ * Return individual properties of the last shape drawn with beginShape() and endShape().
+ * @category Baffects.js
+ * @method lastShape
+ * @returns {Properties} Array of Properties for individual shapes;
+ */
+pub.lastShape = function () {
+  return lastShapes;
+};
+
+//Creating stroke and fill
+function createStroke() {
+  var strokeHere = this.shapeGroup
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Graphic - Stroke");
+  switch (currCaps) {
+    case 0:
+      strokeHere.property("ADBE Vector Stroke Line Cap").setValue(1);
+      break;
+    case 1:
+      strokeHere.property("ADBE Vector Stroke Line Cap").setValue(2);
+      break;
+    case 2:
+      strokeHere.property("ADBE Vector Stroke Line Cap").setValue(3);
+      break;
+  }
+}
+
+function createFill() {
+  this.shapeGroup
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Graphic - Fill");
+}
+
+// Get all transform properties for shapes
+function setTransformPropertiesObject() {
+  var transform = this.shape.property("ADBE Transform Group");
+  for (var i = 0; i &lt; transform.numProperties - 1; i++) {
+    this.obb[
+      transform
+        .property(i + 1)
+        .name.toLowerCase()
+        .replace(/\s/g, "")
+    ] = transform.property(i + 1);
+  }
+}
+
+//Recover properties of created shape layer
+function setStylePropertiesObject() {
+  if (currStrokeState) {
+    this.obb.stroke = this.shapeGroup
+      .property("ADBE Vectors Group")
+      .property("ADBE Vector Graphic - Stroke")
+      .property("ADBE Vector Stroke Color");
+    this.obb.weight = this.shapeGroup
+      .property("ADBE Vectors Group")
+      .property("ADBE Vector Graphic - Stroke")
+      .property("ADBE Vector Stroke Width");
+    this.obb.stroke.setValue(currStrokeColor);
+    this.obb.weight.setValue(currStrokeWeight);
+  }
+
+  if (currFillState) {
+    this.obb.fill = this.shapeGroup
+      .property("ADBE Vectors Group")
+      .property("ADBE Vector Graphic - Fill")
+      .property("ADBE Vector Fill Color");
+    this.obb.fill.setValue(currFillColor);
+  }
+}
+
+//______________________________________________________________________________________________________________________
+// ShapeLayer FX
+
+/**
+ * Add Pucker &amp; Bloat effect to ShapeLayer.
+ * @category Baffects.js 
+ * @method shapePuckerBloat
+ * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
+ * @returns {Properties} Properties object with attributes [amount].
+ * @example
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         
+ * var fx = b.shapePuckerBloat(shape.layer);                        
+ */
+pub.shapePuckerBloat = function (rShape) {
+  var shape;
+  if (validateLayer(rShape, ShapeLayer)) {
+    shape = rShape;
+  } else {
+    shape = rShape.layer;
+  }
+
+  var obb = new Properties();
+  var pb = shape
+    .property("ADBE Root Vectors Group")
+    .property(1)
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Filter - PB");
+  obb.amount = pb.property("ADBE Vector PuckerBloat Amount");
+
+  return obb;
+};
+
+/**
+ * Add Repeater effects to ShapeLayer.
+ *  
+ * @category Baffects.js
+ * @method shapeRepeater
+ * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
+ * @returns {Properties} Properties object with attributes [copies, offset, composite, anchor, position, scale, rotation, startopacity, endopacity].
+ * @example
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         
+ * var fx = b.shapeRepeater(shape.layer);                           
+ */
+pub.shapeRepeater = function (rShape) {
+  var shape;
+  if (validateLayer(rShape, ShapeLayer)) {
+    shape = rShape;
+  } else {
+    shape = rShape.layer;
+  }
+
+  var obb = new Properties();
+  var repeater = shape
+    .property("ADBE Root Vectors Group")
+    .property(1)
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Filter - Repeater");
+  obb.copies = repeater.property("ADBE Vector Repeater Copies");
+  obb.offset = repeater.property("ADBE Vector Repeater Offset");
+  obb.composite = repeater.property("ADBE Vector Repeater Order");
+
+  var transform = repeater.property("ADBE Vector Repeater Transform");
+  for (var i = 0; i &lt; transform.numProperties; i++) {
+    obb[
+      transform
+        .property(i + 1)
+        .name.toLowerCase()
+        .replace(/\s/g, "")
+    ] = transform.property(i + 1);
+  }
+
+  return obb;
+};
+
+/**
+ * Add Trim Paths effect to ShapeLayer.
+ *  
+ * @category Baffects.js
+ * @method shapeTrimPaths
+ * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
+ * @returns {Properties} Properties object with attributes [start, end, offset].
+ * @example
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         
+ * var fx = b.shapeTrimPaths(shape.layer);                          
+ */
+pub.shapeTrimPaths = function (rShape) {
+  var shape;
+  if (validateLayer(rShape, ShapeLayer)) {
+    shape = rShape;
+  } else {
+    shape = rShape.layer;
+  }
+
+  var obb = new Properties();
+  var trim = shape
+    .property("ADBE Root Vectors Group")
+    .property(1)
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Filter - Trim");
+  obb.start = trim.property("ADBE Vector Trim Start");
+  obb.end = trim.property("ADBE Vector Trim End");
+  obb.offset = trim.property("ADBE Vector Trim Offset");
+
+  return obb;
+};
+
+/**
+ * Add Twist effect to ShapeLayer.
+ *  
+ * @category Baffects.js
+ * @method shapeTwist
+ * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
+ * @returns {Properties} Properties object with attributes [angle, center].
+ * @example
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         
+ * var fx = b.shapeTwist(shape.layer);                              
+ */
+pub.shapeTwist = function (rShape) {
+  var shape;
+  if (validateLayer(rShape, ShapeLayer)) {
+    shape = rShape;
+  } else {
+    shape = rShape.layer;
+  }
+
+  var obb = new Properties();
+  var twist = shape
+    .property("ADBE Root Vectors Group")
+    .property(1)
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Filter - Twist");
+  obb.angle = twist.property("ADBE Vector Twist Angle");
+  obb.center = twist.property("ADBE Vector Twist Center");
+
+  return obb;
+};
+
+/**
+ * Add Wiggle Path effect to ShapeLayer.
+ *  
+ * @category Baffects.js
+ * @method shapeWigglePaths
+ * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
+ * @returns {Properties} Properties object with attributes [size, detail, points, wiggles, correlation, temporalphase, spatialphase, seed].
+ * @example
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         
+ * var fx = b.shapeWigglePaths(shape.layer);                        
+ */
+pub.shapeWigglePaths = function (rShape) {
+  var shape;
+  if (validateLayer(rShape, ShapeLayer)) {
+    shape = rShape;
+  } else {
+    shape = rShape.layer;
+  }
+
+  var obb = new Properties();
+  var wiggle = shape
+    .property("ADBE Root Vectors Group")
+    .property(1)
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Filter - Roughen");
+  obb.size = wiggle.property("ADBE Vector Roughen Size");
+  obb.detail = wiggle.property("ADBE Vector Roughen Detail");
+  obb.points = wiggle.property("ADBE Vector Roughen Points");
+  obb.wiggles = wiggle.property("ADBE Vector Temporal Freq");
+  obb.correlation = wiggle.property("ADBE Vector Correlation");
+  obb.temporalphase = wiggle.property("ADBE Vector Temporal Phase");
+  obb.spatialphase = wiggle.property("ADBE Vector Spatial Phase");
+  obb.seed = wiggle.property("ADBE Vector Random Seed");
+
+  return obb;
+};
+
+/**
+ * Add Wiggle Transform effect to ShapeLayer.
+ *  
+ * @category Baffects.js
+ * @method shapeWiggleTransform
+ * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
+ * @returns {Properties} Properties object with attributes [wiggles, correlation, temporalphase, spatialphase, seed, anchor, position, scale, rotation].
+ * @example
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         
+ * var fx = b.shapeWiggleTransform(shape.layer);                    
+ */
+pub.shapeWiggleTransform = function (rShape) {
+  var shape;
+  if (validateLayer(rShape, ShapeLayer)) {
+    shape = rShape;
+  } else {
+    shape = rShape.layer;
+  }
+
+  var obb = new Properties();
+  var wiggle = shape
+    .property("ADBE Root Vectors Group")
+    .property(1)
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Filter - Wiggler");
+  obb.wiggles = wiggle.property("ADBE Vector Xform Temporal Freq");
+  obb.correlation = wiggle.property("ADBE Vector Correlation");
+  obb.temporalphase = wiggle.property("ADBE Vector Temporal Phase");
+  obb.spatialphase = wiggle.property("ADBE Vector Spatial Phase");
+  obb.seed = wiggle.property("ADBE Vector Random Seed");
+
+  var transform = wiggle.property("ADBE Vector Wiggler Transform");
+  for (var i = 0; i &lt; transform.numProperties; i++) {
+    obb[
+      transform
+        .property(i + 1)
+        .name.toLowerCase()
+        .replace(/\s/g, "")
+    ] = transform.property(i + 1);
+  }
+
+  return obb;
+};
+
+/**
+ * Add Zig Zag effect to ShapeLayer.
+ *  
+ * @category Baffects.js
+ * @method shapeZigZag
+ * @param {ShapeLayer} shape ShapeLayer or Properties object to add effect to
+ * @returns {Properties} Properties object with attributes [size, ridges, points].
+ * @example
+ * var shape = b.rect(b.width / 2, b.height / 2, 400, 400);         
+ * var fx = b.shapeZigZag(shape.layer);                             
+ */
+pub.shapeZigZag = function (rShape) {
+  var shape;
+  if (validateLayer(rShape, ShapeLayer)) {
+    shape = rShape;
+  } else {
+    shape = rShape.layer;
+  }
+
+  var obb = new Properties();
+  var zz = shape
+    .property("ADBE Root Vectors Group")
+    .property(1)
+    .property("ADBE Vectors Group")
+    .addProperty("ADBE Vector Filter - Zigzag");
+  obb.size = zz.property("ADBE Vector Zigzag Size");
+  obb.ridges = zz.property("ADBE Vector Zigzag Detail");
+  obb.points = zz.property("ADBE Vector Zigzag Points");
+
+  return obb;
+};
+
+//Has not yet being implemented on AE API
+// pub.paint = function(points) {
+//     this.obb = new Properties();
+//     var solid = pub.solid();
+// 	var paint = solid.layer.effect.addProperty("ADBE Paint");
+//     var brush = paint.property("ADBE Paint Group").addProperty("ADBE Paint Atom");
+
+//     this.obb.layer = solid.layer;
+//     this.obb.path = brush.property("ADBE Paint Shape");
+
+//     var shape = new Shape();
+//     shape.vertices = points;
+//     // this.obb.path.setValue(shape);
+//     solid.layer.property("ADBE Effect Parade").property("ADBE Paint").property("ADBE Paint Group").property("ADBE Paint Atom").property("ADBE Paint Shape").setValue(shape);
+
+//     var strokeProps = brush.property("ADBE Paint Properties");
+//     for (var i = 0; i &lt; strokeProps.numProperties - 1; i++) {
+//         this.obb[strokeProps.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = strokeProps.property(i + 1);
+//     }
+
+//     return this.obb;
+// };
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

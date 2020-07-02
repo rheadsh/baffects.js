@@ -1,0 +1,466 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> math_random_noise.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="b.html">b</a></li></ul><h3>Global</h3><ul><li><a href="global.html#abs">abs</a></li><li><a href="global.html#acos">acos</a></li><li><a href="global.html#asin">asin</a></li><li><a href="global.html#atan">atan</a></li><li><a href="global.html#atan2">atan2</a></li><li><a href="global.html#binary">binary</a></li><li><a href="global.html#ceil">ceil</a></li><li><a href="global.html#constrain">constrain</a></li><li><a href="global.html#cos">cos</a></li><li><a href="global.html#day">day</a></li><li><a href="global.html#degrees">degrees</a></li><li><a href="global.html#dist">dist</a></li><li><a href="global.html#endsWith">endsWith</a></li><li><a href="global.html#exp">exp</a></li><li><a href="global.html#floor">floor</a></li><li><a href="global.html#forEach">forEach</a></li><li><a href="global.html#go">go</a></li><li><a href="global.html#HashList">HashList</a></li><li><a href="global.html#hex">hex</a></li><li><a href="global.html#hour">hour</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isNumber">isNumber</a></li><li><a href="global.html#isString">isString</a></li><li><a href="global.html#isURL">isURL</a></li><li><a href="global.html#itemsFromFolder">itemsFromFolder</a></li><li><a href="global.html#itemsFromFolderGUI">itemsFromFolderGUI</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#lerp">lerp</a></li><li><a href="global.html#loadAI">loadAI</a></li><li><a href="global.html#loadItem">loadItem</a></li><li><a href="global.html#loadSequence">loadSequence</a></li><li><a href="global.html#loadString">loadString</a></li><li><a href="global.html#loadStrings">loadStrings</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#mag">mag</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#millis">millis</a></li><li><a href="global.html#millisecond">millisecond</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minute">minute</a></li><li><a href="global.html#month">month</a></li><li><a href="global.html#nf">nf</a></li><li><a href="global.html#nfc">nfc</a></li><li><a href="global.html#nfp">nfp</a></li><li><a href="global.html#nfs">nfs</a></li><li><a href="global.html#norm">norm</a></li><li><a href="global.html#pow">pow</a></li><li><a href="global.html#print">print</a></li><li><a href="global.html#printInfo">printInfo</a></li><li><a href="global.html#println">println</a></li><li><a href="global.html#projectFolder">projectFolder</a></li><li><a href="global.html#radians">radians</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#saveString">saveString</a></li><li><a href="global.html#saveStrings">saveStrings</a></li><li><a href="global.html#second">second</a></li><li><a href="global.html#sin">sin</a></li><li><a href="global.html#split">split</a></li><li><a href="global.html#splitTokens">splitTokens</a></li><li><a href="global.html#sq">sq</a></li><li><a href="global.html#sqrt">sqrt</a></li><li><a href="global.html#startsWith">startsWith</a></li><li><a href="global.html#tan">tan</a></li><li><a href="global.html#timestamp">timestamp</a></li><li><a href="global.html#trim">trim</a></li><li><a href="global.html#trimWord">trimWord</a></li><li><a href="global.html#unbinary">unbinary</a></li><li><a href="global.html#unhex">unhex</a></li><li><a href="global.html#Vector">Vector</a></li><li><a href="global.html#weekday">weekday</a></li><li><a href="global.html#year">year</a></li></ul></div><div class="category"><h2>Baffects.js</h2><h3>Global</h3><ul><li><a href="global.html#addFX">addFX</a></li><li><a href="global.html#addItemToComp">addItemToComp</a></li><li><a href="global.html#addLayer">addLayer</a></li><li><a href="global.html#addPreset">addPreset</a></li><li><a href="global.html#addToRender">addToRender</a></li><li><a href="global.html#addToRenderAME">addToRenderAME</a></li><li><a href="global.html#adjustmenLayer">adjustmenLayer</a></li><li><a href="global.html#anchor">anchor</a></li><li><a href="global.html#anchorMode">anchorMode</a></li><li><a href="global.html#audioToKeyframes">audioToKeyframes</a></li><li><a href="global.html#background">background</a></li><li><a href="global.html#beginMask">beginMask</a></li><li><a href="global.html#beginShape">beginShape</a></li><li><a href="global.html#beginUndo">beginUndo</a></li><li><a href="global.html#blendingMode">blendingMode</a></li><li><a href="global.html#blendMode">blendMode</a></li><li><a href="global.html#bounds">bounds</a></li><li><a href="global.html#camera">camera</a></li><li><a href="global.html#capMode">capMode</a></li><li><a href="global.html#cleanComp">cleanComp</a></li><li><a href="global.html#clearRenderQueue">clearRenderQueue</a></li><li><a href="global.html#collapseVectors">collapseVectors</a></li><li><a href="global.html#color">color</a></li><li><a href="global.html#createComp">createComp</a></li><li><a href="global.html#createShapes">createShapes</a></li><li><a href="global.html#delay">delay</a></li><li><a href="global.html#deleteComp">deleteComp</a></li><li><a href="global.html#duplicate">duplicate</a></li><li><a href="global.html#ease">ease</a></li><li><a href="global.html#ellipse">ellipse</a></li><li><a href="global.html#endMask">endMask</a></li><li><a href="global.html#endShape">endShape</a></li><li><a href="global.html#endUndo">endUndo</a></li><li><a href="global.html#expression">expression</a></li><li><a href="global.html#fill">fill</a></li><li><a href="global.html#frameCount">frameCount</a></li><li><a href="global.html#frameTime">frameTime</a></li><li><a href="global.html#getAllComps">getAllComps</a></li><li><a href="global.html#getAllFXProperties">getAllFXProperties</a></li><li><a href="global.html#getAllLayers">getAllLayers</a></li><li><a href="global.html#getCenter">getCenter</a></li><li><a href="global.html#getComp">getComp</a></li><li><a href="global.html#getDuration">getDuration</a></li><li><a href="global.html#getIndex">getIndex</a></li><li><a href="global.html#getItem">getItem</a></li><li><a href="global.html#getLayer">getLayer</a></li><li><a href="global.html#getLayers">getLayers</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getTotalFrames">getTotalFrames</a></li><li><a href="global.html#height">height</a></li><li><a href="global.html#hsbaToRgba">hsbaToRgba</a></li><li><a href="global.html#interpolationMode">interpolationMode</a></li><li><a href="global.html#isShape">isShape</a></li><li><a href="global.html#itangent">itangent</a></li><li><a href="global.html#key">key</a></li><li><a href="global.html#lastShape">lastShape</a></li><li><a href="global.html#light">light</a></li><li><a href="global.html#line">line</a></li><li><a href="global.html#mask">mask</a></li><li><a href="global.html#maskMode">maskMode</a></li><li><a href="global.html#motionBlur">motionBlur</a></li><li><a href="global.html#moveFrames">moveFrames</a></li><li><a href="global.html#noFill">noFill</a></li><li><a href="global.html#noise">noise</a></li><li><a href="global.html#noiseDetail">noiseDetail</a></li><li><a href="global.html#noiseSeed">noiseSeed</a></li><li><a href="global.html#noStroke">noStroke</a></li><li><a href="global.html#nullLayer">nullLayer</a></li><li><a href="global.html#numLayers">numLayers</a></li><li><a href="global.html#otangent">otangent</a></li><li><a href="global.html#parent">parent</a></li><li><a href="global.html#polygon">polygon</a></li><li><a href="global.html#popMatrix">popMatrix</a></li><li><a href="global.html#preComp">preComp</a></li><li><a href="global.html#printProperties">printProperties</a></li><li><a href="global.html#pushMatrix">pushMatrix</a></li><li><a href="global.html#random">random</a></li><li><a href="global.html#randomGaussian">randomGaussian</a></li><li><a href="global.html#randomSeed">randomSeed</a></li><li><a href="global.html#rect">rect</a></li><li><a href="global.html#removeAllKeyframes">removeAllKeyframes</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#renderAME">renderAME</a></li><li><a href="global.html#resetMatrix">resetMatrix</a></li><li><a href="global.html#reverseLayers">reverseLayers</a></li><li><a href="global.html#rotate">rotate</a></li><li><a href="global.html#scale">scale</a></li><li><a href="global.html#selectedLayers">selectedLayers</a></li><li><a href="global.html#set3DMode">set3DMode</a></li><li><a href="global.html#setComp">setComp</a></li><li><a href="global.html#setCompDuration">setCompDuration</a></li><li><a href="global.html#setMaskMode">setMaskMode</a></li><li><a href="global.html#shape">shape</a></li><li><a href="global.html#shapePuckerBloat">shapePuckerBloat</a></li><li><a href="global.html#shapeRepeater">shapeRepeater</a></li><li><a href="global.html#shapeTrimPaths">shapeTrimPaths</a></li><li><a href="global.html#shapeTwist">shapeTwist</a></li><li><a href="global.html#shapeWigglePaths">shapeWigglePaths</a></li><li><a href="global.html#shapeWiggleTransform">shapeWiggleTransform</a></li><li><a href="global.html#shapeZigZag">shapeZigZag</a></li><li><a href="global.html#slider">slider</a></li><li><a href="global.html#spatialMode">spatialMode</a></li><li><a href="global.html#speed">speed</a></li><li><a href="global.html#speedAll">speedAll</a></li><li><a href="global.html#speedEase">speedEase</a></li><li><a href="global.html#stroke">stroke</a></li><li><a href="global.html#strokeWeight">strokeWeight</a></li><li><a href="global.html#text">text</a></li><li><a href="global.html#textAlign">textAlign</a></li><li><a href="global.html#textAllTransform">textAllTransform</a></li><li><a href="global.html#textAnchorPoint">textAnchorPoint</a></li><li><a href="global.html#textBlur">textBlur</a></li><li><a href="global.html#textCharacterOffset">textCharacterOffset</a></li><li><a href="global.html#textCharacterValue">textCharacterValue</a></li><li><a href="global.html#textFill">textFill</a></li><li><a href="global.html#textFont">textFont</a></li><li><a href="global.html#textOpacity">textOpacity</a></li><li><a href="global.html#textPosition">textPosition</a></li><li><a href="global.html#textRotation">textRotation</a></li><li><a href="global.html#textScale">textScale</a></li><li><a href="global.html#textSize">textSize</a></li><li><a href="global.html#textSkew">textSkew</a></li><li><a href="global.html#textStroke">textStroke</a></li><li><a href="global.html#textStrokeWidth">textStrokeWidth</a></li><li><a href="global.html#timeRemap">timeRemap</a></li><li><a href="global.html#trackMatte">trackMatte</a></li><li><a href="global.html#translate">translate</a></li><li><a href="global.html#vertex">vertex</a></li><li><a href="global.html#width">width</a></li></ul></div><div class="category"><h2>Baffects.js Constants</h2><h3>Global</h3><ul><li><a href="global.html#ADD">ADD</a></li><li><a href="global.html#ALPHA_ADD">ALPHA_ADD</a></li><li><a href="global.html#AMBIENT">AMBIENT</a></li><li><a href="global.html#BUTT">BUTT</a></li><li><a href="global.html#CLASSIC_COLOR_BURN">CLASSIC_COLOR_BURN</a></li><li><a href="global.html#CLASSIC_COLOR_DODGE">CLASSIC_COLOR_DODGE</a></li><li><a href="global.html#CLASSIC_DIFFERENCE">CLASSIC_DIFFERENCE</a></li><li><a href="global.html#CLOSE">CLOSE</a></li><li><a href="global.html#COLOR">COLOR</a></li><li><a href="global.html#COLOR_BURN">COLOR_BURN</a></li><li><a href="global.html#COLOR_DODGE">COLOR_DODGE</a></li><li><a href="global.html#DANCING_DISSOLVE">DANCING_DISSOLVE</a></li><li><a href="global.html#DARKEN">DARKEN</a></li><li><a href="global.html#DARKER_COLOR">DARKER_COLOR</a></li><li><a href="global.html#DIFFERENCE">DIFFERENCE</a></li><li><a href="global.html#DISSABLE">DISSABLE</a></li><li><a href="global.html#DISSOLVE">DISSOLVE</a></li><li><a href="global.html#DIVIDE">DIVIDE</a></li><li><a href="global.html#ENABLE">ENABLE</a></li><li><a href="global.html#EPSILON">EPSILON</a></li><li><a href="global.html#EXCLUSION">EXCLUSION</a></li><li><a href="global.html#HALF_PI">HALF_PI</a></li><li><a href="global.html#HARD_LIGHT">HARD_LIGHT</a></li><li><a href="global.html#HARD_MIX">HARD_MIX</a></li><li><a href="global.html#HUE">HUE</a></li><li><a href="global.html#INACTIVE">INACTIVE</a></li><li><a href="global.html#KAPPA">KAPPA</a></li><li><a href="global.html#LIGHTEN">LIGHTEN</a></li><li><a href="global.html#LIGHTER_COLOR">LIGHTER_COLOR</a></li><li><a href="global.html#LINEAR_BURN">LINEAR_BURN</a></li><li><a href="global.html#LINEAR_DODGE">LINEAR_DODGE</a></li><li><a href="global.html#LINEAR_LIGHT">LINEAR_LIGHT</a></li><li><a href="global.html#LINES">LINES</a></li><li><a href="global.html#LUMINESCENT_PREMUL">LUMINESCENT_PREMUL</a></li><li><a href="global.html#LUMINOSITY">LUMINOSITY</a></li><li><a href="global.html#M_NONE">M_NONE</a></li><li><a href="global.html#MULTIPLY">MULTIPLY</a></li><li><a href="global.html#NORMAL">NORMAL</a></li><li><a href="global.html#OVERLAY">OVERLAY</a></li><li><a href="global.html#PARALLEL">PARALLEL</a></li><li><a href="global.html#PI">PI</a></li><li><a href="global.html#PIN_LIGHT">PIN_LIGHT</a></li><li><a href="global.html#POINT">POINT</a></li><li><a href="global.html#PROJECTING">PROJECTING</a></li><li><a href="global.html#QUADS">QUADS</a></li><li><a href="global.html#QUARTER_PI">QUARTER_PI</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#ROUND">ROUND</a></li><li><a href="global.html#SATURATION">SATURATION</a></li><li><a href="global.html#SCREEN">SCREEN</a></li><li><a href="global.html#SILHOUETE_ALPHA">SILHOUETE_ALPHA</a></li><li><a href="global.html#SILHOUETTE_LUMA">SILHOUETTE_LUMA</a></li><li><a href="global.html#SINCOS_LENGTH">SINCOS_LENGTH</a></li><li><a href="global.html#SOFT_LIGHT">SOFT_LIGHT</a></li><li><a href="global.html#SPOT">SPOT</a></li><li><a href="global.html#STENCIL_ALPHA">STENCIL_ALPHA</a></li><li><a href="global.html#STENCIL_LUMA">STENCIL_LUMA</a></li><li><a href="global.html#SUBTRACT">SUBTRACT</a></li><li><a href="global.html#TRIANGLES">TRIANGLES</a></li><li><a href="global.html#TWO_PI">TWO_PI</a></li><li><a href="global.html#VIVID_LIGHT">VIVID_LIGHT</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>math_random_noise.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//Random
+
+var seeded = false;
+var previous = false;
+var y2 = 0;
+
+// Linear Congruential Generator
+// Variant of a Lehman Generator
+var lcg = (function () {
+    // Set to values from http://en.wikipedia.org/wiki/Numerical_Recipes
+    // m is basically chosen to be large (as it is the max period)
+    // and for its relationships to a and c
+    var m = 4294967296,
+        // a - 1 should be divisible by m's prime factors
+        a = 1664525,
+        // c and m should be co-prime
+        c = 1013904223,
+        seed,
+        z;
+    return {
+        setSeed: function (val) {
+            // pick a random seed if val is undefined or null
+            // the >>> 0 casts the seed to an unsigned 32-bit integer
+            z = seed = (val == null ? Math.random() * m : val) >>> 0;
+        },
+        getSeed: function () {
+            return seed;
+        },
+        rand: function () {
+            // define the recurrence relationship
+            z = (a * z + c) % m;
+            // return a float in [0, 1)
+            // if z = m then z / m = 0 therefore (z % m) / m &lt; 1 always
+            return z / m;
+        }
+    };
+})();
+
+/**
+ * Sets the seed value for random().
+ * @category Baffects.js
+ * @method randomSeed
+ * @param {number} seed the seed value
+ */
+pub.randomSeed = function (seed) {
+    lcg.setSeed(seed);
+    seeded = true;
+    previous = false;
+};
+
+/**
+ * Return a random floating-point number.
+ * @category Baffects.js
+ * @method random
+ * @param {number} min the lower bound (inclusive)
+ * @param {number} max the upper bound (exclusive)
+ * @returns {number} the random number
+ */
+pub.random = function (min, max) {
+    var rand;
+
+    if (seeded) {
+        rand = lcg.rand();
+    } else {
+        rand = Math.random();
+    }
+    if (typeof min === 'undefined') {
+        return rand;
+    } else if (typeof max === 'undefined') {
+        if (min instanceof Array) {
+            return min[Math.floor(rand * min.length)];
+        } else {
+            return rand * min;
+        }
+    } else {
+        if (min > max) {
+            var tmp = min;
+            min = max;
+            max = tmp;
+        }
+
+        return rand * (max - min) + min;
+    }
+};
+
+/**
+ * Returns a random number fitting a Gaussian, or
+ * normal, distribution. There is theoretically no minimum or maximum
+ * value that randomGaussian() might return. Rather, there is
+ * just a very low probability that values far from the mean will be
+ * returned; and a higher probability that numbers near the mean will
+ * be returned.
+ * @category Baffects.js
+ * @method randomGaussian
+ * @param {number} mean the mean
+ * @param {number} sd the standard deviation
+ * @returns {number} the random number
+ */
+pub.randomGaussian = function (mean, sd) {
+    var y1, x1, x2, w;
+    if (previous) {
+        y1 = y2;
+        previous = false;
+    } else {
+        do {
+            x1 = this.random(2) - 1;
+            x2 = this.random(2) - 1;
+            w = x1 * x1 + x2 * x2;
+        } while (w >= 1);
+        w = Math.sqrt(-2 * Math.log(w) / w);
+        y1 = x1 * w;
+        y2 = x2 * w;
+        previous = true;
+    }
+
+    var m = mean || 0;
+    var s = sd || 1;
+    return y1 * s + m;
+};
+
+
+//Noise
+// http://mrl.nyu.edu/~perlin/noise/
+// Adapting from PApplet.java
+// which was adapted from toxi
+// which was adapted from the german demo group farbrausch
+// as used in their demo "art": http://www.farb-rausch.de/fr010src.zip
+
+// someday we might consider using "improved noise"
+// http://mrl.nyu.edu/~perlin/paper445.pdf
+// See: https://github.com/shiffman/The-Nature-of-Code-Examples-p5.js/
+//      blob/master/introduction/Noise1D/noise.js
+
+
+var PERLIN_YWRAPB = 4;
+var PERLIN_YWRAP = 1 &lt;&lt; PERLIN_YWRAPB;
+var PERLIN_ZWRAPB = 8;
+var PERLIN_ZWRAP = 1 &lt;&lt; PERLIN_ZWRAPB;
+var PERLIN_SIZE = 4095;
+
+var perlin_octaves = 4; // default to medium smooth
+var perlin_amp_falloff = 0.5; // 50% reduction/octave
+
+var scaled_cosine = function (i) {
+    return 0.5 * (1.0 - Math.cos(i * Math.PI));
+};
+
+var perlin;
+/**
+ * Returns the Perlin noise value at specified coordinates. Perlin noise is
+ * a random sequence generator producing a more natural ordered, harmonic
+ * succession of numbers compared to the standard &lt;b>random()&lt;/b> function.
+ * It was invented by Ken Perlin in the 1980s and been used since in
+ * graphical applications to produce procedural textures, natural motion,
+ * shapes, terrains etc.&lt;br />&lt;br /> The main difference to the
+ * &lt;b>random()&lt;/b> function is that Perlin noise is defined in an infinite
+ * n-dimensional space where each pair of coordinates corresponds to a
+ * fixed semi-random value (fixed only for the lifespan of the program; see
+ * the noiseSeed() function). p5.js can compute 1D, 2D and 3D noise,
+ * depending on the number of coordinates given. The resulting value will
+ * always be between 0.0 and 1.0. The noise value can be animated by moving
+ * through the noise space as demonstrated in the example above. The 2nd
+ * and 3rd dimension can also be interpreted as time.&lt;br />&lt;br />The actual
+ * noise is structured similar to an audio signal, in respect to the
+ * function's use of frequencies. Similar to the concept of harmonics in
+ * physics, perlin noise is computed over several octaves which are added
+ * together for the final result. &lt;br />&lt;br />Another way to adjust the
+ * character of the resulting sequence is the scale of the input
+ * coordinates. As the function works within an infinite space the value of
+ * the coordinates doesn't matter as such, only the distance between
+ * successive coordinates does (eg. when using &lt;b>noise()&lt;/b> within a
+ * loop). As a general rule the smaller the difference between coordinates,
+ * the smoother the resulting noise sequence will be. Steps of 0.005-0.03
+ * work best for most applications, but this will differ depending on use.
+ * @category Baffects.js
+ * @method noise
+ * @param  {number} x   x-coordinate in noise space
+ * @param  {number} [y] y-coordinate in noise space
+ * @param  {number} [z] z-coordinate in noise space
+ * @returns {number}     Perlin noise value (between 0 and 1) at specified
+ *                      coordinates
+*/
+pub.noise = function (x, y, z) {
+    y = y || 0;
+    z = z || 0;
+
+    if (perlin == null) {
+        perlin = new Array(PERLIN_SIZE + 1);
+        for (var i = 0; i &lt; PERLIN_SIZE + 1; i++) {
+            perlin[i] = Math.random();
+        }
+    }
+
+    if (x &lt; 0) {
+        x = -x;
+    }
+    if (y &lt; 0) {
+        y = -y;
+    }
+    if (z &lt; 0) {
+        z = -z;
+    }
+
+    var xi = Math.floor(x),
+        yi = Math.floor(y),
+        zi = Math.floor(z);
+    var xf = x - xi;
+    var yf = y - yi;
+    var zf = z - zi;
+    var rxf, ryf;
+
+    var r = 0;
+    var ampl = 0.5;
+
+    var n1, n2, n3;
+
+    for (var o = 0; o &lt; perlin_octaves; o++) {
+        var of = xi + (yi &lt;&lt; PERLIN_YWRAPB) + (zi &lt;&lt; PERLIN_ZWRAPB);
+
+        rxf = scaled_cosine(xf);
+        ryf = scaled_cosine(yf);
+
+        n1 = perlin[of &amp; PERLIN_SIZE];
+        n1 += rxf * (perlin[(of + 1) &amp; PERLIN_SIZE] - n1);
+        n2 = perlin[(of + PERLIN_YWRAP) &amp; PERLIN_SIZE];
+        n2 += rxf * (perlin[(of + PERLIN_YWRAP + 1) &amp; PERLIN_SIZE] - n2);
+        n1 += ryf * (n2 - n1);
+
+        of += PERLIN_ZWRAP;
+        n2 = perlin[of &amp; PERLIN_SIZE];
+        n2 += rxf * (perlin[(of + 1) &amp; PERLIN_SIZE] - n2);
+        n3 = perlin[(of + PERLIN_YWRAP) &amp; PERLIN_SIZE];
+        n3 += rxf * (perlin[(of + PERLIN_YWRAP + 1) &amp; PERLIN_SIZE] - n3);
+        n2 += ryf * (n3 - n2);
+
+        n1 += scaled_cosine(zf) * (n2 - n1);
+
+        r += n1 * ampl;
+        ampl *= perlin_amp_falloff;
+        xi &lt;&lt;= 1;
+        xf *= 2;
+        yi &lt;&lt;= 1;
+        yf *= 2;
+        zi &lt;&lt;= 1;
+        zf *= 2;
+
+        if (xf >= 1.0) {
+            xi++;
+            xf--;
+        }
+        if (yf >= 1.0) {
+            yi++;
+            yf--;
+        }
+        if (zf >= 1.0) {
+            zi++;
+            zf--;
+        }
+    }
+    return r;
+}
+
+/**
+ *
+ * Adjusts the character and level of detail produced by the Perlin noise
+ * function. Similar to harmonics in physics, noise is computed over
+ * several octaves. Lower octaves contribute more to the output signal and
+ * as such define the overall intensity of the noise, whereas higher octaves
+ * create finer grained details in the noise sequence.
+ * 
+ * By default, noise is computed over 4 octaves with each octave contributing
+ * exactly half than its predecessor, starting at 50% strength for the 1st
+ * octave. This falloff amount can be changed by adding an additional function
+ * parameter. Eg. a falloff factor of 0.75 means each octave will now have
+ * 75% impact (25% less) of the previous lower octave. Any value between
+ * 0.0 and 1.0 is valid, however note that values greater than 0.5 might
+ * result in greater than 1.0 values returned by &lt;b>noise()&lt;/b>.
+ * 
+ * By changing these parameters, the signal created by the &lt;b>noise()&lt;/b>
+ * function can be adapted to fit very specific needs and characteristics.
+ * @category Baffects.js
+ * @method noiseDetail
+ * @param {number} lod number of octaves to be used by the noise
+ * @param {number} falloff falloff factor for each octave
+*/
+pub.noiseDetail = function (lod, falloff) {
+    if (lod > 0) {
+        perlin_octaves = lod;
+    }
+    if (falloff > 0) {
+        perlin_amp_falloff = falloff;
+    }
+};
+
+/**
+ * Sets the seed value for &lt;b>noise()&lt;/b>. By default, &lt;b>noise()&lt;/b>
+ * produces different results each time the program is run. Set the
+ * &lt;b>value&lt;/b> parameter to a constant to return the same pseudo-random
+ * numbers each time the software is run.
+ * @category Baffects.js
+ * @method noiseSeed
+ * @param {number} seed   the seed value
+ */
+pub.noiseSeed = function (seed) {
+    // Linear Congruential Generator
+    // Variant of a Lehman Generator
+    var lcg = (function () {
+        // Set to values from http://en.wikipedia.org/wiki/Numerical_Recipes
+        // m is basically chosen to be large (as it is the max period)
+        // and for its relationships to a and c
+        var m = 4294967296;
+        // a - 1 should be divisible by m's prime factors
+        var a = 1664525;
+        // c and m should be co-prime
+        var c = 1013904223;
+        var seed, z;
+        return {
+            setSeed: function (val) {
+                // pick a random seed if val is undefined or null
+                // the >>> 0 casts the seed to an unsigned 32-bit integer
+                z = seed = (val == null ? Math.random() * m : val) >>> 0;
+            },
+            getSeed: function () {
+                return seed;
+            },
+            rand: function () {
+                // define the recurrence relationship
+                z = (a * z + c) % m;
+                // return a float in [0, 1)
+                // if z = m then z / m = 0 therefore (z % m) / m &lt; 1 always
+                return z / m;
+            }
+        };
+    })();
+
+    lcg.setSeed(seed);
+    perlin = new Array(PERLIN_SIZE + 1);
+    for (var i = 0; i &lt; PERLIN_SIZE + 1; i++) {
+        perlin[i] = lcg.rand();
+    }
+};</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

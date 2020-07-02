@@ -1,0 +1,679 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> after-effects-text.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="b.html">b</a></li></ul><h3>Global</h3><ul><li><a href="global.html#abs">abs</a></li><li><a href="global.html#acos">acos</a></li><li><a href="global.html#asin">asin</a></li><li><a href="global.html#atan">atan</a></li><li><a href="global.html#atan2">atan2</a></li><li><a href="global.html#binary">binary</a></li><li><a href="global.html#ceil">ceil</a></li><li><a href="global.html#constrain">constrain</a></li><li><a href="global.html#cos">cos</a></li><li><a href="global.html#day">day</a></li><li><a href="global.html#degrees">degrees</a></li><li><a href="global.html#dist">dist</a></li><li><a href="global.html#endsWith">endsWith</a></li><li><a href="global.html#exp">exp</a></li><li><a href="global.html#floor">floor</a></li><li><a href="global.html#forEach">forEach</a></li><li><a href="global.html#go">go</a></li><li><a href="global.html#HashList">HashList</a></li><li><a href="global.html#hex">hex</a></li><li><a href="global.html#hour">hour</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isNumber">isNumber</a></li><li><a href="global.html#isString">isString</a></li><li><a href="global.html#isURL">isURL</a></li><li><a href="global.html#itemsFromFolder">itemsFromFolder</a></li><li><a href="global.html#itemsFromFolderGUI">itemsFromFolderGUI</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#lerp">lerp</a></li><li><a href="global.html#loadAI">loadAI</a></li><li><a href="global.html#loadItem">loadItem</a></li><li><a href="global.html#loadSequence">loadSequence</a></li><li><a href="global.html#loadString">loadString</a></li><li><a href="global.html#loadStrings">loadStrings</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#mag">mag</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#millis">millis</a></li><li><a href="global.html#millisecond">millisecond</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minute">minute</a></li><li><a href="global.html#month">month</a></li><li><a href="global.html#nf">nf</a></li><li><a href="global.html#nfc">nfc</a></li><li><a href="global.html#nfp">nfp</a></li><li><a href="global.html#nfs">nfs</a></li><li><a href="global.html#norm">norm</a></li><li><a href="global.html#pow">pow</a></li><li><a href="global.html#print">print</a></li><li><a href="global.html#printInfo">printInfo</a></li><li><a href="global.html#println">println</a></li><li><a href="global.html#projectFolder">projectFolder</a></li><li><a href="global.html#radians">radians</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#saveString">saveString</a></li><li><a href="global.html#saveStrings">saveStrings</a></li><li><a href="global.html#second">second</a></li><li><a href="global.html#sin">sin</a></li><li><a href="global.html#split">split</a></li><li><a href="global.html#splitTokens">splitTokens</a></li><li><a href="global.html#sq">sq</a></li><li><a href="global.html#sqrt">sqrt</a></li><li><a href="global.html#startsWith">startsWith</a></li><li><a href="global.html#tan">tan</a></li><li><a href="global.html#timestamp">timestamp</a></li><li><a href="global.html#trim">trim</a></li><li><a href="global.html#trimWord">trimWord</a></li><li><a href="global.html#unbinary">unbinary</a></li><li><a href="global.html#unhex">unhex</a></li><li><a href="global.html#Vector">Vector</a></li><li><a href="global.html#weekday">weekday</a></li><li><a href="global.html#year">year</a></li></ul></div><div class="category"><h2>Baffects.js</h2><h3>Global</h3><ul><li><a href="global.html#addFX">addFX</a></li><li><a href="global.html#addItemToComp">addItemToComp</a></li><li><a href="global.html#addLayer">addLayer</a></li><li><a href="global.html#addPreset">addPreset</a></li><li><a href="global.html#addToRender">addToRender</a></li><li><a href="global.html#addToRenderAME">addToRenderAME</a></li><li><a href="global.html#adjustmenLayer">adjustmenLayer</a></li><li><a href="global.html#anchor">anchor</a></li><li><a href="global.html#anchorMode">anchorMode</a></li><li><a href="global.html#audioToKeyframes">audioToKeyframes</a></li><li><a href="global.html#background">background</a></li><li><a href="global.html#beginMask">beginMask</a></li><li><a href="global.html#beginShape">beginShape</a></li><li><a href="global.html#beginUndo">beginUndo</a></li><li><a href="global.html#blendingMode">blendingMode</a></li><li><a href="global.html#blendMode">blendMode</a></li><li><a href="global.html#bounds">bounds</a></li><li><a href="global.html#camera">camera</a></li><li><a href="global.html#capMode">capMode</a></li><li><a href="global.html#cleanComp">cleanComp</a></li><li><a href="global.html#clearRenderQueue">clearRenderQueue</a></li><li><a href="global.html#collapseVectors">collapseVectors</a></li><li><a href="global.html#color">color</a></li><li><a href="global.html#createComp">createComp</a></li><li><a href="global.html#createShapes">createShapes</a></li><li><a href="global.html#delay">delay</a></li><li><a href="global.html#deleteComp">deleteComp</a></li><li><a href="global.html#duplicate">duplicate</a></li><li><a href="global.html#ease">ease</a></li><li><a href="global.html#ellipse">ellipse</a></li><li><a href="global.html#endMask">endMask</a></li><li><a href="global.html#endShape">endShape</a></li><li><a href="global.html#endUndo">endUndo</a></li><li><a href="global.html#expression">expression</a></li><li><a href="global.html#fill">fill</a></li><li><a href="global.html#frameCount">frameCount</a></li><li><a href="global.html#frameTime">frameTime</a></li><li><a href="global.html#getAllComps">getAllComps</a></li><li><a href="global.html#getAllFXProperties">getAllFXProperties</a></li><li><a href="global.html#getAllLayers">getAllLayers</a></li><li><a href="global.html#getCenter">getCenter</a></li><li><a href="global.html#getComp">getComp</a></li><li><a href="global.html#getDuration">getDuration</a></li><li><a href="global.html#getIndex">getIndex</a></li><li><a href="global.html#getItem">getItem</a></li><li><a href="global.html#getLayer">getLayer</a></li><li><a href="global.html#getLayers">getLayers</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getTotalFrames">getTotalFrames</a></li><li><a href="global.html#height">height</a></li><li><a href="global.html#hsbaToRgba">hsbaToRgba</a></li><li><a href="global.html#interpolationMode">interpolationMode</a></li><li><a href="global.html#isShape">isShape</a></li><li><a href="global.html#itangent">itangent</a></li><li><a href="global.html#key">key</a></li><li><a href="global.html#lastShape">lastShape</a></li><li><a href="global.html#light">light</a></li><li><a href="global.html#line">line</a></li><li><a href="global.html#mask">mask</a></li><li><a href="global.html#maskMode">maskMode</a></li><li><a href="global.html#motionBlur">motionBlur</a></li><li><a href="global.html#moveFrames">moveFrames</a></li><li><a href="global.html#noFill">noFill</a></li><li><a href="global.html#noise">noise</a></li><li><a href="global.html#noiseDetail">noiseDetail</a></li><li><a href="global.html#noiseSeed">noiseSeed</a></li><li><a href="global.html#noStroke">noStroke</a></li><li><a href="global.html#nullLayer">nullLayer</a></li><li><a href="global.html#numLayers">numLayers</a></li><li><a href="global.html#otangent">otangent</a></li><li><a href="global.html#parent">parent</a></li><li><a href="global.html#polygon">polygon</a></li><li><a href="global.html#popMatrix">popMatrix</a></li><li><a href="global.html#preComp">preComp</a></li><li><a href="global.html#printProperties">printProperties</a></li><li><a href="global.html#pushMatrix">pushMatrix</a></li><li><a href="global.html#random">random</a></li><li><a href="global.html#randomGaussian">randomGaussian</a></li><li><a href="global.html#randomSeed">randomSeed</a></li><li><a href="global.html#rect">rect</a></li><li><a href="global.html#removeAllKeyframes">removeAllKeyframes</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#renderAME">renderAME</a></li><li><a href="global.html#resetMatrix">resetMatrix</a></li><li><a href="global.html#reverseLayers">reverseLayers</a></li><li><a href="global.html#rotate">rotate</a></li><li><a href="global.html#scale">scale</a></li><li><a href="global.html#selectedLayers">selectedLayers</a></li><li><a href="global.html#set3DMode">set3DMode</a></li><li><a href="global.html#setComp">setComp</a></li><li><a href="global.html#setCompDuration">setCompDuration</a></li><li><a href="global.html#setMaskMode">setMaskMode</a></li><li><a href="global.html#shape">shape</a></li><li><a href="global.html#shapePuckerBloat">shapePuckerBloat</a></li><li><a href="global.html#shapeRepeater">shapeRepeater</a></li><li><a href="global.html#shapeTrimPaths">shapeTrimPaths</a></li><li><a href="global.html#shapeTwist">shapeTwist</a></li><li><a href="global.html#shapeWigglePaths">shapeWigglePaths</a></li><li><a href="global.html#shapeWiggleTransform">shapeWiggleTransform</a></li><li><a href="global.html#shapeZigZag">shapeZigZag</a></li><li><a href="global.html#slider">slider</a></li><li><a href="global.html#spatialMode">spatialMode</a></li><li><a href="global.html#speed">speed</a></li><li><a href="global.html#speedAll">speedAll</a></li><li><a href="global.html#speedEase">speedEase</a></li><li><a href="global.html#stroke">stroke</a></li><li><a href="global.html#strokeWeight">strokeWeight</a></li><li><a href="global.html#text">text</a></li><li><a href="global.html#textAlign">textAlign</a></li><li><a href="global.html#textAllTransform">textAllTransform</a></li><li><a href="global.html#textAnchorPoint">textAnchorPoint</a></li><li><a href="global.html#textBlur">textBlur</a></li><li><a href="global.html#textCharacterOffset">textCharacterOffset</a></li><li><a href="global.html#textCharacterValue">textCharacterValue</a></li><li><a href="global.html#textFill">textFill</a></li><li><a href="global.html#textFont">textFont</a></li><li><a href="global.html#textOpacity">textOpacity</a></li><li><a href="global.html#textPosition">textPosition</a></li><li><a href="global.html#textRotation">textRotation</a></li><li><a href="global.html#textScale">textScale</a></li><li><a href="global.html#textSize">textSize</a></li><li><a href="global.html#textSkew">textSkew</a></li><li><a href="global.html#textStroke">textStroke</a></li><li><a href="global.html#textStrokeWidth">textStrokeWidth</a></li><li><a href="global.html#timeRemap">timeRemap</a></li><li><a href="global.html#trackMatte">trackMatte</a></li><li><a href="global.html#translate">translate</a></li><li><a href="global.html#vertex">vertex</a></li><li><a href="global.html#width">width</a></li></ul></div><div class="category"><h2>Baffects.js Constants</h2><h3>Global</h3><ul><li><a href="global.html#ADD">ADD</a></li><li><a href="global.html#ALPHA_ADD">ALPHA_ADD</a></li><li><a href="global.html#AMBIENT">AMBIENT</a></li><li><a href="global.html#BUTT">BUTT</a></li><li><a href="global.html#CLASSIC_COLOR_BURN">CLASSIC_COLOR_BURN</a></li><li><a href="global.html#CLASSIC_COLOR_DODGE">CLASSIC_COLOR_DODGE</a></li><li><a href="global.html#CLASSIC_DIFFERENCE">CLASSIC_DIFFERENCE</a></li><li><a href="global.html#CLOSE">CLOSE</a></li><li><a href="global.html#COLOR">COLOR</a></li><li><a href="global.html#COLOR_BURN">COLOR_BURN</a></li><li><a href="global.html#COLOR_DODGE">COLOR_DODGE</a></li><li><a href="global.html#DANCING_DISSOLVE">DANCING_DISSOLVE</a></li><li><a href="global.html#DARKEN">DARKEN</a></li><li><a href="global.html#DARKER_COLOR">DARKER_COLOR</a></li><li><a href="global.html#DIFFERENCE">DIFFERENCE</a></li><li><a href="global.html#DISSABLE">DISSABLE</a></li><li><a href="global.html#DISSOLVE">DISSOLVE</a></li><li><a href="global.html#DIVIDE">DIVIDE</a></li><li><a href="global.html#ENABLE">ENABLE</a></li><li><a href="global.html#EPSILON">EPSILON</a></li><li><a href="global.html#EXCLUSION">EXCLUSION</a></li><li><a href="global.html#HALF_PI">HALF_PI</a></li><li><a href="global.html#HARD_LIGHT">HARD_LIGHT</a></li><li><a href="global.html#HARD_MIX">HARD_MIX</a></li><li><a href="global.html#HUE">HUE</a></li><li><a href="global.html#INACTIVE">INACTIVE</a></li><li><a href="global.html#KAPPA">KAPPA</a></li><li><a href="global.html#LIGHTEN">LIGHTEN</a></li><li><a href="global.html#LIGHTER_COLOR">LIGHTER_COLOR</a></li><li><a href="global.html#LINEAR_BURN">LINEAR_BURN</a></li><li><a href="global.html#LINEAR_DODGE">LINEAR_DODGE</a></li><li><a href="global.html#LINEAR_LIGHT">LINEAR_LIGHT</a></li><li><a href="global.html#LINES">LINES</a></li><li><a href="global.html#LUMINESCENT_PREMUL">LUMINESCENT_PREMUL</a></li><li><a href="global.html#LUMINOSITY">LUMINOSITY</a></li><li><a href="global.html#M_NONE">M_NONE</a></li><li><a href="global.html#MULTIPLY">MULTIPLY</a></li><li><a href="global.html#NORMAL">NORMAL</a></li><li><a href="global.html#OVERLAY">OVERLAY</a></li><li><a href="global.html#PARALLEL">PARALLEL</a></li><li><a href="global.html#PI">PI</a></li><li><a href="global.html#PIN_LIGHT">PIN_LIGHT</a></li><li><a href="global.html#POINT">POINT</a></li><li><a href="global.html#PROJECTING">PROJECTING</a></li><li><a href="global.html#QUADS">QUADS</a></li><li><a href="global.html#QUARTER_PI">QUARTER_PI</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#ROUND">ROUND</a></li><li><a href="global.html#SATURATION">SATURATION</a></li><li><a href="global.html#SCREEN">SCREEN</a></li><li><a href="global.html#SILHOUETE_ALPHA">SILHOUETE_ALPHA</a></li><li><a href="global.html#SILHOUETTE_LUMA">SILHOUETTE_LUMA</a></li><li><a href="global.html#SINCOS_LENGTH">SINCOS_LENGTH</a></li><li><a href="global.html#SOFT_LIGHT">SOFT_LIGHT</a></li><li><a href="global.html#SPOT">SPOT</a></li><li><a href="global.html#STENCIL_ALPHA">STENCIL_ALPHA</a></li><li><a href="global.html#STENCIL_LUMA">STENCIL_LUMA</a></li><li><a href="global.html#SUBTRACT">SUBTRACT</a></li><li><a href="global.html#TRIANGLES">TRIANGLES</a></li><li><a href="global.html#TWO_PI">TWO_PI</a></li><li><a href="global.html#VIVID_LIGHT">VIVID_LIGHT</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>after-effects-text.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//Text
+
+/**
+ * Add text to composition.
+ *  
+ * @category Baffects.js
+ * @method text
+ * @param {String} text Text to add
+ * @param {number} x x-coordinate of the textbox
+ * @param {number} y y-coordinate of the textbox
+ * @param {number} [z] z-coordinate of the textbox
+ *  @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, path, reversepath, perpendiculartopath, forcealignment, firstmargin, lastmargin].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created TextLayer reference.
+ * @example
+ * var txt = b.text(text, x, y);
+ * var txt = b.text(text, x, y, z);
+ */
+pub.text = function (text, x, y, z) {
+    var a = arguments[0],
+        b = arguments[1],
+        c = arguments[2],
+        d = arguments[3];
+
+    var textLayer;
+    if (!curr3DMode) {
+        switch (arguments.length) {
+            case 3:
+                textLayer = createText(thisComp, a, b, c, 0);
+                return textLayer;
+        }
+    } else {
+        switch (arguments.length) {
+            case 4:
+                textLayer = createText(thisComp, a, b, c, d);
+                return textLayer;
+        }
+    }
+};
+
+function createText(comp, text, x, y, z) {
+    this.obb = new Properties();
+
+    this.shape = comp.layers.addText(text);
+    this.obb.layer = this.shape;
+
+    if (curr3DMode) {
+        this.shape.threeDLayer = true;
+    }
+
+    setTransformPropertiesObject();
+
+    var pathOptions = this.shape.property("ADBE Text Properties").property("ADBE Text Path Options");
+    for (var i = 0; i &lt; pathOptions.numProperties; i++) {
+        this.obb[pathOptions.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = pathOptions.property(i + 1);
+    }
+
+    var textLayerProps = this.shape.property("ADBE Text Properties").property("ADBE Text Document");
+    var textLayerDoc = textLayerProps.value;
+    textLayerDoc.font = currFont;
+    textLayerDoc.fontSize = currFontSize;
+    textLayerDoc.applyFill = currFillState;
+    textLayerDoc.fillColor = currFillColor;
+    textLayerDoc.applyStroke = currStrokeState;
+    textLayerDoc.strokeColor = currStrokeColor;
+    textLayerDoc.strokeWidth = currStrokeWeight;
+    textLayerDoc.justification = currJustification;
+    textLayerProps.setValue(textLayerDoc);
+
+    pub.anchor(this.obb.layer, currAnchorMode);
+    var cmx = currMatrix.position[0];
+    var cmy = currMatrix.position[1];
+    var cmz = currMatrix.position[2];
+    this.obb.position.setValue([cmx + x, cmy + y, cmz + z]);
+    this.obb.scale.setValue(currMatrix.scale);
+    if (curr3DMode) {
+        this.obb.xrotation.setValue(currMatrix.rotation3d[0]);
+        this.obb.yrotation.setValue(currMatrix.rotation3d[1]);
+        this.obb.zrotation.setValue(currMatrix.rotation3d[2]);
+    } else {
+        this.obb.rotation.setValue(currMatrix.rotation);
+    }
+
+    obb.opacity.setValue(currOpacity);
+
+    this.shape.blendingMode = currBlendMode;
+
+    return this.obb;
+}
+
+/**
+ * Sets the current text alignment.
+ *  
+ * @category Baffects.js
+ * @method textAlign
+ * @param {J_LEFT|J_RIGHT|J_CENTER|J_FULL_LEFT|J_FULL_RIGHT|J_FULL_CENTER|J_FULL} mode Text justification mode
+ */
+pub.textAlign = function (mode) {
+    currJustification = mode;
+};
+
+/**
+ * Returns the current font size in points and sets it if argument pointSize is given.
+ *  
+ * @category Baffects.js
+ * @method textSize
+ * @param {number} pointSize The size in points to set
+ *  @returns {number}          The current point size
+ */
+pub.textSize = function (pointSize) {
+    if (arguments.length === 1) {
+        currFontSize = pointSize;
+    }
+    return currFontSize;
+};
+
+/**
+ * Returns the current font and sets it if argument fontName is given.
+ *  
+ * @category Baffects.js
+ * @method textFont
+ * @param {string} fontName The name of the font to set e.g. Helvetica
+ *  @returns {string}         The name of the current font
+ */
+pub.textFont = function (fontName) {
+    if (arguments.length === 1) {
+        currFont = fontName;
+    }
+    return currFont;
+};
+
+
+//Not ready
+pub.character = function (text) {
+    var textPos = text.position.value,
+        textString = text.sourceText.value.toString(),
+        textBox = text.sourceRectAtTime(text.inPoint, false),
+        textJustification = text.property("ADBE Text Properties").property("ADBE Text Document").value.justification,
+        textOffset = 0;
+
+    if (textJustification === pub.J_CENTER)
+        textOffset -= textBox.width / 2;
+    else if (textJustification === pub.J_RIGHT)
+        textOffset -= textBox.width;
+
+    var textStartPos = textPos + textOffset;
+    var lastLength = 0;
+
+    layers = [];
+
+    for (var i = 0; i &lt; textString.length; i++) {
+        var character = textString.charAt(i);
+        if (character.match(/\s+/)) {
+            continue;
+        }
+        var newText = text.duplicate();
+        newText.name = character;
+
+        if (curr3DMode) {
+            shape.threeDLayer = true;
+        }
+
+        newText.sourceText.setValue(character);
+        if (textJustification === pub.J_CENTER) {
+            var newTextBox = newText.sourceRectAtTime(newText.inPoint, false);
+            var newPos = textStartPos + [(textBox.width * (i / textString.length)) + (newTextBox.width / 2), 0, 0];
+            newText.position.setValue(newPos);
+        } else if (textJustification === pub.J_RIGHT) {
+            var newTextBox = newText.sourceRectAtTime(newText.inPoint, false);
+            var newPos = textStartPos + [textBox.width * (i / textString.length), 0, 0];
+            newText.position.setValue(newPos);
+        }
+
+        layers.push(newText);
+    }
+    text.enabled = false;
+    return layers;
+};
+
+
+
+//______________________________________________________________________________________________________________________
+// Text Layer FX
+
+/**
+ * Add Anchor Point effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textAnchorPoint
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [anchor, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textAnchorPoint(txt.layer);                                                         
+ */
+pub.textAnchorPoint = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.anchor = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Anchor Point 3D");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Position effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textPosition
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [position, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textPosition(txt.layer);                                   
+ */
+pub.textPosition = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.position = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Position 3D");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Scale effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textScale
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [scale, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textScale(txt.layer);                                      
+ */
+pub.textScale = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.scale = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Scale 3D");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Skew effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textSkew
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [skew, skewAxis, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textSkew(txt.layer);                                       
+ */
+pub.textSkew = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.skew = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Skew");
+    obb.skewAxis = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Skew Axis");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Rotation effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textRotation
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [rotation, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textRotation(txt.layer);                                   
+ */
+pub.textRotation = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.rotation = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Rotation");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+
+/**
+ * Add Opacity effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textOpacity
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [opacity].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textOpacity(txt.layer);                                    
+ */
+pub.textOpacity = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.opacity = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Opacity");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add All Transform Properties effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textAllTransform
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [anchor, position, scale, skew, skewAxis, rotation, opacity, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textAllTransform(txt.layer);                               
+ */
+pub.textAllTransform = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.anchor = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Anchor Point 3D");
+    obb.position = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Position 3D");
+    obb.scale = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Scale 3D");
+    obb.skew = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Skew");
+    obb.skewAxis = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Skew Axis");
+    obb.rotation = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Rotation");
+    obb.opacity = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Opacity");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Fill Color effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textFill
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [fill, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textFill(txt.layer);                                       
+ */
+pub.textFill = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.fill = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Fill Color");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Stroke Color effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textStroke
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [stroke, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textStroke(txt.layer);                                     
+ */
+pub.textStroke = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.stroke = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Stroke Color");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Stroke Width effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textStrokeWidth
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [width, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textStrokeWidth(txt.layer);                                
+ */
+pub.textStrokeWidth = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.width = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Stroke Width");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Tracking effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textStroke
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [tracking, amount, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textTracking(txt.layer);                                   
+ */
+pub.textTracking = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.tracking = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Track Type");
+    obb.amount = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Tracking Amount");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Character Offset effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textCharacterOffset
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [alignment, range, offset, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textCharacterOffset(txt.layer);                            
+ */
+pub.textCharacterOffset = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.alignment = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Character Change Type");
+    obb.range = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Character Range");
+    obb.offset = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Character Offset");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Character Value effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textCharacterValue
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [alignment, range, value, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textCharacterValue(txt.layer);                             
+ */
+pub.textCharacterValue = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.alignment = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Character Change Type");
+    obb.range = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Character Range");
+    obb.value = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Character Replace");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+/**
+ * Add Blur effect to text layer.
+ *  
+ * @category Baffects.js
+ * @method textBlur
+ * @param {TextLayer} text TextLayer or Properties object to add effect to
+ *  @returns {Properties} Properties object with attributes [blur, start, end, offset, units, basedon, mode, amount, shape, smoothness, easehigh, easelow, randomizeorder, randomseed].
+ * @example
+ * var txt = b.text("Baffects.js", b.width / 2, b.height / 2);           
+ * var fx = b.textBlur(txt.layer);                                       
+ */
+pub.textBlur = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var obb = new Properties();
+    var animator = layer.Text.Animators.addProperty("ADBE Text Animator");
+    var range = animator.property("ADBE Text Selectors").addProperty("ADBE Text Selector");
+    obb.blur = animator.property("ADBE Text Animator Properties").addProperty("ADBE Text Blur");
+
+    rangeAdvanced(range, obb);
+
+    return obb;
+};
+
+
+//Get all range selector properties with advanced options
+function rangeAdvanced(range, obb) {
+    for (var i = 0; i &lt; 3; i++) {
+        obb[range.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = range.property(i + 1);
+    }
+
+    var advanced = range.property("ADBE Text Range Advanced");
+    for (var i = 0; i &lt; advanced.numProperties; i++) {
+        obb[advanced.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = advanced.property(i + 1);
+    }
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

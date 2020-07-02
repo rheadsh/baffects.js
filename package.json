@@ -1,0 +1,32 @@
+{
+  "name": "baffects",
+  "version": "1.0.0",
+  "description": "Adaptation of the Processing language for Adobe After Effects",
+  "main": "lib/baffects.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
+  },
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rheadsh/baffects.js.git"
+  },
+  "keywords": [
+    "procedural",
+    "animation",
+    "2d"
+  ],
+  "author": "Roberto Cabezas H",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rheadsh/baffects.js/issues"
+  },
+  "homepage": "https://github.com/rheadsh/baffects.js#readme",
+  "devDependencies": {
+    "better-docs": "^2.0.1",
+    "jsdoc": "^3.6.4"
+  }
+}

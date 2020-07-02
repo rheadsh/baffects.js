@@ -1,0 +1,1453 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> after-effects-environment.js</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Classes</h3><ul><li><a href="b.html">b</a></li></ul><h3>Global</h3><ul><li><a href="global.html#abs">abs</a></li><li><a href="global.html#acos">acos</a></li><li><a href="global.html#asin">asin</a></li><li><a href="global.html#atan">atan</a></li><li><a href="global.html#atan2">atan2</a></li><li><a href="global.html#binary">binary</a></li><li><a href="global.html#ceil">ceil</a></li><li><a href="global.html#constrain">constrain</a></li><li><a href="global.html#cos">cos</a></li><li><a href="global.html#day">day</a></li><li><a href="global.html#degrees">degrees</a></li><li><a href="global.html#dist">dist</a></li><li><a href="global.html#endsWith">endsWith</a></li><li><a href="global.html#exp">exp</a></li><li><a href="global.html#floor">floor</a></li><li><a href="global.html#forEach">forEach</a></li><li><a href="global.html#go">go</a></li><li><a href="global.html#HashList">HashList</a></li><li><a href="global.html#hex">hex</a></li><li><a href="global.html#hour">hour</a></li><li><a href="global.html#isArray">isArray</a></li><li><a href="global.html#isNumber">isNumber</a></li><li><a href="global.html#isString">isString</a></li><li><a href="global.html#isURL">isURL</a></li><li><a href="global.html#itemsFromFolder">itemsFromFolder</a></li><li><a href="global.html#itemsFromFolderGUI">itemsFromFolderGUI</a></li><li><a href="global.html#join">join</a></li><li><a href="global.html#lerp">lerp</a></li><li><a href="global.html#loadAI">loadAI</a></li><li><a href="global.html#loadItem">loadItem</a></li><li><a href="global.html#loadSequence">loadSequence</a></li><li><a href="global.html#loadString">loadString</a></li><li><a href="global.html#loadStrings">loadStrings</a></li><li><a href="global.html#log">log</a></li><li><a href="global.html#mag">mag</a></li><li><a href="global.html#map">map</a></li><li><a href="global.html#max">max</a></li><li><a href="global.html#millis">millis</a></li><li><a href="global.html#millisecond">millisecond</a></li><li><a href="global.html#min">min</a></li><li><a href="global.html#minute">minute</a></li><li><a href="global.html#month">month</a></li><li><a href="global.html#nf">nf</a></li><li><a href="global.html#nfc">nfc</a></li><li><a href="global.html#nfp">nfp</a></li><li><a href="global.html#nfs">nfs</a></li><li><a href="global.html#norm">norm</a></li><li><a href="global.html#pow">pow</a></li><li><a href="global.html#print">print</a></li><li><a href="global.html#printInfo">printInfo</a></li><li><a href="global.html#println">println</a></li><li><a href="global.html#projectFolder">projectFolder</a></li><li><a href="global.html#radians">radians</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#saveString">saveString</a></li><li><a href="global.html#saveStrings">saveStrings</a></li><li><a href="global.html#second">second</a></li><li><a href="global.html#sin">sin</a></li><li><a href="global.html#split">split</a></li><li><a href="global.html#splitTokens">splitTokens</a></li><li><a href="global.html#sq">sq</a></li><li><a href="global.html#sqrt">sqrt</a></li><li><a href="global.html#startsWith">startsWith</a></li><li><a href="global.html#tan">tan</a></li><li><a href="global.html#timestamp">timestamp</a></li><li><a href="global.html#trim">trim</a></li><li><a href="global.html#trimWord">trimWord</a></li><li><a href="global.html#unbinary">unbinary</a></li><li><a href="global.html#unhex">unhex</a></li><li><a href="global.html#Vector">Vector</a></li><li><a href="global.html#weekday">weekday</a></li><li><a href="global.html#year">year</a></li></ul></div><div class="category"><h2>Baffects.js</h2><h3>Global</h3><ul><li><a href="global.html#addFX">addFX</a></li><li><a href="global.html#addItemToComp">addItemToComp</a></li><li><a href="global.html#addLayer">addLayer</a></li><li><a href="global.html#addPreset">addPreset</a></li><li><a href="global.html#addToRender">addToRender</a></li><li><a href="global.html#addToRenderAME">addToRenderAME</a></li><li><a href="global.html#adjustmenLayer">adjustmenLayer</a></li><li><a href="global.html#anchor">anchor</a></li><li><a href="global.html#anchorMode">anchorMode</a></li><li><a href="global.html#audioToKeyframes">audioToKeyframes</a></li><li><a href="global.html#background">background</a></li><li><a href="global.html#beginMask">beginMask</a></li><li><a href="global.html#beginShape">beginShape</a></li><li><a href="global.html#beginUndo">beginUndo</a></li><li><a href="global.html#blendingMode">blendingMode</a></li><li><a href="global.html#blendMode">blendMode</a></li><li><a href="global.html#bounds">bounds</a></li><li><a href="global.html#camera">camera</a></li><li><a href="global.html#capMode">capMode</a></li><li><a href="global.html#cleanComp">cleanComp</a></li><li><a href="global.html#clearRenderQueue">clearRenderQueue</a></li><li><a href="global.html#collapseVectors">collapseVectors</a></li><li><a href="global.html#color">color</a></li><li><a href="global.html#createComp">createComp</a></li><li><a href="global.html#createShapes">createShapes</a></li><li><a href="global.html#delay">delay</a></li><li><a href="global.html#deleteComp">deleteComp</a></li><li><a href="global.html#duplicate">duplicate</a></li><li><a href="global.html#ease">ease</a></li><li><a href="global.html#ellipse">ellipse</a></li><li><a href="global.html#endMask">endMask</a></li><li><a href="global.html#endShape">endShape</a></li><li><a href="global.html#endUndo">endUndo</a></li><li><a href="global.html#expression">expression</a></li><li><a href="global.html#fill">fill</a></li><li><a href="global.html#frameCount">frameCount</a></li><li><a href="global.html#frameTime">frameTime</a></li><li><a href="global.html#getAllComps">getAllComps</a></li><li><a href="global.html#getAllFXProperties">getAllFXProperties</a></li><li><a href="global.html#getAllLayers">getAllLayers</a></li><li><a href="global.html#getCenter">getCenter</a></li><li><a href="global.html#getComp">getComp</a></li><li><a href="global.html#getDuration">getDuration</a></li><li><a href="global.html#getIndex">getIndex</a></li><li><a href="global.html#getItem">getItem</a></li><li><a href="global.html#getLayer">getLayer</a></li><li><a href="global.html#getLayers">getLayers</a></li><li><a href="global.html#getProperty">getProperty</a></li><li><a href="global.html#getTotalFrames">getTotalFrames</a></li><li><a href="global.html#height">height</a></li><li><a href="global.html#hsbaToRgba">hsbaToRgba</a></li><li><a href="global.html#interpolationMode">interpolationMode</a></li><li><a href="global.html#isShape">isShape</a></li><li><a href="global.html#itangent">itangent</a></li><li><a href="global.html#key">key</a></li><li><a href="global.html#lastShape">lastShape</a></li><li><a href="global.html#light">light</a></li><li><a href="global.html#line">line</a></li><li><a href="global.html#mask">mask</a></li><li><a href="global.html#maskMode">maskMode</a></li><li><a href="global.html#motionBlur">motionBlur</a></li><li><a href="global.html#moveFrames">moveFrames</a></li><li><a href="global.html#noFill">noFill</a></li><li><a href="global.html#noise">noise</a></li><li><a href="global.html#noiseDetail">noiseDetail</a></li><li><a href="global.html#noiseSeed">noiseSeed</a></li><li><a href="global.html#noStroke">noStroke</a></li><li><a href="global.html#nullLayer">nullLayer</a></li><li><a href="global.html#numLayers">numLayers</a></li><li><a href="global.html#otangent">otangent</a></li><li><a href="global.html#parent">parent</a></li><li><a href="global.html#polygon">polygon</a></li><li><a href="global.html#popMatrix">popMatrix</a></li><li><a href="global.html#preComp">preComp</a></li><li><a href="global.html#printProperties">printProperties</a></li><li><a href="global.html#pushMatrix">pushMatrix</a></li><li><a href="global.html#random">random</a></li><li><a href="global.html#randomGaussian">randomGaussian</a></li><li><a href="global.html#randomSeed">randomSeed</a></li><li><a href="global.html#rect">rect</a></li><li><a href="global.html#removeAllKeyframes">removeAllKeyframes</a></li><li><a href="global.html#render">render</a></li><li><a href="global.html#renderAME">renderAME</a></li><li><a href="global.html#resetMatrix">resetMatrix</a></li><li><a href="global.html#reverseLayers">reverseLayers</a></li><li><a href="global.html#rotate">rotate</a></li><li><a href="global.html#scale">scale</a></li><li><a href="global.html#selectedLayers">selectedLayers</a></li><li><a href="global.html#set3DMode">set3DMode</a></li><li><a href="global.html#setComp">setComp</a></li><li><a href="global.html#setCompDuration">setCompDuration</a></li><li><a href="global.html#setMaskMode">setMaskMode</a></li><li><a href="global.html#shape">shape</a></li><li><a href="global.html#shapePuckerBloat">shapePuckerBloat</a></li><li><a href="global.html#shapeRepeater">shapeRepeater</a></li><li><a href="global.html#shapeTrimPaths">shapeTrimPaths</a></li><li><a href="global.html#shapeTwist">shapeTwist</a></li><li><a href="global.html#shapeWigglePaths">shapeWigglePaths</a></li><li><a href="global.html#shapeWiggleTransform">shapeWiggleTransform</a></li><li><a href="global.html#shapeZigZag">shapeZigZag</a></li><li><a href="global.html#slider">slider</a></li><li><a href="global.html#spatialMode">spatialMode</a></li><li><a href="global.html#speed">speed</a></li><li><a href="global.html#speedAll">speedAll</a></li><li><a href="global.html#speedEase">speedEase</a></li><li><a href="global.html#stroke">stroke</a></li><li><a href="global.html#strokeWeight">strokeWeight</a></li><li><a href="global.html#text">text</a></li><li><a href="global.html#textAlign">textAlign</a></li><li><a href="global.html#textAllTransform">textAllTransform</a></li><li><a href="global.html#textAnchorPoint">textAnchorPoint</a></li><li><a href="global.html#textBlur">textBlur</a></li><li><a href="global.html#textCharacterOffset">textCharacterOffset</a></li><li><a href="global.html#textCharacterValue">textCharacterValue</a></li><li><a href="global.html#textFill">textFill</a></li><li><a href="global.html#textFont">textFont</a></li><li><a href="global.html#textOpacity">textOpacity</a></li><li><a href="global.html#textPosition">textPosition</a></li><li><a href="global.html#textRotation">textRotation</a></li><li><a href="global.html#textScale">textScale</a></li><li><a href="global.html#textSize">textSize</a></li><li><a href="global.html#textSkew">textSkew</a></li><li><a href="global.html#textStroke">textStroke</a></li><li><a href="global.html#textStrokeWidth">textStrokeWidth</a></li><li><a href="global.html#timeRemap">timeRemap</a></li><li><a href="global.html#trackMatte">trackMatte</a></li><li><a href="global.html#translate">translate</a></li><li><a href="global.html#vertex">vertex</a></li><li><a href="global.html#width">width</a></li></ul></div><div class="category"><h2>Baffects.js Constants</h2><h3>Global</h3><ul><li><a href="global.html#ADD">ADD</a></li><li><a href="global.html#ALPHA_ADD">ALPHA_ADD</a></li><li><a href="global.html#AMBIENT">AMBIENT</a></li><li><a href="global.html#BUTT">BUTT</a></li><li><a href="global.html#CLASSIC_COLOR_BURN">CLASSIC_COLOR_BURN</a></li><li><a href="global.html#CLASSIC_COLOR_DODGE">CLASSIC_COLOR_DODGE</a></li><li><a href="global.html#CLASSIC_DIFFERENCE">CLASSIC_DIFFERENCE</a></li><li><a href="global.html#CLOSE">CLOSE</a></li><li><a href="global.html#COLOR">COLOR</a></li><li><a href="global.html#COLOR_BURN">COLOR_BURN</a></li><li><a href="global.html#COLOR_DODGE">COLOR_DODGE</a></li><li><a href="global.html#DANCING_DISSOLVE">DANCING_DISSOLVE</a></li><li><a href="global.html#DARKEN">DARKEN</a></li><li><a href="global.html#DARKER_COLOR">DARKER_COLOR</a></li><li><a href="global.html#DIFFERENCE">DIFFERENCE</a></li><li><a href="global.html#DISSABLE">DISSABLE</a></li><li><a href="global.html#DISSOLVE">DISSOLVE</a></li><li><a href="global.html#DIVIDE">DIVIDE</a></li><li><a href="global.html#ENABLE">ENABLE</a></li><li><a href="global.html#EPSILON">EPSILON</a></li><li><a href="global.html#EXCLUSION">EXCLUSION</a></li><li><a href="global.html#HALF_PI">HALF_PI</a></li><li><a href="global.html#HARD_LIGHT">HARD_LIGHT</a></li><li><a href="global.html#HARD_MIX">HARD_MIX</a></li><li><a href="global.html#HUE">HUE</a></li><li><a href="global.html#INACTIVE">INACTIVE</a></li><li><a href="global.html#KAPPA">KAPPA</a></li><li><a href="global.html#LIGHTEN">LIGHTEN</a></li><li><a href="global.html#LIGHTER_COLOR">LIGHTER_COLOR</a></li><li><a href="global.html#LINEAR_BURN">LINEAR_BURN</a></li><li><a href="global.html#LINEAR_DODGE">LINEAR_DODGE</a></li><li><a href="global.html#LINEAR_LIGHT">LINEAR_LIGHT</a></li><li><a href="global.html#LINES">LINES</a></li><li><a href="global.html#LUMINESCENT_PREMUL">LUMINESCENT_PREMUL</a></li><li><a href="global.html#LUMINOSITY">LUMINOSITY</a></li><li><a href="global.html#M_NONE">M_NONE</a></li><li><a href="global.html#MULTIPLY">MULTIPLY</a></li><li><a href="global.html#NORMAL">NORMAL</a></li><li><a href="global.html#OVERLAY">OVERLAY</a></li><li><a href="global.html#PARALLEL">PARALLEL</a></li><li><a href="global.html#PI">PI</a></li><li><a href="global.html#PIN_LIGHT">PIN_LIGHT</a></li><li><a href="global.html#POINT">POINT</a></li><li><a href="global.html#PROJECTING">PROJECTING</a></li><li><a href="global.html#QUADS">QUADS</a></li><li><a href="global.html#QUARTER_PI">QUARTER_PI</a></li><li><a href="global.html#RGB">RGB</a></li><li><a href="global.html#ROUND">ROUND</a></li><li><a href="global.html#SATURATION">SATURATION</a></li><li><a href="global.html#SCREEN">SCREEN</a></li><li><a href="global.html#SILHOUETE_ALPHA">SILHOUETE_ALPHA</a></li><li><a href="global.html#SILHOUETTE_LUMA">SILHOUETTE_LUMA</a></li><li><a href="global.html#SINCOS_LENGTH">SINCOS_LENGTH</a></li><li><a href="global.html#SOFT_LIGHT">SOFT_LIGHT</a></li><li><a href="global.html#SPOT">SPOT</a></li><li><a href="global.html#STENCIL_ALPHA">STENCIL_ALPHA</a></li><li><a href="global.html#STENCIL_LUMA">STENCIL_LUMA</a></li><li><a href="global.html#SUBTRACT">SUBTRACT</a></li><li><a href="global.html#TRIANGLES">TRIANGLES</a></li><li><a href="global.html#TWO_PI">TWO_PI</a></li><li><a href="global.html#VIVID_LIGHT">VIVID_LIGHT</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>after-effects-environment.js</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>﻿// Environment
+
+//______________________________________________________________________________________________________________________
+// Composition methods
+
+/**
+ * Create new composition.
+ * @category Baffects.js
+ * @method createComp
+ * @param {String} name Name of the composition
+ * @param {number} w Width of the composition
+ * @param {number} h Height of the composition
+ * @param {number} duration Duration in seconds of the composition
+ * @param {number} frameRate Frame rate of the composition
+ * @returns {CompItem} Created composition
+ */
+pub.createComp = function (name, w, h, dur, fr) {
+    var comp = proj.items.addComp(name, w, h, 1, dur, fr);
+    thisComp = comp;
+    pub.width = comp.width;
+    pub.height = comp.height;
+    return comp;
+};
+
+/**
+ * Starts undo block.
+ * @category Baffects.js
+ * @method beginUndo
+ * @param {String} [name] Undo name GUI identifier
+ */
+pub.beginUndo = function (name) {
+    switch (arguments.length) {
+        case 0:
+            app.beginUndoGroup("Baffects");
+            break;
+        case 1:
+            app.beginUndoGroup(name);
+            break;
+    }
+};
+
+/**
+ * Ends undo block
+ * @category Baffects.js 
+ * @method endUndo
+ */
+pub.endUndo = function () {
+    app.endUndoGroup();
+};
+
+/**
+ * Get composition reference by name.
+ * @category Baffects.js 
+ * @method getComp
+ * @param {String} name Name of the composition to retrieve
+ * @returns {CompItem|null} Composition found
+ */
+pub.getComp = function (name) {
+    var number = 0;
+    for (var i = 1; i &lt;= proj.numItems; i++) {
+        if ((proj.item(i) instanceof CompItem) &amp;&amp; (proj.item(i).name === name)) {
+            number = i;
+            break;
+        }
+    }
+    if (number > 0) {
+        return proj.item(number);
+    } else {
+        error("Comp not found!");
+        return null;
+    }
+};
+
+/**
+ * Clean composition layers and items references.
+ * @category Baffects.js 
+ * @method cleanComp
+ */
+pub.cleanComp = function () {
+    var layers, names;
+    layers = thisComp.layers
+    try {
+        if (layers.length > 0) {
+            while (layers.length > 0) {
+                var source = layers[layers.length].source;
+                layers[layers.length].remove();
+                if (source != null)
+                    source.remove();
+            }
+        }
+    } catch (e) {
+        error("Composition not found!")
+    }
+};
+
+/**
+ * Sets background color for the composition.
+ * @category Baffects.js 
+ * @method background
+ * @param {Color|number} color 
+ */
+pub.background = function (color) {
+    var a = arguments[0],
+        b = arguments[1],
+        c = arguments[2];
+
+    switch (arguments.length) {
+        case 1:
+            var col = pub.color(a);
+            thisComp.bgColor = col;
+            break;
+        case 3:
+            var col = pub.color(a, b, c);
+            thisComp.bgColor = col;
+            break;
+    }
+};
+
+/**
+ * Get the total number of frames from composition.
+ * @category Baffects.js 
+ * @method getTotalFrames
+ *@returns {number} Total number of frames
+ */
+pub.getTotalFrames = function () {
+    return thisComp.duration * thisComp.frameRate;
+};
+
+/**
+ * Duration of the composition in seconds.
+ * @category Baffects.js 
+ * @method getDuration
+ *@returns {number} Total duration in seconds
+ */
+pub.getDuration = function () {
+    return thisComp.duration;
+};
+
+/**
+ * Set composition to new duration.
+ * @category Baffects.js 
+ * @method setCompDuration
+ * @param {number} duration Duration in seconds
+ */
+pub.setDuration = function (duration) {
+    thisComp.duration = duration;
+};
+
+/**
+ * Total number of layers in the composition
+ * @category Baffects.js 
+ * @method numLayers
+ *@returns {number} Total number of layers
+ */
+pub.numLayers = function () {
+    return thisComp.numLayers;
+}
+
+
+/**
+ * Return all the compositions in the project.
+ * @category Baffects.js 
+ * @method getAllComps
+ *@returns {Array} 0-based array with CompItem object for eacho one of all the compositions found in the project
+ */
+pub.getAllComps = function () {
+    var comps = [];
+    var items = proj.items;
+    for (var i = 1; i &lt;= proj.numItems; i++) {
+        if ((proj.item(i) instanceof CompItem)) {
+            comps.push(items[i]);
+        }
+    }
+
+    return comps;
+};
+
+
+
+/**
+ * Delete a composition.
+ * @category Baffects.js
+ * @method deleteComp
+ * @param {String|CompItem} comp 
+ */
+pub.deleteComp = function (comp) {
+    try {
+        if (typeof comp === "string") {
+            var newComp = pub.getComp(comp);
+            newComp.remove();
+        } else {
+            comp.remove();
+        }
+    } catch (e) {
+        error("Composition not found!")
+    }
+}
+
+
+/**
+ * Get the composition center
+ * @category Baffects.js
+ * @method getCenter
+ *@returnss {Array} Composition's center as [x, y] array
+ */
+pub.getCenter = function () {
+    return [pub.width / 2, pub.height / 2];
+}
+
+
+//______________________________________________________________________________________________________________________
+// Item methods
+
+/**
+ * Get item reference by name.
+ * @category Baffects.js 
+ * @method getItem
+ * @param {String} name Name of item to retrieve
+ *@returns {Item|null} Item found
+ */
+pub.getItem = function (name) {
+    var number = 0;
+    for (var i = 1; i &lt;= proj.numItems; i++) {
+        if (!((proj.item(i) instanceof CompItem)) &amp;&amp; (proj.item(i).name === name)) {
+            number = i;
+            break;
+        }
+    }
+    if (number > 0) {
+        return proj.item(number);
+    } else {
+        error("Item not found!");
+        return null;
+    }
+};
+
+/**
+ * Adds item to comp (for ease of use loadItem() is better suited for this task).
+ * @category Baffects.js 
+ * @method addItemToComp
+ * @param {Item} item Item to add to composition
+ *@returns {Layer} Item added as layer
+ */
+pub.addItemToComp = function (item) {
+    var layer = thisComp.layers.add(item);
+    return layer;
+};
+
+// TO DO
+pub.getFolder = function (name) {
+
+}
+
+
+
+
+
+//______________________________________________________________________________________________________________________
+// Layer methods
+
+/**
+ * Get layer reference by name.
+ * @category Baffects.js 
+ * @method getLayer
+ * @param {String} name Name of layer to retrieve 
+ *@returns {Properties|Array} Return Properties or if the layer has effects it returns a 0-based array of [Transform Properties, FX Properties];
+ */
+pub.getLayer = function (name) {
+    var layersCollection = thisComp.layers
+    var n = 0;
+    if (layersCollection.length > 0) {
+        for (var i = 1; i &lt;= layersCollection.length; i++) {
+            if (layersCollection[i].name === name) {
+                n = i;
+                break;
+            }
+        }
+    } else {
+        error("Zero layers in comp");
+    }
+    if (n > 0) {
+        var obb = new Properties();
+        obb.layer = layersCollection[n];
+        scopeTransformProperties(obb);
+
+        var fxGroup = obb.layer("Effects");
+        if (fxGroup.numProperties > 0) {
+            var fx = pub.getAllFXProperties(obb.layer);
+            return [obb, fx]
+        } else {
+            return obb;
+        }
+    } else {
+        error("Layer name not found");
+    }
+};
+
+
+
+/**
+ * Get all layers as Properties object from composition.
+ * @category Baffects.js 
+ * @method getAllLayers
+ * @param {number} option If option is true, return type is LayerCollection
+ *@returns {Array&lt;Properties>} 0-based array of Properties object with attributes [layer, anchor, position, scale, rotation, orientation, rotationx, rotationy, rotationz, opacity].
+ *                             Each attribute is a Property object for convenience in animation, except of layer which is the layer reference.
+ */
+pub.getAllLayers = function (option) {
+    var allLayers = [];
+    var layers = thisComp.layers;
+
+    if (arguments.length === 0) {
+        if (layers.length > 0) {
+            for (var i = 1; i &lt;= layers.length; i++) {
+                var obb = new Properties();
+                obb.layer = layers[i];
+                scopeTransformProperties(obb);
+                allLayers.push(obb);
+            }
+        } else
+            error("No layers found in composition")
+
+        return allLayers;
+    } else {
+        return thisComp.layers;
+    }
+};
+
+/**
+ * Get layers by range.
+ * @category Baffects.js 
+ * @method getLayers
+ * @param {number} min Minimum index of layer collection
+ * @param {number} max Maximum index of layer collection
+ *@returns {LayerCollection} Layers in range
+ */
+pub.getLayers = function (min, max) {
+    var layers = pub.getAllLayers();
+    return layers.slice(min - 1, max);
+};
+
+/**
+ * Gets a property from a specified layer, this function is useful in case Properties is not returning a correct layer or effects property.
+ * @category Baffects.js 
+ * @method getProperty
+ * @param {AVLayer} layer Object or AVLayer to get a Property from
+ * @param {String} path Full path to property 
+ *@returns {Property} Property reference
+ */
+pub.getProperty = function (layer, path) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    var pathStr = path.split("/");
+    var prop = layer.property(pathStr[0]);
+    for (var i = 1; i &lt; pathStr.length; i++) {
+        prop = prop.property(pathStr[i]);
+    }
+    return prop;
+};
+
+/**
+ * Add FX to a specific layer.
+ * @category Baffects.js 
+ * @method addFX
+ * @param {Properties} layer Object or AVLayer to add fx to
+ * @param {String} fx Name of the effect to add to layer
+ *@returns {Properties} Properties object with all animatable properties. Attribute names are built without spaces and all lower case. (Ej. "fx.color" To get the property "Effects/Fill/Color").
+ */
+pub.addFX = function (layer, fx) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var fxPath = layer.effect.addProperty(fx);
+    var fx = new Properties();
+    for (var i = 0; i &lt; fxPath.numProperties; i++) {
+        var prop = fxPath.property(i + 1);
+        fx[prop.name.toLowerCase().replace(/\s/g, '')] = prop;
+    }
+    return fx;
+};
+
+/**
+ * Add slider to layer.
+ * @category Baffects.js
+ * @method slider
+ * @param {Properties} layer Object or AVLayer to add slider to
+ * @param {String} name Slider new name
+ * @param {Property} prop Property to link slider control
+ *@returns {Properties} Properties object with attributes [name, value]
+ */
+pub.slider = function (layer, name, prop) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var sli = layer.effect.addProperty("ADBE Slider Control");
+    var value = sli.property("ADBE Slider Control-0001");
+    var exp1 = 'temp = effect("' + sli.name + '")("Slider");';
+
+    var testReturn = new Properties();
+    testReturn.name = sli.name;
+    testReturn.value = sli.value;
+
+    return testReturn;
+};
+
+/**
+ * Return true if seleted layer is Shape Layer.
+ * @category Baffects.js
+ * @method isShape
+ * @param {Properties} layer 
+ *@returns {Boolean}
+ */
+pub.isShape = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    if (layer instanceof ShapeLayer) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+/**
+ * Add preset to a specific layer.
+ * @category Baffects.js
+ * @method addPreset
+ * @param {Properties} layer Object or AVLayer to add preset to
+ * @param {String} name Name of the preset to add to layer
+ *@returnss {Object} Object hierarchy containing all properties of each effect. For every effect it returns an object with attributes names without spaces and lower case. (Ej. "fx.fill.color" To get the property "Effects/Fill/Color").
+ */
+pub.addPreset = function (layer, name) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var osPath;
+    if (system.osName == "MacOS")
+        osPath = Folder.startup.parent.parent.parent.fsName + "/Presets/";
+    else
+        osPath = Folder.startup.fsName + encodeURI("/Presets/");
+
+    var file = new File(osPath + name + ".ffx");
+
+    var preset = layer.applyPreset(file);
+
+    return pub.getAllFXProperties(layer);
+}
+
+/**
+ * @method getAllFXProperties
+ * @category Baffects.js
+ * @param {Properties} layer Object or AVLayer to get FX properties
+ *@returns {Object} Object hierarchy containing all properties of each effect. For every effect it returns an object with attributes names without spaces and lower case. (Ej. "fx.fill.color" To get the property "Effects/Fill/Color").
+ * @example 
+ * var layer = b.solid();                   
+ * var fx = b.getAllFXProperties(layer);    
+ * b.setKey(fx.fill.color, 0, [1,0,0]);     
+ * b.setKey(fx.fill.color, 1, [1,1,0]);     
+ */
+pub.getAllFXProperties = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    var fx = new Properties();
+    var fxGroup = layer("Effects");
+    for (var i = 0; i &lt; fxGroup.numProperties; i++) {
+        fx[fxGroup.property(i + 1).name.toLowerCase().replace(/\s/g, '')] = new Properties();
+        var ffx = fx[fxGroup.property(i + 1).name.toLowerCase().replace(/\s/g, '')];
+        for (var j = 0; j &lt; fxGroup.property(i + 1).numProperties; j++) {
+            var prop = fxGroup.property(i + 1);
+            ffx[prop.property(j + 1).name.toLowerCase().replace(/\s/g, '')] = prop.property(j + 1);
+        }
+    }
+    return fx;
+}
+
+/**
+ * Sets track matte function in layer.
+ * @category Baffects.js  
+ * @method trackMatte
+ * @param {Properties} layer Object or AVLayer to set track matte
+ * @param {ALPHA|ALPHA_INVERTED|LUMA|LUMA_INVERTED|NO_TRACK_MATTE} mode 
+ */
+pub.trackMatte = function (layer, mode) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    layer.trackMatteType = mode;
+};
+
+/**
+ * Precompose layers.
+ * @category Baffects.js 
+ * @method preComp
+ * @param {Array} indexes The position indexes of the layers to be collected. An array of integers
+ * @param {String} name Name of the new composition
+ */
+pub.preComp = function (index, name) {
+    var newComp = thisComp.layers.precompose(index, name, true);
+    return newComp;
+};
+
+
+/**
+ * Return the index number.
+ * @category Baffects.js
+ * @method getIndex
+ * @param {Properties} layer 
+ */
+pub.getIndex = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    return layer.index;
+}
+
+/**
+ * Return only manually selected layers from composition.
+ * @category Baffects.js 
+ * @method selectedLayers
+ *@returns {Array&lt;Properties>} 0-based array of Properties object of only selected layers with attributes [layer, anchor, position, scale, rotation, orientation, rotationx, rotationy, rotationz, opacity].
+ *                             Each attribute is a Property object for convenience in animation, except of layer which is the layer reference.
+ */
+pub.selectedLayers = function () {
+    var sel = thisComp.selectedLayers;
+    var allLayers = [];
+
+    if (sel.length > 0) {
+        for (var i = 0; i &lt; sel.length; i++) {
+            var obb = new Properties();
+            obb.layer = sel[i];
+            scopeTransformProperties(obb);
+            allLayers.push(obb);
+        }
+    } else
+        error("Select at least one layer")
+
+    return allLayers;
+};
+
+function scopeTransformProperties(obb) {
+    this.shape = obb.layer;
+    this.obb = obb;
+    setTransformPropertiesObject();
+
+    return this.obb;
+};
+
+/**
+ * Add item to composition.
+ * @category Baffects.js
+ * @method addLayer
+ * @param {Item} item 
+ *@returns {Properties} Transform properties
+ */
+pub.addLayer = function (item) {
+    var obb = new Properties();
+    var layer = thisComp.layers.add(item);
+    obb.layer = layer;
+    scopeTransformProperties(obb);
+    return obb;
+};
+
+/**
+ * Turn on collapse transformation on layer.
+ * @category Baffects.js
+ * @method collapseVectors
+ * @param {Properties} layer 
+ */
+pub.collapseVectors = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    layer.collapseTransformation = true;
+};
+
+/**
+ * Duplicate a layer n times.
+ * @category Baffects.js 
+ * @method duplicate
+ * @param {Layer} layer Layer to duplicate
+ * @param {number} n number of duplicates to generate
+ * @param {Boolean} [autoComp] Precompose all duplicates if true
+ * @returns {Properties} Array with transform Properties 
+ */
+pub.duplicate = function (originalLayer, n, autoComp) {
+    var a = arguments[0],
+        b = arguments[1],
+        c = arguments[2];
+
+    var copies;
+    switch (arguments.length) {
+        case 2:
+            copies = dup(a, b, false);
+            return copies;
+        case 3:
+            copies = dup(a, b, c);
+            return copies;
+    }
+};
+
+function dup(layer, n, autoComp) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+    var copies = [];
+    for (var i = 0; i &lt; n; i++) {
+        var dup = layer.duplicate();
+        copies.push(dup);
+    }
+    if (autoComp) {
+        pub.preComp(indexArray(copies), "Duplicates" + proj.numItems);
+    }
+    return copies;
+};
+
+/**
+ * Reverse layers order in timeline.
+ * @category Baffects.js 
+ * @method reverseLayers
+ * @param {LayerCollection} layers Layers to invert order
+ */
+//Function adapted from code found in Adobe forums and the internet
+pub.reverseLayers = function (layers) {
+    for (var j = 1; j &lt;= layers.length / 2; j++) {
+        var layerToMoveAfter = layers[j];
+        var wasLocked = layerToMoveAfter.locked;
+        if (wasLocked) {
+            layerToMoveAfter.locked = false;
+        }
+        layerToMoveAfter.moveAfter(layers[layers.length - j + 1]);
+        if (wasLocked) {
+            layerToMoveAfter.locked = true;
+        }
+        if (layers.length - j != j) {
+            var layerToMoveBefore = layers[layers.length - j];
+            wasLocked = layerToMoveBefore.locked;
+            if (wasLocked) {
+                layerToMoveBefore.locked = false;
+            }
+            layerToMoveBefore.moveBefore(layers[j]);
+            if (wasLocked) {
+                layerToMoveBefore.locked = true;
+            }
+        }
+    }
+};
+
+/**
+ * Create parent - child relationship.
+ * @category Baffects.js 
+ * @method parent
+ * @param {Properties} layer Object or AVLayer to be parent layer
+ * @param {Properties} layer Object or AVLayer to be children
+ */
+pub.parent = function (parent, children) {
+    if (!validateLayer(parent))
+        parent = parent.layer;
+    if (!validateLayer(children))
+        children = children.layer;
+    children.parent = parent;
+};
+
+/**
+ * Get Layer object bounds.
+ * @category Baffects.js
+ * @method bounds
+ * @param {Properties} layer Object or AVLayer to bet bounds from
+ * @returns {Object} A JavaScript object with four attributes, [top, left, width, height]
+ */
+pub.bounds = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    return layer.sourceRectAtTime(layer.inPoint, false);
+};
+
+/**
+ * Reposition anchor point to bounding box option: 
+ * 1-------2-------3    
+ * 4-------5-------6    
+ * 7-------8-------9    
+ * @category Baffects.js
+ * @method anchor
+ * @param {Properties} layer Object or AVLayer to reposition anchor point
+ * @param {number} option Point to bounding box to reposition anchor point
+ */
+//This function was adapted from several posts on adobe forum and code found on the internet...
+pub.anchor = function (layer, mode) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    if (layer instanceof CameraLayer) {
+        if (layers.length == 1) {
+            error("Cannot reposition anchor point in camera layer...")
+        }
+    }
+    var row = 0,
+        col = 0;
+
+    switch (mode) {
+        case 1:
+            row = 0;
+            col = 0;
+            break;
+        case 2:
+            row = 1;
+            col = 0;
+            break;
+        case 3:
+            row = 2;
+            col = 0;
+            break;
+        case 4:
+            row = 0;
+            col = 1;
+            break;
+        case 5:
+            row = 1;
+            col = 1;
+            break;
+        case 6:
+            row = 2;
+            col = 1;
+            break;
+        case 7:
+            row = 0;
+            col = 2;
+            break;
+        case 8:
+            row = 1;
+            col = 2;
+            break;
+        case 9:
+            row = 2;
+            col = 2;
+            break;
+    }
+
+    var noMasks = true;
+
+    if (layer.mask.numProperties != 0) {
+        for (var i = 1; i &lt;= layer.mask.numProperties; i++) {
+            if (layer.mask(i).maskMode != MaskMode.NONE) {
+                noMasks = false;
+            }
+        }
+    }
+
+    if (noMasks) {
+        switch (row) {
+            case 0:
+                var x = 0;
+                break;
+            case 1:
+                var x = pub.bounds(layer).width / 2;
+                break;
+            case 2:
+                var x = pub.bounds(layer).width;
+                break;
+            case 3:
+                var x = pub.bounds(layer).width;
+                break;
+            default:
+        }
+
+        switch (col) {
+            case 0:
+                var y = 0;
+                break;
+            case 1:
+                var y = pub.bounds(layer).height / 2;
+                break;
+            case 2:
+                var y = pub.bounds(layer).height;
+                break;
+            case 3:
+                var y = pub.bounds(layer).height;
+                break;
+            default:
+        }
+
+        if (layer instanceof TextLayer || layer instanceof ShapeLayer) {
+            x += pub.bounds(layer).left;
+            y += pub.bounds(layer).top;
+        }
+
+    } else {
+        var xBounds = [];
+        var yBounds = [];
+        var numMasks = layer.mask.numProperties;
+
+        for (var i = 1; i &lt;= numMasks; i++) {
+            var numVerts = layer.mask(i).maskShape.value.vertices.length;
+            if (layer.mask(i).maskMode == MaskMode.NONE) { continue; }
+            for (var j = 0; j &lt; numVerts; j++) {
+                var curVerts = layer.mask(i).maskShape.valueAtTime(layer.inPoint, false).vertices[j];
+                xBounds.push(curVerts[0])
+                yBounds.push(curVerts[1])
+            }
+        }
+
+        xBounds.sort(function (a, b) { return a - b })
+        yBounds.sort(function (a, b) { return a - b })
+
+        var xl = xBounds.shift();
+        var xh = xBounds.pop();
+        var yl = yBounds.shift();
+        var yh = yBounds.pop();
+
+        if (layer instanceof TextLayer || layer instanceof ShapeLayer) {
+            var xl2 = pub.bounds(layer).left;
+            var xh2 = xl2 + pub.bounds(layer).width;
+            var yl2 = pub.bounds(layer).top;
+            var yh2 = yl2 + pub.bounds(layer).height;
+
+            if (xl &lt; xl2) { xl = xl2; }
+            if (xh > xh2) { xh = xh2; }
+            if (yl &lt; yl2) { yl = yl2; }
+            if (yh > yh2) { yh = yh2; }
+        }
+
+        switch (row) {
+            case 0:
+                var x = xl;
+                break;
+            case 1:
+                var x = xl + ((xh - xl) / 2);
+                break;
+            case 2:
+                var x = xh;
+                break;
+            case 3:
+                var x = xl + ((xh - xl));
+                break;
+            default:
+        }
+
+        switch (col) {
+            case 0:
+                var y = yl;
+                break;
+            case 1:
+                var y = yl + ((yh - yl) / 2);
+                break;
+            case 2:
+                var y = yh;
+                break;
+            case 3:
+                var y = yl + ((yh - yl));
+                break;
+            default:
+        }
+    }
+
+    if (layer.anchorPoint.isTimeVarying) {
+        theComp = app.project.activeItem;
+        layer.anchorPoint.setValueAtTime(theComp.time, [x, y]);
+    } else {
+        var curAnchor = layer.anchorPoint.value;
+
+        var xMove = (x - curAnchor[0]) * (layer.scale.value[0] / 100);
+        var yMove = (y - curAnchor[1]) * (layer.scale.value[1] / 100);
+
+        var posEx = false;
+        if (layer.position.expressionEnabled) {
+            layer.position.expressionEnabled = false;
+            posEx = true;
+        }
+
+        var dupLayer = layer.duplicate();
+
+        var oldParent = layer.parent;
+
+        dupLayer.moveToEnd();
+        if (dupLayer.scale.isTimeVarying) {
+            dupLayer.scale.setValueAtTime(app.project.activeItem.time, [100, 100])
+        } else {
+            dupLayer.scale.setValue([100, 100]);
+        }
+
+        layer.parent = dupLayer;
+
+        layer.anchorPoint.setValue([x, y]);
+
+        if (layer.position.isTimeVarying) {
+            var numKeys = layer.position.numKeys;
+            for (var k = 1; k &lt;= numKeys; k++) {
+                var curPos = layer.position.keyValue(k);
+                curPos[0] += xMove;
+                curPos[1] += yMove;
+                layer.position.setValueAtKey(k, curPos);
+            }
+        } else {
+            var curPos = layer.position.value;
+            layer.position.setValue([curPos[0] + xMove, curPos[1] + yMove, curPos[2]]);
+
+        }
+        layer.parent = oldParent;
+        if (posEx) {
+            layer.position.expressionEnabled = true;
+        }
+        dupLayer.remove();
+    }
+};
+
+/**
+ * Enables motion blur to layer.
+ * @category Baffects.js
+ * @method motionBlur
+ * @param {Properties} layer Object or AVLayer to enable motion blur
+ */
+pub.motionBlur = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    layer.motionBlur = true;
+
+    if (!thisComp.motionBlur)
+        thisComp.motionBlur = true;
+};
+
+/**
+ * Enable adjustment layer mode.
+ * @category Baffects.js
+ * @method adjustmenLayer
+ * @param {Properties} layer Object or AVLayer to enable adjustment layer mode
+ */
+pub.adjustmentLayer = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    layer.adjustmentLayer = true;
+};
+
+//TO DO
+pub.removeAllEffects = function (layer) { };
+
+/**
+ * Convert audio to keyframes.
+ * @category Baffects.js
+ * @method audioToKeyframes
+ * @param {AVLayer} layer Layer to create keyframes from
+ * @returns {Properties} Properties object with attributes [left, right, both].
+ */
+pub.audioToKeyframes = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    layer.selected = false;
+    layer.selected = true;
+
+    thisComp.openInViewer();
+    var n = app.findMenuCommandId("Convert Audio to Keyframes");
+    app.executeCommand(n);
+
+    var amp = thisComp.layers[1];
+    pub.println(amp.name);
+    var obb = new Properties();
+    obb.left = amp.property("ADBE Effect Parade").property(1).property("ADBE Slider Control-0001");
+    obb.right = amp.property("ADBE Effect Parade").property(2).property("ADBE Slider Control-0001");
+    obb.both = amp.property("ADBE Effect Parade").property(3).property("ADBE Slider Control-0001");
+
+    return obb;
+}
+
+/**
+ * Apply time remap to loop a sequence.
+ * @category Baffects.js
+ * @method timeRemap
+ * @param {Sequence} layer 
+ * @returns 1
+ */
+pub.timeRemap = function (layer) {
+    if (!validateLayer(layer))
+        layer = layer.layer;
+
+    layer.selected = false;
+    layer.selected = true;
+    thisComp.openInViewer();
+    var n = app.findMenuCommandId("Enable Time Remapping");
+    app.executeCommand(n);
+
+    layer.outPoint = thisComp.duration;
+    pub.expression(layer.property("Time Remap"), "loopOut()");
+}
+
+/**
+ * Generate frame offset between layers layers.
+ * @category Baffects.js 
+ * @subcat FromSelections
+ * @method moveFrames
+ * @param {number} n number of frames to offset each layer layer beginning at playhead position
+ */
+pub.moveFrames = function (layers, n, initTime) {
+    if (layers.length > 0) {
+        var layersOnly = [];
+        for (var i = 0; i &lt; layers.length; i++) {
+            layersOnly.push(layers[i].layer);
+        }
+
+        for (i = layersOnly.length - 1; i >= 0; i--) {
+            layersOnly[i].startTime = initTime + frameMove(n) * ((layersOnly.length - 1) - i);
+        }
+    } else {
+        println("select at least one layer");
+    }
+};
+
+
+
+/**
+ * Create shapes from vectors layer.
+ * @category Baffects.js
+ * @method createShapes
+ * @param {Array} [layers] Array of Properties object to convert to shapes
+ * @returns {Properties} Properties object with attributes [layer, anchorpoint, position, xposition, yposition, zposition, scale, orientation, xrotation, yrotation, zrotation, rotation, opacity, fill, stroke, weight].
+ *                      Each attribute is a Property object for convenience in animation, except of layer which is the new created Shape layer reference.
+ */
+pub.createShapes = function (layers) {
+    var lays;
+    if (arguments.length === 1)
+        lays = arguments[0];
+    else
+        lays = pub.getAllLayers();
+
+    for (var i = 0; i &lt; lays.length; i++) {
+        lays[i].layer.selected = false;
+        lays[i].layer.selected = true;
+    }
+    thisComp.openInViewer();
+    app.executeCommand(3973); //Create shapes from vector layers menu id
+
+    var shapes = [];
+    var all = thisComp.layers;
+
+    for (var i = 1; i &lt;= all.length; i++) {
+        if (all[i] instanceof ShapeLayer) {
+            var obb = new Properties();
+            obb.layer = all[i];
+
+            var transform = all[i].property("ADBE Transform Group");
+            for (var j = 0; j &lt; transform.numProperties - 1; j++) {
+                obb[transform.property(j + 1).name.toLowerCase().replace(/\s/g, '')] = transform.property(j + 1);
+            }
+
+            var grouping = obb.layer.property("ADBE Root Vectors Group").property(1).property("ADBE Vectors Group");
+            obb.path = grouping.property(1).property("ADBE Vector Shape");
+
+            try {
+                var fill = grouping.property("ADBE Vector Graphic - Fill").property("ADBE Vector Fill Color");
+                obb.fill = fill;
+            } catch (e) { };
+
+            try {
+                var stroke = grouping.property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Color");
+                obb.stroke = stroke;
+            } catch (e) { };
+
+            try {
+                var weight = grouping.property("ADBE Vector Graphic - Stroke").property("ADBE Vector Stroke Width");
+                obb.weight = weight;
+            } catch (e) { };
+
+            shapes.push(obb);
+        }
+    }
+
+    return shapes
+};
+
+
+//______________________________________________________________________________________________________________________
+// Setter and getter methods for global modes 
+
+
+/**
+ * Set composition to work with.
+ * @category Baffects.js 
+ * @method setComp
+ * @param {String|CompItem} comp 
+ */
+pub.setComp = function (comp) {
+    if (typeof comp === "string") {
+        var newComp = pub.getComp(comp);
+        thisComp = newComp;
+    } else if (comp instanceof Properties) {
+        var newComp = pub.getComp(comp.layer.name);
+        thisComp = newComp;
+    } else {
+        thisComp = comp;
+    }
+};
+
+/**
+ * Set anchor point to bounding box option mode: 
+ * 1-------2-------3    
+ * 4-------5-------6    
+ * 7-------8-------9     
+ * This allows for the position to be controlled in a more intuitive way from scripting. Defaults to 5 which is the center of the layer.
+ * @category Baffects.js 
+ * @method anchorMode
+ * @param {number} mode 
+ */
+pub.anchorMode = function (mode) {
+    currAnchorMode = mode;
+};
+
+/**
+ * Set global blend mode for layers.
+ * @category Baffects.js 
+ * @method blendMode
+ * @param {ADD|ALPHA_ADD|CLASSIC_COLOR_BURN|CLASSIC_COLOR_DODGE|CLASSIC_DIFFERENCE|COLOR|COLOR_BURN|COLOR_DODGE|DANCING_DISSOLVE|DARKEN|DARKER_COLOR|DIFFERENCE|DISSOLVE|DIVIDE|EXCLUSION|HARD_LIGHT|HARD_MIX|HUE|LIGHTEN|LIGHTER_COLOR|LINEAR_BURN|LINEAR_DODGE|LINEAR_LIGHT|LUMINESCENT_PREMUL|LUMINOSITY|MULTIPLY|NORMAL|OVERLAY|PIN_LIGHT|SATURATION|SCREEN|SILHOUETTE_LUMA|SUBTRACT|SOFT_LIGHT|STENCIL_ALPHA|STENCIL_LUMA|VIVID_LIGHT} mode 
+ */
+pub.blendMode = function (mode) {
+    currBlendMode = mode;
+};
+
+/**
+ * Apply no fill.
+ * @category Baffects.js 
+ * @subcat Color
+ * @method noFill
+ */
+pub.noFill = function () {
+    currFillState = false;
+    var off = new Style(currFillState, currFillColor, currStrokeState, currStrokeColor, currStrokeWeight);
+    styleStack.push(off);
+};
+
+/**
+ * Apply no stroke.
+ * @category Baffects.js 
+ * @subcat Color
+ * @method noStroke
+ */
+pub.noStroke = function () {
+    currStrokeState = false;
+    var off = new Style(currFillState, currFillColor, currStrokeState, currStrokeColor, currStrokeWeight);
+    styleStack.push(off);
+};
+
+/**
+ * Returns the current strokeWeight in points and sets it if argument strokeWeight is given.
+ * @category Baffects.js 
+ * @subcat Color
+ * @method strokeWeight
+ * @param {number} strokeWeight Stroke weight in points to set
+ * @returns {number} Current stroke weight
+ */
+pub.strokeWeight = function (strokeWeight) {
+    if (arguments.length === 1) {
+        currStrokeWeight = strokeWeight;
+    }
+
+    var off = new Style(currFillState, currFillColor, currStrokeState, currStrokeColor, currStrokeWeight);
+    styleStack.push(off);
+
+    return currStrokeWeight;
+}
+
+/**
+ * Enables 3D manipulation in layers.
+ * @category Baffects.js 
+ * @method set3DMode
+ * @param {ENABLE3D|DISSABLE3D} mode 
+ */
+pub.set3DMode = function (mode) {
+    curr3DMode = mode;
+};
+
+/**
+ * Set specific layer blending mode.
+ * @category Baffects.js 
+ * @method blendingMode
+ * @param {Layer} layer 
+ * @param {BlendMode} mode 
+ */
+pub.blendingMode = function (layer, mode) {
+    layer.blendingMode = mode;
+};
+
+/**
+ * Set global cap mode for stroke.
+ * @category Baffects.js 
+ * @method capMode
+ * @param {BUTT|ROUND|PROJECTING} mode  
+ */
+pub.capMode = function (mode) {
+    currCaps = mode;
+}
+
+
+
+
+//______________________________________________________________________________________________________________________
+// Render methods
+
+/**
+ * Add composition to render queue.
+ * @category Baffects.js 
+ * @method addToRender
+ * @param {CompItem} [comp] Reference to composition to render 
+ * @param {String} template Name of template to use on render
+ * @param {String} path Path to save render file
+ */
+pub.addToRender = function (comp, template, path) {
+    var a = arguments[0],
+        b = arguments[1],
+        c = arguments[2];
+
+    switch (arguments.length) {
+        case 2:
+            addToRenderFunc(thisComp, 1, a, b);
+            break;
+        case 3:
+            addToRenderFunc(a, 1, b, c);
+            break;
+    }
+};
+
+function addToRenderFunc(comp, mod, template, path) {
+    try {
+        var file = initExportFile(path, false);
+    } catch (e) {
+        error("Please save you AE file on the same path of your data folder.")
+    }
+    var added = queue.items.add(comp);
+    added.outputModule(mod).applyTemplate(template);
+    added.outputModule(mod).file = file;
+}
+
+/**
+ * Render all compositions in render queue.
+ * @category Baffects.js 
+ * @method render
+ */
+pub.render = function () {
+    queue.showWindow(true);
+    queue.render();
+};
+
+/**
+ * Clear all items from render queue.
+ * @category Baffects.js 
+ * @method clearRenderQueue
+ */
+pub.clearRenderQueue = function () {
+    while (queue.numItems > 0) {
+        queue.item(queue.numItems).remove();
+    }
+};
+
+pub.exportFrameOnly = function (n) {
+
+};
+
+function exportOnlyFrame(comp, mod, n, template, path) {
+    var file = initDataFile(path, false);
+    var added = queue.items.add(comp);
+    added.outputModule(mod).applyTemplate(template);
+    added.outputModule(mod).file = file;
+};
+
+/**
+ * Add composition to render queue.
+ * @category Baffects.js 
+ * @method addToRenderAME
+ * @param {CompItem} [comp] Reference to composition to render 
+ * @param {String} template Name of template to use on render
+ * @param {String} path Path to save render file
+ */
+pub.addToRenderAME = function (comp, template, path) {
+    var a = arguments[0],
+        b = arguments[1],
+        c = arguments[2];
+
+    switch (arguments.length) {
+        case 2:
+            addToRenderAMEFunc(thisComp, 1, a, b);
+            break;
+        case 3:
+            addToRenderAMEFunc(a, 1, b, c);
+            break;
+    }
+};
+
+function addToRenderAMEFunc(comp, mod, template, path) {
+    try {
+        var file = initExportFile(path, false);
+    } catch (e) {
+        error("Please save you AE file on the same path of your data folder.")
+    }
+    var added = queue.items.add(comp);
+    added.outputModule(mod).file = file;
+
+    if (app.project.renderQueue.canQueueInAME == true) {
+        app.project.renderQueue.queueInAME(false);
+    }
+}
+
+
+/**
+ * Render in render Adone Media Encoder.
+ * @category Baffects.js 
+ * @method renderAME
+ */
+pub.renderAME = function () {
+    if (app.project.renderQueue.canQueueInAME == true) {
+        app.project.renderQueue.queueInAME(true);
+    }
+};
+
+
+
+
+// ----------------------------------------
+// Structure
+// Taken from basil.js
+
+/**
+ * Suspends the calling thread for a number of milliseconds.
+ * During a sleep period, checks at 100 millisecond intervals to see whether the sleep should be terminated.
+ * @category Baffects.js
+ * @cat Environment
+ * @method delay
+ * @param  {number} milliseconds  The delay time in milliseconds
+ */
+pub.delay = function (milliseconds) {
+    $.sleep(milliseconds);
+};</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>
