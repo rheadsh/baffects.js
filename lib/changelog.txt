@@ -1,9 +1,12 @@
-+ new
-* changed
-- removed
-
 baffects.js beta 0.1 - Jan 2018
 
 - baffects.js was developed over the christmas vacations by Roberto Cabezas H.
 
 - Assumes default instalation folders for presets.
+
+
+baffects.js 1.0 - July 2020
+
+- Consistent use of English language for all library implementations, After Effects needs to be setup to English language.
+
+- Tested in After Effects 2020 Version 17.1.1 (Build 34)
